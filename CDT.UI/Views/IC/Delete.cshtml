@@ -1,0 +1,168 @@
+﻿@model CDT.Repo.IC
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>IC</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.BOM_Number)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BOM_Number)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BU)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BU)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Product_line)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Product_line)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Site)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Site)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Thermo_Number)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Thermo_Number)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Item_Description)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Item_Description)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Category)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Category)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Part)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Part)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Part_Type)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Part_Type)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Technology)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Technology)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Supply_Voltage)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Supply_Voltage)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Memory___organisation)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Memory___organisation)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Memory___access_Time)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Memory___access_Time)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Mouting)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Mouting)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Package)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Package)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Lead_Spacing_Inch_)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Lead_Spacing_Inch_)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.No___of_pins)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.No___of_pins)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Operating__Temperature)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Operating__Temperature)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

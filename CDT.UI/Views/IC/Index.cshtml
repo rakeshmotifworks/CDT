@@ -1,0 +1,135 @@
+﻿@model IEnumerable<CDT.Repo.IC>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.BOM_Number)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.BU)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Product_line)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Site)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Thermo_Number)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Item_Description)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Category)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Part)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Part_Type)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Technology)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Supply_Voltage)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Memory___organisation)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Memory___access_Time)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Mouting)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Package)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Lead_Spacing_Inch_)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.No___of_pins)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Operating__Temperature)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.BOM_Number)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.BU)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Product_line)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Site)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Thermo_Number)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Item_Description)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Category)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Part)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Part_Type)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Technology)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Supply_Voltage)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Memory___organisation)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Memory___access_Time)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Mouting)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Package)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Lead_Spacing_Inch_)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.No___of_pins)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Operating__Temperature)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
+            @Html.ActionLink("Details", "Details", new { id=item.Id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.Id })
+        </td>
+    </tr>
+}
+
+</table>

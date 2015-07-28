@@ -1,0 +1,10 @@
+D:\CDT_2015\CDT.UI\CDT.Repo\bin\Debug\CDT.Repo.dll.config
+D:\CDT_2015\CDT.UI\CDT.Repo\bin\Debug\CDT.Repo.dll
+D:\CDT_2015\CDT.UI\CDT.Repo\bin\Debug\CDT.Repo.pdb
+D:\CDT_2015\CDT.UI\CDT.Repo\bin\Debug\EntityFramework.dll
+D:\CDT_2015\CDT.UI\CDT.Repo\bin\Debug\EntityFramework.SqlServer.dll
+D:\CDT_2015\CDT.UI\CDT.Repo\bin\Debug\EntityFramework.xml
+D:\CDT_2015\CDT.UI\CDT.Repo\bin\Debug\EntityFramework.SqlServer.xml
+D:\CDT_2015\CDT.UI\CDT.Repo\obj\Debug\CDT.Repo.csprojResolveAssemblyReference.cache
+D:\CDT_2015\CDT.UI\CDT.Repo\obj\Debug\CDT.Repo.dll
+D:\CDT_2015\CDT.UI\CDT.Repo\obj\Debug\CDT.Repo.pdb

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="f2ba0b90de7d4f83924d338714eed22e" Name="Diagram1">
+        <EntityTypeShape EntityType="CDTModel.Capacitor" Width="1.5" PointX="0.75" PointY="23.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="CDTModel.CapacitorMnf" Width="1.5" PointX="3" PointY="24.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="CDTModel.Connector" Width="1.5" PointX="21.75" PointY="13.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="CDTModel.ConnectorMnf" Width="1.5" PointX="24" PointY="14.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="CDTModel.Diode" Width="1.5" PointX="12.75" PointY="21" IsExpanded="true" />
+        <EntityTypeShape EntityType="CDTModel.DiodeMnf" Width="1.5" PointX="15" PointY="22" IsExpanded="true" />
+        <EntityTypeShape EntityType="CDTModel.Fuse" Width="1.5" PointX="18.75" PointY="20" IsExpanded="true" />
+        <EntityTypeShape EntityType="CDTModel.FuseMnf" Width="1.5" PointX="21" PointY="21" IsExpanded="true" />
+        <EntityTypeShape EntityType="CDTModel.IC" Width="1.5" PointX="19.75" PointY="8.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="CDTModel.ICMnf" Width="1.5" PointX="22" PointY="9.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="CDTModel.Inductor" Width="1.5" PointX="19.75" PointY="1.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="CDTModel.InductorMnf" Width="1.5" PointX="22" PointY="2.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="CDTModel.Mechanical" Width="1.5" PointX="16.75" PointY="16" IsExpanded="true" />
+        <EntityTypeShape EntityType="CDTModel.MechanicalMnf" Width="1.5" PointX="19" PointY="16.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="CDTModel.Misc" Width="1.5" PointX="10.75" PointY="17" IsExpanded="true" />
+        <EntityTypeShape EntityType="CDTModel.MiscMnf" Width="1.5" PointX="13" PointY="17.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="CDTModel.Optoelectronic" Width="1.5" PointX="5.75" PointY="16.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="CDTModel.OptoelectronicsMnf" Width="1.5" PointX="8" PointY="17.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="CDTModel.Oscillator" Width="1.5" PointX="14.75" PointY="11" IsExpanded="true" />
+        <EntityTypeShape EntityType="CDTModel.OscillatorsMnf" Width="1.5" PointX="17" PointY="11.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="CDTModel.Potentiometer" Width="1.5" PointX="14.75" PointY="6" IsExpanded="true" />
+        <EntityTypeShape EntityType="CDTModel.PotentiometerMnf" Width="1.5" PointX="17" PointY="6.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="CDTModel.Relay" Width="1.5" PointX="12.75" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="CDTModel.RelayMnf" Width="1.5" PointX="15" PointY="2" IsExpanded="true" />
+        <EntityTypeShape EntityType="CDTModel.Resistor" Width="1.5" PointX="0.75" PointY="12" IsExpanded="true" />
+        <EntityTypeShape EntityType="CDTModel.ResistorMnf" Width="1.5" PointX="3" PointY="13" IsExpanded="true" />
+        <EntityTypeShape EntityType="CDTModel.Switch" Width="1.5" PointX="9.75" PointY="10" IsExpanded="true" />
+        <EntityTypeShape EntityType="CDTModel.SwitchMnf" Width="1.5" PointX="12" PointY="10.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="CDTModel.Thermistor" Width="1.5" PointX="7.75" PointY="6" IsExpanded="true" />
+        <EntityTypeShape EntityType="CDTModel.ThermistorMnf" Width="1.5" PointX="10" PointY="6.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="CDTModel.Transformer" Width="1.5" PointX="5.75" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="CDTModel.TransformerMnf" Width="1.5" PointX="8" PointY="1.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CDTModel.Transistor" Width="1.5" PointX="2.75" PointY="5.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="CDTModel.TransistorMnf" Width="1.5" PointX="5" PointY="6.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="CDTModel.User" Width="1.5" PointX="5.75" PointY="10.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CDTModel.Wire" Width="1.5" PointX="0.75" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="CDTModel.WiresMnf" Width="1.5" PointX="3" PointY="1.125" IsExpanded="true" />
+        <AssociationConnector Association="CDTModel.FK_CapacitorMnf_Capacitor" ManuallyRouted="false" />
+        <AssociationConnector Association="CDTModel.FK_ConnectorMnf_Connector" ManuallyRouted="false" />
+        <AssociationConnector Association="CDTModel.FK_DiodeMnf_Diode" ManuallyRouted="false" />
+        <AssociationConnector Association="CDTModel.FK_FuseMnf_Fuse" ManuallyRouted="false" />
+        <AssociationConnector Association="CDTModel.FK_ICMnf_IC" ManuallyRouted="false" />
+        <AssociationConnector Association="CDTModel.FK_InductorMnf_Inductor" ManuallyRouted="false" />
+        <AssociationConnector Association="CDTModel.FK_MechanicalMnf_Mechanical" ManuallyRouted="false" />
+        <AssociationConnector Association="CDTModel.FK_MiscMnf_Misc" ManuallyRouted="false" />
+        <AssociationConnector Association="CDTModel.FK_OptoelectronicsMnf_Optoelectronics" ManuallyRouted="false" />
+        <AssociationConnector Association="CDTModel.FK_OscillatorsMnf_Oscillators" ManuallyRouted="false" />
+        <AssociationConnector Association="CDTModel.FK_PotentiometerMnf_Potentiometer" ManuallyRouted="false" />
+        <AssociationConnector Association="CDTModel.FK_RelayMnf_Relay" ManuallyRouted="false" />
+        <AssociationConnector Association="CDTModel.FK_ResistorMnf_Resistor" ManuallyRouted="false" />
+        <AssociationConnector Association="CDTModel.FK_SwitchMnf_Switch" ManuallyRouted="false" />
+        <AssociationConnector Association="CDTModel.FK_ThermistorMnf_Thermistor" ManuallyRouted="false" />
+        <AssociationConnector Association="CDTModel.FK_TransformerMnf_Transformer" ManuallyRouted="false" />
+        <AssociationConnector Association="CDTModel.FK_TransistorMnf_Transistor" ManuallyRouted="false" />
+        <AssociationConnector Association="CDTModel.FK_WiresMnf_Wires" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

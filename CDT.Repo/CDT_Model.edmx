@@ -1,0 +1,2686 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="CDTModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Capacitor">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="BOM Number" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="BU" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Product line" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Site" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Thermo Number" Type="int" Nullable="false" />
+          <Property Name="Item Description" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Category" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Part" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Part Type" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Technology" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Dielectric for Ceramic" Type="nvarchar" MaxLength="50" />
+          <Property Name="Value" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Tol" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Temperature" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Voltage" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="ESR" Type="nvarchar(max)" />
+          <Property Name="Mounting" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Dimensions" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Lead Spacing" Type="float" />
+          <Property Name="SMD package" Type="float" />
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+        </EntityType>
+        <EntityType Name="CapacitorMnf">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="Mfr. Name" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Mfr. Part Number" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Part Status" Type="nvarchar" MaxLength="50" />
+          <Property Name="RoHS Status" Type="nvarchar" MaxLength="50" />
+          <Property Name="Comments" Type="nvarchar(max)" />
+          <Property Name="Type" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="M_Id" Type="int" Nullable="false" />
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Connector">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="BOM Number" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="BU" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Product line" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Site" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Thermo Number" Type="int" Nullable="false" />
+          <Property Name="Item Description" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Category" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Part" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Part Type" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Contact Contact Type" Type="nvarchar(max)" />
+          <Property Name="Contact Surface" Type="nvarchar" MaxLength="50" />
+          <Property Name="Max &#xD;&#xA;Temperature" Type="nvarchar(max)" />
+          <Property Name="No of &#xD;&#xA;Rows" Type="int" />
+          <Property Name="No of &#xD;&#xA;Positions" Type="int" />
+          <Property Name="Connector &#xD;&#xA;Orientation" Type="nvarchar(max)" />
+          <Property Name="Contact &#xD;&#xA;Rating" Type="nvarchar(max)" />
+          <Property Name="Voltage &#xD;&#xA;Rating" Type="nvarchar(max)" />
+          <Property Name="Package" Type="nvarchar(max)" />
+          <Property Name="Pin Spacing &#xD;&#xA;or pitch" Type="float" />
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+        </EntityType>
+        <EntityType Name="ConnectorMnf">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Mfr. Name" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Mfr. Part Number" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Part Status" Type="nvarchar" MaxLength="50" />
+          <Property Name="RoHS Status" Type="nvarchar" MaxLength="50" />
+          <Property Name="Comments" Type="nvarchar(max)" />
+          <Property Name="Type" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="M_Id" Type="int" Nullable="false" />
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Diode">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="BOM Number" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="BU" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Product line" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Site" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Thermo Number" Type="int" Nullable="false" />
+          <Property Name="Item Description" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Category" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Part" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Part Type" Type="nvarchar(max)" />
+          <Property Name="DC Voltage" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Forward Voltage" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Forward Surge Current" Type="nvarchar" MaxLength="50" />
+          <Property Name="Power Dissipation" Type="nvarchar" MaxLength="50" />
+          <Property Name="Mounting Style" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Package" Type="nvarchar(max)" />
+          <Property Name="Operating Temperature" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Dimensions" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+        </EntityType>
+        <EntityType Name="DiodeMnf">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Mfr. Name" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Mfr. Part Number" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Part Status" Type="nvarchar" MaxLength="50" />
+          <Property Name="RoHS Status" Type="nvarchar" MaxLength="50" />
+          <Property Name="Comments" Type="nvarchar(max)" />
+          <Property Name="Type" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="M_Id" Type="int" Nullable="false" />
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Fuse">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="BOM Number" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="BU" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Product line" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Site" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Thermo Number" Type="int" Nullable="false" />
+          <Property Name="Item Description" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Category" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Part" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Part Type" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Material" Type="nvarchar(max)" />
+          <Property Name="Blow speed" Type="nvarchar" MaxLength="50" />
+          <Property Name="Rated Current" Type="nvarchar" MaxLength="50" />
+          <Property Name="Volt" Type="nvarchar" MaxLength="50" />
+          <Property Name="Mounting Style" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Package size" Type="nvarchar" MaxLength="50" />
+          <Property Name="Dimension" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Lead Spacing(" Type="float" />
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+        </EntityType>
+        <EntityType Name="FuseMnf">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Mfr. Name" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Mfr. Part Number" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Part Status" Type="nvarchar" MaxLength="50" />
+          <Property Name="RoHS Status" Type="nvarchar" MaxLength="50" />
+          <Property Name="Comments" Type="nvarchar(max)" />
+          <Property Name="Type" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="M_Id" Type="int" Nullable="false" />
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+        </EntityType>
+        <EntityType Name="IC">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="BOM Number" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="BU" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Product line" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Site" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Thermo Number" Type="int" Nullable="false" />
+          <Property Name="Item Description" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Category" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Part" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Part Type" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Technology" Type="nvarchar" MaxLength="50" />
+          <Property Name="Supply Voltage" Type="nvarchar" MaxLength="50" />
+          <Property Name="Memory &#xD;&#xA;organisation" Type="nvarchar(max)" />
+          <Property Name="Memory &#xD;&#xA;access Time" Type="nvarchar" MaxLength="50" />
+          <Property Name="Mouting" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Package" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Lead Spacing(Inch)" Type="float" />
+          <Property Name="No &#xD;&#xA;of pins" Type="int" />
+          <Property Name="Operating&#xD;&#xA;Temperature" Type="nvarchar(max)" />
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+        </EntityType>
+        <EntityType Name="ICMnf">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Mfr. Name" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Mfr. Part Number" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Part Status" Type="nvarchar" MaxLength="50" />
+          <Property Name="RoHS Status" Type="nvarchar" MaxLength="50" />
+          <Property Name="Comments" Type="nvarchar(max)" />
+          <Property Name="Type" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="M_Id" Type="int" Nullable="false" />
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Inductor">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="BOM Number" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="BU" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Product line" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Site" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Thermo Number" Type="int" Nullable="false" />
+          <Property Name="Item Description" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Category" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Part" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Part Type" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Construction" Type="nvarchar(max)" />
+          <Property Name="Operating Temperature" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Impedence" Type="nvarchar" MaxLength="50" />
+          <Property Name="Inductance" Type="nvarchar" MaxLength="50" />
+          <Property Name="Capacitance" Type="nvarchar" MaxLength="50" />
+          <Property Name="Tol" Type="nvarchar" MaxLength="50" />
+          <Property Name="Current Rating" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="DC Resistance" Type="nvarchar" MaxLength="50" />
+          <Property Name="Shielding" Type="nvarchar" MaxLength="50" />
+          <Property Name="Frequency" Type="nvarchar" MaxLength="50" />
+          <Property Name="Mounting" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Package for SMD" Type="nvarchar" MaxLength="50" />
+          <Property Name="Dimensions" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+        </EntityType>
+        <EntityType Name="InductorMnf">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Mfr. Name" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Mfr. Part Number" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Part Status" Type="nvarchar" MaxLength="50" />
+          <Property Name="RoHS Status" Type="nvarchar" MaxLength="50" />
+          <Property Name="Comments" Type="nvarchar(max)" />
+          <Property Name="Type" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="M_Id" Type="int" Nullable="false" />
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Mechanical">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="BOM Number" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="BU" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Product line" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Site" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Thermo Number" Type="int" Nullable="false" />
+          <Property Name="Item Description" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Category" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Part" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Part Type" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+        </EntityType>
+        <EntityType Name="MechanicalMnf">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Mfr. Name" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Mfr. Part Number" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Part Status" Type="nvarchar" MaxLength="50" />
+          <Property Name="RoHS Status" Type="nvarchar" MaxLength="50" />
+          <Property Name="Comments" Type="nvarchar(max)" />
+          <Property Name="Type" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="M_Id" Type="int" Nullable="false" />
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Misc">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="BOM Number" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="BU" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Product line" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Site" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Thermo Number" Type="int" Nullable="false" />
+          <Property Name="Item Description" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Category" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Part" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Part Type" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+        </EntityType>
+        <EntityType Name="MiscMnf">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Mfr. Name" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Mfr. Part Number" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Part Status" Type="nvarchar" MaxLength="50" />
+          <Property Name="RoHS Status" Type="nvarchar" MaxLength="50" />
+          <Property Name="Comments" Type="nvarchar(max)" />
+          <Property Name="Type" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="M_Id" Type="int" Nullable="false" />
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Optoelectronics">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="BOM Number" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="BU" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Product line" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Site" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Thermo Number" Type="int" Nullable="false" />
+          <Property Name="Item Description" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Category" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Part" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Part Type" Type="nvarchar(max)" />
+          <Property Name="Function" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Detectable&#xD;&#xA;light Color" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Voltage" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Forward &#xD;&#xA;Current" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Power" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Luminous &#xD;&#xA;Intensity" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Peak Wave&#xD;&#xA;length" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Dominant &#xD;&#xA;Wavelength" Type="nvarchar" MaxLength="50" />
+          <Property Name="Reverse &#xD;&#xA;Voltage" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Viewing Angle" Type="float" />
+          <Property Name="Mounting Style" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Package" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Operating&#xD;&#xA;Temperature" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+        </EntityType>
+        <EntityType Name="OptoelectronicsMnf">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Mfr. Name" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Mfr. Part Number" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Part Status" Type="nvarchar" MaxLength="50" />
+          <Property Name="RoHS Status" Type="nvarchar" MaxLength="50" />
+          <Property Name="Comments" Type="nvarchar(max)" />
+          <Property Name="Type" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="M_Id" Type="int" Nullable="false" />
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Oscillators">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="BOM Number" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="BU" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Product line" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Site" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Thermo Number" Type="int" Nullable="false" />
+          <Property Name="Item Description" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Category" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Part" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Part Type" Type="nvarchar(max)" />
+          <Property Name="Frequency" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Freq. &#xD;&#xA;Tolerance" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Frequency &#xD;&#xA;Stability" Type="nvarchar" MaxLength="50" />
+          <Property Name="Load &#xD;&#xA;Capacitance" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Mounting" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Operating &#xD;&#xA;Temp" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Dimensions" Type="nvarchar(max)" />
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+        </EntityType>
+        <EntityType Name="OscillatorsMnf">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Mfr. Name" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Mfr. Part Number" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Part Status" Type="nvarchar" MaxLength="50" />
+          <Property Name="RoHS Status" Type="nvarchar" MaxLength="50" />
+          <Property Name="Comments" Type="nvarchar(max)" />
+          <Property Name="Type" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="M_Id" Type="int" Nullable="false" />
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Potentiometer">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="BOM Number" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="BU" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Product line" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Site" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Thermo Number" Type="int" Nullable="false" />
+          <Property Name="Item Description" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Category" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Part" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Part Type" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+        </EntityType>
+        <EntityType Name="PotentiometerMnf">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Mfr. Name" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Mfr. Part Number" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Part Status" Type="nvarchar" MaxLength="50" />
+          <Property Name="RoHS Status" Type="nvarchar" MaxLength="50" />
+          <Property Name="Comments" Type="nvarchar(max)" />
+          <Property Name="Type" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="M_Id" Type="int" Nullable="false" />
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Relay">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="BOM Number" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="BU" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Product line" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Site" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Thermo Number" Type="int" Nullable="false" />
+          <Property Name="Item Description" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Category" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Part" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Part Type" Type="nvarchar(max)" />
+          <Property Name="Form &#xD;&#xA;Factor" Type="nvarchar(max)" />
+          <Property Name="Current &#xD;&#xA;Rating A" Type="float" Nullable="false" />
+          <Property Name="Coil &#xD;&#xA;Rating" Type="nvarchar" MaxLength="50" />
+          <Property Name="Coil &#xD;&#xA;Resistance" Type="float" />
+          <Property Name="Contact &#xD;&#xA;Configuration" Type="nvarchar(max)" />
+          <Property Name="Operating &#xD;&#xA;Temperature" Type="nvarchar(max)" />
+          <Property Name="Mounting &#xD;&#xA;Style" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Dimensions" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+        </EntityType>
+        <EntityType Name="RelayMnf">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Mfr. Name" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Mfr. Part Number" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Part Status" Type="nvarchar" MaxLength="50" />
+          <Property Name="RoHS Status" Type="nvarchar" MaxLength="50" />
+          <Property Name="Comments" Type="nvarchar(max)" />
+          <Property Name="Type" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="M_Id" Type="int" Nullable="false" />
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Resistor">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="BOM Number" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="BU" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Product line" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Site" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Thermo Number" Type="int" Nullable="false" />
+          <Property Name="Item Description" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Category" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Part" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Part Type" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Technology" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Value" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Tol" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Temperature &#xD;&#xA;Coefficent" Type="nvarchar" MaxLength="50" />
+          <Property Name="Power" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Mounting &#xD;&#xA;Style" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Package" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Dimensions" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+        </EntityType>
+        <EntityType Name="ResistorMnf">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Mfr. Name" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Mfr. Part Number" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Part Status" Type="nvarchar" MaxLength="50" />
+          <Property Name="RoHS Status" Type="nvarchar" MaxLength="50" />
+          <Property Name="Comments" Type="nvarchar(max)" />
+          <Property Name="Type" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="M_Id" Type="int" Nullable="false" />
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Switch">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="BOM Number" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="BU" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Product line" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Site" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Thermo Number" Type="int" Nullable="false" />
+          <Property Name="Item Description" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Category" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Part" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Part Type" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Endurance" Type="nvarchar(max)" />
+          <Property Name="Form Factor" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Current rating" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Illumination" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Voltage" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Mounting style" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Dimensions" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+        </EntityType>
+        <EntityType Name="SwitchMnf">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Mfr. Name" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Mfr. Part Number" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Part Status" Type="nvarchar" MaxLength="50" />
+          <Property Name="RoHS Status" Type="nvarchar" MaxLength="50" />
+          <Property Name="Comments" Type="nvarchar(max)" />
+          <Property Name="Type" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="M_Id" Type="int" Nullable="false" />
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Thermistor">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="BOM Number" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="BU" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Product line" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Site" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Thermo Number" Type="int" Nullable="false" />
+          <Property Name="Item Description" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Category" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Part" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Part Type" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+        </EntityType>
+        <EntityType Name="ThermistorMnf">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Mfr. Name" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Mfr. Part Number" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Part Status" Type="nvarchar" MaxLength="50" />
+          <Property Name="RoHS Status" Type="nvarchar" MaxLength="50" />
+          <Property Name="Comments" Type="nvarchar(max)" />
+          <Property Name="Type" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="M_Id" Type="int" Nullable="false" />
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Transformer">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="BOM Number" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="BU" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Product line" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Site" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Thermo Number" Type="int" Nullable="false" />
+          <Property Name="Item Description" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Category" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Part" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Part Type" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Turns Ratio" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Power rating" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Mounting Style" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Max.Temp" Type="nvarchar" MaxLength="50" />
+          <Property Name="Dimensions" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+        </EntityType>
+        <EntityType Name="TransformerMnf">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Mfr. Name" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Mfr. Part Number" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Part Status" Type="nvarchar" MaxLength="50" />
+          <Property Name="RoHS Status" Type="nvarchar" MaxLength="50" />
+          <Property Name="Comments" Type="nvarchar(max)" />
+          <Property Name="Type" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="M_Id" Type="int" Nullable="false" />
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Transistor">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="BOM Number" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="BU" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Product line" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Site" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Thermo Number" Type="int" Nullable="false" />
+          <Property Name="Item Description" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Category" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Part" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Part Type" Type="nvarchar(max)" />
+          <Property Name="Technology" Type="nvarchar" MaxLength="50" />
+          <Property Name="Gain Band &#xD;&#xA;width(MhZ)" Type="float" />
+          <Property Name="Material" Type="nvarchar" MaxLength="50" />
+          <Property Name="VCE&#xD;&#xA;(Volts)" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Current&#xD;&#xA;(Amps)" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Power&#xD;&#xA;(Watts)" Type="nvarchar" MaxLength="50" />
+          <Property Name="Application" Type="nvarchar(max)" />
+          <Property Name="Mounting" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Package" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Temperature" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+        </EntityType>
+        <EntityType Name="TransistorMnf">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Mfr. Name" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Mfr. Part Number" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Part Status" Type="nvarchar" MaxLength="50" />
+          <Property Name="RoHS Status" Type="nvarchar" MaxLength="50" />
+          <Property Name="Comments" Type="nvarchar(max)" />
+          <Property Name="Type" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="M_Id" Type="int" Nullable="false" />
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Users">
+          <Key>
+            <PropertyRef Name="SNo" />
+          </Key>
+          <Property Name="SNo" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="FirstName" Type="nvarchar" MaxLength="255" Nullable="false" />
+          <Property Name="LastName" Type="nvarchar" MaxLength="255" />
+          <Property Name="Email" Type="nvarchar" MaxLength="255" Nullable="false" />
+          <Property Name="PhoneNumber" Type="numeric" Precision="18" Scale="0" Nullable="false" />
+          <Property Name="Address" Type="nvarchar" MaxLength="255" Nullable="false" />
+          <Property Name="Password" Type="nvarchar" MaxLength="255" Nullable="false" />
+          <Property Name="Sex" Type="nchar" MaxLength="10" Nullable="false" />
+          <Property Name="Age" Type="nchar" MaxLength="10" Nullable="false" />
+          <Property Name="PasswordHash" Type="nvarchar" MaxLength="255" />
+          <Property Name="CreatedDateTime" Type="datetime" />
+          <Property Name="IsActive" Type="nvarchar" MaxLength="5" />
+          <Property Name="IsDeleted" Type="nvarchar" MaxLength="5" />
+        </EntityType>
+        <EntityType Name="Wires">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="BOM Number" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="BU" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Product line" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Site" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Thermo Number" Type="int" Nullable="false" />
+          <Property Name="Item Description" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Category" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Part" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Part Type" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+        </EntityType>
+        <EntityType Name="WiresMnf">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Mfr. Name" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Mfr. Part Number" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Part Status" Type="nvarchar" MaxLength="50" />
+          <Property Name="RoHS Status" Type="nvarchar" MaxLength="50" />
+          <Property Name="Comments" Type="nvarchar(max)" />
+          <Property Name="Type" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="M_Id" Type="int" Nullable="false" />
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+        </EntityType>
+        <Association Name="FK_CapacitorMnf_Capacitor">
+          <End Role="Capacitor" Type="Self.Capacitor" Multiplicity="1" />
+          <End Role="CapacitorMnf" Type="Self.CapacitorMnf" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Capacitor">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="CapacitorMnf">
+              <PropertyRef Name="M_Id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ConnectorMnf_Connector">
+          <End Role="Connector" Type="Self.Connector" Multiplicity="1" />
+          <End Role="ConnectorMnf" Type="Self.ConnectorMnf" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Connector">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="ConnectorMnf">
+              <PropertyRef Name="M_Id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_DiodeMnf_Diode">
+          <End Role="Diode" Type="Self.Diode" Multiplicity="1" />
+          <End Role="DiodeMnf" Type="Self.DiodeMnf" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Diode">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="DiodeMnf">
+              <PropertyRef Name="M_Id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_FuseMnf_Fuse">
+          <End Role="Fuse" Type="Self.Fuse" Multiplicity="1" />
+          <End Role="FuseMnf" Type="Self.FuseMnf" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Fuse">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="FuseMnf">
+              <PropertyRef Name="M_Id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ICMnf_IC">
+          <End Role="IC" Type="Self.IC" Multiplicity="1" />
+          <End Role="ICMnf" Type="Self.ICMnf" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="IC">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="ICMnf">
+              <PropertyRef Name="M_Id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_InductorMnf_Inductor">
+          <End Role="Inductor" Type="Self.Inductor" Multiplicity="1" />
+          <End Role="InductorMnf" Type="Self.InductorMnf" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Inductor">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="InductorMnf">
+              <PropertyRef Name="M_Id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MechanicalMnf_Mechanical">
+          <End Role="Mechanical" Type="Self.Mechanical" Multiplicity="1" />
+          <End Role="MechanicalMnf" Type="Self.MechanicalMnf" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Mechanical">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="MechanicalMnf">
+              <PropertyRef Name="M_Id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MiscMnf_Misc">
+          <End Role="Misc" Type="Self.Misc" Multiplicity="1" />
+          <End Role="MiscMnf" Type="Self.MiscMnf" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Misc">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="MiscMnf">
+              <PropertyRef Name="M_Id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_OptoelectronicsMnf_Optoelectronics">
+          <End Role="Optoelectronics" Type="Self.Optoelectronics" Multiplicity="1" />
+          <End Role="OptoelectronicsMnf" Type="Self.OptoelectronicsMnf" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Optoelectronics">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="OptoelectronicsMnf">
+              <PropertyRef Name="M_Id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_OscillatorsMnf_Oscillators">
+          <End Role="Oscillators" Type="Self.Oscillators" Multiplicity="1" />
+          <End Role="OscillatorsMnf" Type="Self.OscillatorsMnf" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Oscillators">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="OscillatorsMnf">
+              <PropertyRef Name="M_Id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PotentiometerMnf_Potentiometer">
+          <End Role="Potentiometer" Type="Self.Potentiometer" Multiplicity="1" />
+          <End Role="PotentiometerMnf" Type="Self.PotentiometerMnf" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Potentiometer">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="PotentiometerMnf">
+              <PropertyRef Name="M_Id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_RelayMnf_Relay">
+          <End Role="Relay" Type="Self.Relay" Multiplicity="1" />
+          <End Role="RelayMnf" Type="Self.RelayMnf" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Relay">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="RelayMnf">
+              <PropertyRef Name="M_Id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ResistorMnf_Resistor">
+          <End Role="Resistor" Type="Self.Resistor" Multiplicity="1" />
+          <End Role="ResistorMnf" Type="Self.ResistorMnf" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Resistor">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="ResistorMnf">
+              <PropertyRef Name="M_Id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_SwitchMnf_Switch">
+          <End Role="Switch" Type="Self.Switch" Multiplicity="1" />
+          <End Role="SwitchMnf" Type="Self.SwitchMnf" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Switch">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="SwitchMnf">
+              <PropertyRef Name="M_Id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ThermistorMnf_Thermistor">
+          <End Role="Thermistor" Type="Self.Thermistor" Multiplicity="1" />
+          <End Role="ThermistorMnf" Type="Self.ThermistorMnf" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Thermistor">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="ThermistorMnf">
+              <PropertyRef Name="M_Id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TransformerMnf_Transformer">
+          <End Role="Transformer" Type="Self.Transformer" Multiplicity="1" />
+          <End Role="TransformerMnf" Type="Self.TransformerMnf" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Transformer">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="TransformerMnf">
+              <PropertyRef Name="M_Id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TransistorMnf_Transistor">
+          <End Role="Transistor" Type="Self.Transistor" Multiplicity="1" />
+          <End Role="TransistorMnf" Type="Self.TransistorMnf" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Transistor">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="TransistorMnf">
+              <PropertyRef Name="M_Id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_WiresMnf_Wires">
+          <End Role="Wires" Type="Self.Wires" Multiplicity="1" />
+          <End Role="WiresMnf" Type="Self.WiresMnf" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Wires">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="WiresMnf">
+              <PropertyRef Name="M_Id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="CDTModelStoreContainer">
+          <EntitySet Name="Capacitor" EntityType="Self.Capacitor" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="CapacitorMnf" EntityType="Self.CapacitorMnf" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Connector" EntityType="Self.Connector" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ConnectorMnf" EntityType="Self.ConnectorMnf" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Diode" EntityType="Self.Diode" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="DiodeMnf" EntityType="Self.DiodeMnf" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Fuse" EntityType="Self.Fuse" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="FuseMnf" EntityType="Self.FuseMnf" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="IC" EntityType="Self.IC" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ICMnf" EntityType="Self.ICMnf" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Inductor" EntityType="Self.Inductor" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="InductorMnf" EntityType="Self.InductorMnf" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Mechanical" EntityType="Self.Mechanical" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="MechanicalMnf" EntityType="Self.MechanicalMnf" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Misc" EntityType="Self.Misc" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="MiscMnf" EntityType="Self.MiscMnf" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Optoelectronics" EntityType="Self.Optoelectronics" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="OptoelectronicsMnf" EntityType="Self.OptoelectronicsMnf" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Oscillators" EntityType="Self.Oscillators" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="OscillatorsMnf" EntityType="Self.OscillatorsMnf" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Potentiometer" EntityType="Self.Potentiometer" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="PotentiometerMnf" EntityType="Self.PotentiometerMnf" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Relay" EntityType="Self.Relay" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="RelayMnf" EntityType="Self.RelayMnf" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Resistor" EntityType="Self.Resistor" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ResistorMnf" EntityType="Self.ResistorMnf" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Switch" EntityType="Self.Switch" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="SwitchMnf" EntityType="Self.SwitchMnf" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Thermistor" EntityType="Self.Thermistor" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ThermistorMnf" EntityType="Self.ThermistorMnf" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Transformer" EntityType="Self.Transformer" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TransformerMnf" EntityType="Self.TransformerMnf" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Transistor" EntityType="Self.Transistor" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TransistorMnf" EntityType="Self.TransistorMnf" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Users" EntityType="Self.Users" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Wires" EntityType="Self.Wires" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="WiresMnf" EntityType="Self.WiresMnf" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_CapacitorMnf_Capacitor" Association="Self.FK_CapacitorMnf_Capacitor">
+            <End Role="Capacitor" EntitySet="Capacitor" />
+            <End Role="CapacitorMnf" EntitySet="CapacitorMnf" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ConnectorMnf_Connector" Association="Self.FK_ConnectorMnf_Connector">
+            <End Role="Connector" EntitySet="Connector" />
+            <End Role="ConnectorMnf" EntitySet="ConnectorMnf" />
+          </AssociationSet>
+          <AssociationSet Name="FK_DiodeMnf_Diode" Association="Self.FK_DiodeMnf_Diode">
+            <End Role="Diode" EntitySet="Diode" />
+            <End Role="DiodeMnf" EntitySet="DiodeMnf" />
+          </AssociationSet>
+          <AssociationSet Name="FK_FuseMnf_Fuse" Association="Self.FK_FuseMnf_Fuse">
+            <End Role="Fuse" EntitySet="Fuse" />
+            <End Role="FuseMnf" EntitySet="FuseMnf" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ICMnf_IC" Association="Self.FK_ICMnf_IC">
+            <End Role="IC" EntitySet="IC" />
+            <End Role="ICMnf" EntitySet="ICMnf" />
+          </AssociationSet>
+          <AssociationSet Name="FK_InductorMnf_Inductor" Association="Self.FK_InductorMnf_Inductor">
+            <End Role="Inductor" EntitySet="Inductor" />
+            <End Role="InductorMnf" EntitySet="InductorMnf" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MechanicalMnf_Mechanical" Association="Self.FK_MechanicalMnf_Mechanical">
+            <End Role="Mechanical" EntitySet="Mechanical" />
+            <End Role="MechanicalMnf" EntitySet="MechanicalMnf" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MiscMnf_Misc" Association="Self.FK_MiscMnf_Misc">
+            <End Role="Misc" EntitySet="Misc" />
+            <End Role="MiscMnf" EntitySet="MiscMnf" />
+          </AssociationSet>
+          <AssociationSet Name="FK_OptoelectronicsMnf_Optoelectronics" Association="Self.FK_OptoelectronicsMnf_Optoelectronics">
+            <End Role="Optoelectronics" EntitySet="Optoelectronics" />
+            <End Role="OptoelectronicsMnf" EntitySet="OptoelectronicsMnf" />
+          </AssociationSet>
+          <AssociationSet Name="FK_OscillatorsMnf_Oscillators" Association="Self.FK_OscillatorsMnf_Oscillators">
+            <End Role="Oscillators" EntitySet="Oscillators" />
+            <End Role="OscillatorsMnf" EntitySet="OscillatorsMnf" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PotentiometerMnf_Potentiometer" Association="Self.FK_PotentiometerMnf_Potentiometer">
+            <End Role="Potentiometer" EntitySet="Potentiometer" />
+            <End Role="PotentiometerMnf" EntitySet="PotentiometerMnf" />
+          </AssociationSet>
+          <AssociationSet Name="FK_RelayMnf_Relay" Association="Self.FK_RelayMnf_Relay">
+            <End Role="Relay" EntitySet="Relay" />
+            <End Role="RelayMnf" EntitySet="RelayMnf" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ResistorMnf_Resistor" Association="Self.FK_ResistorMnf_Resistor">
+            <End Role="Resistor" EntitySet="Resistor" />
+            <End Role="ResistorMnf" EntitySet="ResistorMnf" />
+          </AssociationSet>
+          <AssociationSet Name="FK_SwitchMnf_Switch" Association="Self.FK_SwitchMnf_Switch">
+            <End Role="Switch" EntitySet="Switch" />
+            <End Role="SwitchMnf" EntitySet="SwitchMnf" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ThermistorMnf_Thermistor" Association="Self.FK_ThermistorMnf_Thermistor">
+            <End Role="Thermistor" EntitySet="Thermistor" />
+            <End Role="ThermistorMnf" EntitySet="ThermistorMnf" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TransformerMnf_Transformer" Association="Self.FK_TransformerMnf_Transformer">
+            <End Role="Transformer" EntitySet="Transformer" />
+            <End Role="TransformerMnf" EntitySet="TransformerMnf" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TransistorMnf_Transistor" Association="Self.FK_TransistorMnf_Transistor">
+            <End Role="Transistor" EntitySet="Transistor" />
+            <End Role="TransistorMnf" EntitySet="TransistorMnf" />
+          </AssociationSet>
+          <AssociationSet Name="FK_WiresMnf_Wires" Association="Self.FK_WiresMnf_Wires">
+            <End Role="Wires" EntitySet="Wires" />
+            <End Role="WiresMnf" EntitySet="WiresMnf" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="CDTModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Capacitor">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="BOM_Number" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="BU" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Product_line" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Site" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Thermo_Number" Type="Int32" Nullable="false" />
+          <Property Name="Item_Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Category" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Part" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Part_Type" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Technology" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Dielectric_for_Ceramic" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Value" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Tol" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Temperature" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Voltage" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="ESR" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Mounting" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Dimensions" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Lead_Spacing" Type="Double" />
+          <Property Name="SMD_package" Type="Double" />
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <NavigationProperty Name="CapacitorMnfs" Relationship="Self.FK_CapacitorMnf_Capacitor" FromRole="Capacitor" ToRole="CapacitorMnf" />
+        </EntityType>
+        <EntityType Name="CapacitorMnf">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="Mfr__Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Mfr__Part_Number" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Part_Status" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="RoHS_Status" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Comments" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Type" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="M_Id" Type="Int32" Nullable="false" />
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <NavigationProperty Name="Capacitor" Relationship="Self.FK_CapacitorMnf_Capacitor" FromRole="CapacitorMnf" ToRole="Capacitor" />
+        </EntityType>
+        <EntityType Name="Connector">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="BOM_Number" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="BU" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Product_line" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Site" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Thermo_Number" Type="Int32" Nullable="false" />
+          <Property Name="Item_Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Category" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Part" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Part_Type" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Contact_Contact_Type" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Contact_Surface" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Max___Temperature" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="No_of___Rows" Type="Int32" />
+          <Property Name="No_of___Positions" Type="Int32" />
+          <Property Name="Connector___Orientation" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Contact___Rating" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Voltage___Rating" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Package" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Pin_Spacing___or_pitch" Type="Double" />
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <NavigationProperty Name="ConnectorMnfs" Relationship="Self.FK_ConnectorMnf_Connector" FromRole="Connector" ToRole="ConnectorMnf" />
+        </EntityType>
+        <EntityType Name="ConnectorMnf">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Mfr__Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Mfr__Part_Number" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Part_Status" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="RoHS_Status" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Comments" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Type" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="M_Id" Type="Int32" Nullable="false" />
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <NavigationProperty Name="Connector" Relationship="Self.FK_ConnectorMnf_Connector" FromRole="ConnectorMnf" ToRole="Connector" />
+        </EntityType>
+        <EntityType Name="Diode">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="BOM_Number" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="BU" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Product_line" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Site" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Thermo_Number" Type="Int32" Nullable="false" />
+          <Property Name="Item_Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Category" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Part" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Part_Type" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="DC_Voltage" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Forward_Voltage" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Forward_Surge_Current" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Power_Dissipation" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Mounting_Style" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Package" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Operating_Temperature" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Dimensions" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <NavigationProperty Name="DiodeMnfs" Relationship="Self.FK_DiodeMnf_Diode" FromRole="Diode" ToRole="DiodeMnf" />
+        </EntityType>
+        <EntityType Name="DiodeMnf">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Mfr__Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Mfr__Part_Number" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Part_Status" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="RoHS_Status" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Comments" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Type" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="M_Id" Type="Int32" Nullable="false" />
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <NavigationProperty Name="Diode" Relationship="Self.FK_DiodeMnf_Diode" FromRole="DiodeMnf" ToRole="Diode" />
+        </EntityType>
+        <EntityType Name="Fuse">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="BOM_Number" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="BU" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Product_line" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Site" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Thermo_Number" Type="Int32" Nullable="false" />
+          <Property Name="Item_Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Category" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Part" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Part_Type" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Material" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Blow_speed" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Rated_Current" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Volt" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Mounting_Style" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Package_size" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Dimension" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Lead_Spacing_" Type="Double" />
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <NavigationProperty Name="FuseMnfs" Relationship="Self.FK_FuseMnf_Fuse" FromRole="Fuse" ToRole="FuseMnf" />
+        </EntityType>
+        <EntityType Name="FuseMnf">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Mfr__Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Mfr__Part_Number" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Part_Status" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="RoHS_Status" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Comments" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Type" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="M_Id" Type="Int32" Nullable="false" />
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <NavigationProperty Name="Fuse" Relationship="Self.FK_FuseMnf_Fuse" FromRole="FuseMnf" ToRole="Fuse" />
+        </EntityType>
+        <EntityType Name="IC">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="BOM_Number" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="BU" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Product_line" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Site" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Thermo_Number" Type="Int32" Nullable="false" />
+          <Property Name="Item_Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Category" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Part" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Part_Type" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Technology" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Supply_Voltage" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Memory___organisation" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Memory___access_Time" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Mouting" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Package" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Lead_Spacing_Inch_" Type="Double" />
+          <Property Name="No___of_pins" Type="Int32" />
+          <Property Name="Operating__Temperature" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <NavigationProperty Name="ICMnfs" Relationship="Self.FK_ICMnf_IC" FromRole="IC" ToRole="ICMnf" />
+        </EntityType>
+        <EntityType Name="ICMnf">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Mfr__Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Mfr__Part_Number" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Part_Status" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="RoHS_Status" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Comments" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Type" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="M_Id" Type="Int32" Nullable="false" />
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <NavigationProperty Name="IC" Relationship="Self.FK_ICMnf_IC" FromRole="ICMnf" ToRole="IC" />
+        </EntityType>
+        <EntityType Name="Inductor">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="BOM_Number" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="BU" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Product_line" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Site" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Thermo_Number" Type="Int32" Nullable="false" />
+          <Property Name="Item_Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Category" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Part" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Part_Type" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Construction" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Operating_Temperature" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Impedence" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Inductance" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Capacitance" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Tol" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Current_Rating" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="DC_Resistance" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Shielding" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Frequency" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Mounting" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Package_for_SMD" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Dimensions" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <NavigationProperty Name="InductorMnfs" Relationship="Self.FK_InductorMnf_Inductor" FromRole="Inductor" ToRole="InductorMnf" />
+        </EntityType>
+        <EntityType Name="InductorMnf">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Mfr__Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Mfr__Part_Number" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Part_Status" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="RoHS_Status" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Comments" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Type" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="M_Id" Type="Int32" Nullable="false" />
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <NavigationProperty Name="Inductor" Relationship="Self.FK_InductorMnf_Inductor" FromRole="InductorMnf" ToRole="Inductor" />
+        </EntityType>
+        <EntityType Name="Mechanical">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="BOM_Number" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="BU" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Product_line" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Site" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Thermo_Number" Type="Int32" Nullable="false" />
+          <Property Name="Item_Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Category" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Part" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Part_Type" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <NavigationProperty Name="MechanicalMnfs" Relationship="Self.FK_MechanicalMnf_Mechanical" FromRole="Mechanical" ToRole="MechanicalMnf" />
+        </EntityType>
+        <EntityType Name="MechanicalMnf">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Mfr__Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Mfr__Part_Number" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Part_Status" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="RoHS_Status" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Comments" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Type" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="M_Id" Type="Int32" Nullable="false" />
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <NavigationProperty Name="Mechanical" Relationship="Self.FK_MechanicalMnf_Mechanical" FromRole="MechanicalMnf" ToRole="Mechanical" />
+        </EntityType>
+        <EntityType Name="Misc">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="BOM_Number" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="BU" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Product_line" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Site" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Thermo_Number" Type="Int32" Nullable="false" />
+          <Property Name="Item_Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Category" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Part" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Part_Type" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <NavigationProperty Name="MiscMnfs" Relationship="Self.FK_MiscMnf_Misc" FromRole="Misc" ToRole="MiscMnf" />
+        </EntityType>
+        <EntityType Name="MiscMnf">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Mfr__Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Mfr__Part_Number" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Part_Status" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="RoHS_Status" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Comments" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Type" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="M_Id" Type="Int32" Nullable="false" />
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <NavigationProperty Name="Misc" Relationship="Self.FK_MiscMnf_Misc" FromRole="MiscMnf" ToRole="Misc" />
+        </EntityType>
+        <EntityType Name="Optoelectronic">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="BOM_Number" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="BU" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Product_line" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Site" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Thermo_Number" Type="Int32" Nullable="false" />
+          <Property Name="Item_Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Category" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Part" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Part_Type" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Function" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Detectable__light_Color" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Voltage" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Forward___Current" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Power" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Luminous___Intensity" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Peak_Wave__length" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Dominant___Wavelength" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Reverse___Voltage" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Viewing_Angle" Type="Double" />
+          <Property Name="Mounting_Style" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Package" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Operating__Temperature" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <NavigationProperty Name="OptoelectronicsMnfs" Relationship="Self.FK_OptoelectronicsMnf_Optoelectronics" FromRole="Optoelectronics" ToRole="OptoelectronicsMnf" />
+        </EntityType>
+        <EntityType Name="OptoelectronicsMnf">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Mfr__Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Mfr__Part_Number" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Part_Status" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="RoHS_Status" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Comments" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Type" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="M_Id" Type="Int32" Nullable="false" />
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <NavigationProperty Name="Optoelectronic" Relationship="Self.FK_OptoelectronicsMnf_Optoelectronics" FromRole="OptoelectronicsMnf" ToRole="Optoelectronics" />
+        </EntityType>
+        <EntityType Name="Oscillator">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="BOM_Number" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="BU" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Product_line" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Site" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Thermo_Number" Type="Int32" Nullable="false" />
+          <Property Name="Item_Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Category" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Part" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Part_Type" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Frequency" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Freq____Tolerance" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Frequency___Stability" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Load___Capacitance" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Mounting" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Operating___Temp" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Dimensions" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <NavigationProperty Name="OscillatorsMnfs" Relationship="Self.FK_OscillatorsMnf_Oscillators" FromRole="Oscillators" ToRole="OscillatorsMnf" />
+        </EntityType>
+        <EntityType Name="OscillatorsMnf">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Mfr__Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Mfr__Part_Number" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Part_Status" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="RoHS_Status" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Comments" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Type" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="M_Id" Type="Int32" Nullable="false" />
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <NavigationProperty Name="Oscillator" Relationship="Self.FK_OscillatorsMnf_Oscillators" FromRole="OscillatorsMnf" ToRole="Oscillators" />
+        </EntityType>
+        <EntityType Name="Potentiometer">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="BOM_Number" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="BU" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Product_line" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Site" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Thermo_Number" Type="Int32" Nullable="false" />
+          <Property Name="Item_Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Category" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Part" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Part_Type" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <NavigationProperty Name="PotentiometerMnfs" Relationship="Self.FK_PotentiometerMnf_Potentiometer" FromRole="Potentiometer" ToRole="PotentiometerMnf" />
+        </EntityType>
+        <EntityType Name="PotentiometerMnf">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Mfr__Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Mfr__Part_Number" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Part_Status" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="RoHS_Status" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Comments" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Type" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="M_Id" Type="Int32" Nullable="false" />
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <NavigationProperty Name="Potentiometer" Relationship="Self.FK_PotentiometerMnf_Potentiometer" FromRole="PotentiometerMnf" ToRole="Potentiometer" />
+        </EntityType>
+        <EntityType Name="Relay">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="BOM_Number" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="BU" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Product_line" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Site" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Thermo_Number" Type="Int32" Nullable="false" />
+          <Property Name="Item_Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Category" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Part" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Part_Type" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Form___Factor" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Current___Rating_A" Type="Double" Nullable="false" />
+          <Property Name="Coil___Rating" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Coil___Resistance" Type="Double" />
+          <Property Name="Contact___Configuration" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Operating___Temperature" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Mounting___Style" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Dimensions" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <NavigationProperty Name="RelayMnfs" Relationship="Self.FK_RelayMnf_Relay" FromRole="Relay" ToRole="RelayMnf" />
+        </EntityType>
+        <EntityType Name="RelayMnf">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Mfr__Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Mfr__Part_Number" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Part_Status" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="RoHS_Status" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Comments" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Type" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="M_Id" Type="Int32" Nullable="false" />
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <NavigationProperty Name="Relay" Relationship="Self.FK_RelayMnf_Relay" FromRole="RelayMnf" ToRole="Relay" />
+        </EntityType>
+        <EntityType Name="Resistor">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="BOM_Number" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="BU" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Product_line" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Site" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Thermo_Number" Type="Int32" Nullable="false" />
+          <Property Name="Item_Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Category" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Part" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Part_Type" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Technology" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Value" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Tol" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Temperature___Coefficent" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Power" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Mounting___Style" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Package" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Dimensions" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <NavigationProperty Name="ResistorMnfs" Relationship="Self.FK_ResistorMnf_Resistor" FromRole="Resistor" ToRole="ResistorMnf" />
+        </EntityType>
+        <EntityType Name="ResistorMnf">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Mfr__Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Mfr__Part_Number" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Part_Status" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="RoHS_Status" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Comments" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Type" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="M_Id" Type="Int32" Nullable="false" />
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <NavigationProperty Name="Resistor" Relationship="Self.FK_ResistorMnf_Resistor" FromRole="ResistorMnf" ToRole="Resistor" />
+        </EntityType>
+        <EntityType Name="Switch">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="BOM_Number" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="BU" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Product_line" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Site" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Thermo_Number" Type="Int32" Nullable="false" />
+          <Property Name="Item_Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Category" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Part" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Part_Type" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Endurance" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Form_Factor" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Current_rating" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Illumination" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Voltage" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Mounting_style" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Dimensions" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <NavigationProperty Name="SwitchMnfs" Relationship="Self.FK_SwitchMnf_Switch" FromRole="Switch" ToRole="SwitchMnf" />
+        </EntityType>
+        <EntityType Name="SwitchMnf">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Mfr__Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Mfr__Part_Number" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Part_Status" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="RoHS_Status" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Comments" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Type" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="M_Id" Type="Int32" Nullable="false" />
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <NavigationProperty Name="Switch" Relationship="Self.FK_SwitchMnf_Switch" FromRole="SwitchMnf" ToRole="Switch" />
+        </EntityType>
+        <EntityType Name="Thermistor">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="BOM_Number" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="BU" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Product_line" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Site" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Thermo_Number" Type="Int32" Nullable="false" />
+          <Property Name="Item_Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Category" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Part" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Part_Type" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <NavigationProperty Name="ThermistorMnfs" Relationship="Self.FK_ThermistorMnf_Thermistor" FromRole="Thermistor" ToRole="ThermistorMnf" />
+        </EntityType>
+        <EntityType Name="ThermistorMnf">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Mfr__Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Mfr__Part_Number" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Part_Status" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="RoHS_Status" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Comments" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Type" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="M_Id" Type="Int32" Nullable="false" />
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <NavigationProperty Name="Thermistor" Relationship="Self.FK_ThermistorMnf_Thermistor" FromRole="ThermistorMnf" ToRole="Thermistor" />
+        </EntityType>
+        <EntityType Name="Transformer">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="BOM_Number" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="BU" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Product_line" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Site" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Thermo_Number" Type="Int32" Nullable="false" />
+          <Property Name="Item_Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Category" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Part" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Part_Type" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Turns_Ratio" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Power_rating" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Mounting_Style" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Max_Temp" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Dimensions" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <NavigationProperty Name="TransformerMnfs" Relationship="Self.FK_TransformerMnf_Transformer" FromRole="Transformer" ToRole="TransformerMnf" />
+        </EntityType>
+        <EntityType Name="TransformerMnf">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Mfr__Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Mfr__Part_Number" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Part_Status" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="RoHS_Status" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Comments" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Type" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="M_Id" Type="Int32" Nullable="false" />
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <NavigationProperty Name="Transformer" Relationship="Self.FK_TransformerMnf_Transformer" FromRole="TransformerMnf" ToRole="Transformer" />
+        </EntityType>
+        <EntityType Name="Transistor">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="BOM_Number" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="BU" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Product_line" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Site" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Thermo_Number" Type="Int32" Nullable="false" />
+          <Property Name="Item_Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Category" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Part" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Part_Type" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Technology" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Gain_Band___width_MhZ_" Type="Double" />
+          <Property Name="Material" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="VCE___Volts_" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Current___Amps_" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Power___Watts_" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Application" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Mounting" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Package" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Temperature" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <NavigationProperty Name="TransistorMnfs" Relationship="Self.FK_TransistorMnf_Transistor" FromRole="Transistor" ToRole="TransistorMnf" />
+        </EntityType>
+        <EntityType Name="TransistorMnf">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Mfr__Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Mfr__Part_Number" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Part_Status" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="RoHS_Status" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Comments" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Type" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="M_Id" Type="Int32" Nullable="false" />
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <NavigationProperty Name="Transistor" Relationship="Self.FK_TransistorMnf_Transistor" FromRole="TransistorMnf" ToRole="Transistor" />
+        </EntityType>
+        <EntityType Name="User">
+          <Key>
+            <PropertyRef Name="SNo" />
+          </Key>
+          <Property Name="SNo" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="FirstName" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="LastName" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Email" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="PhoneNumber" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
+          <Property Name="Address" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Password" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Sex" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="Age" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="PasswordHash" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="CreatedDateTime" Type="DateTime" Precision="3" />
+          <Property Name="IsActive" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+          <Property Name="IsDeleted" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Wire">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="BOM_Number" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="BU" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Product_line" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Site" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Thermo_Number" Type="Int32" Nullable="false" />
+          <Property Name="Item_Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Category" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Part" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Part_Type" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <NavigationProperty Name="WiresMnfs" Relationship="Self.FK_WiresMnf_Wires" FromRole="Wires" ToRole="WiresMnf" />
+        </EntityType>
+        <EntityType Name="WiresMnf">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Mfr__Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Mfr__Part_Number" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Part_Status" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="RoHS_Status" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Comments" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Type" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="M_Id" Type="Int32" Nullable="false" />
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <NavigationProperty Name="Wire" Relationship="Self.FK_WiresMnf_Wires" FromRole="WiresMnf" ToRole="Wires" />
+        </EntityType>
+        <Association Name="FK_CapacitorMnf_Capacitor">
+          <End Role="Capacitor" Type="Self.Capacitor" Multiplicity="1" />
+          <End Role="CapacitorMnf" Type="Self.CapacitorMnf" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Capacitor">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="CapacitorMnf">
+              <PropertyRef Name="M_Id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ConnectorMnf_Connector">
+          <End Role="Connector" Type="Self.Connector" Multiplicity="1" />
+          <End Role="ConnectorMnf" Type="Self.ConnectorMnf" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Connector">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="ConnectorMnf">
+              <PropertyRef Name="M_Id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_DiodeMnf_Diode">
+          <End Role="Diode" Type="Self.Diode" Multiplicity="1" />
+          <End Role="DiodeMnf" Type="Self.DiodeMnf" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Diode">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="DiodeMnf">
+              <PropertyRef Name="M_Id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_FuseMnf_Fuse">
+          <End Role="Fuse" Type="Self.Fuse" Multiplicity="1" />
+          <End Role="FuseMnf" Type="Self.FuseMnf" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Fuse">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="FuseMnf">
+              <PropertyRef Name="M_Id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ICMnf_IC">
+          <End Role="IC" Type="Self.IC" Multiplicity="1" />
+          <End Role="ICMnf" Type="Self.ICMnf" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="IC">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="ICMnf">
+              <PropertyRef Name="M_Id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_InductorMnf_Inductor">
+          <End Role="Inductor" Type="Self.Inductor" Multiplicity="1" />
+          <End Role="InductorMnf" Type="Self.InductorMnf" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Inductor">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="InductorMnf">
+              <PropertyRef Name="M_Id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MechanicalMnf_Mechanical">
+          <End Role="Mechanical" Type="Self.Mechanical" Multiplicity="1" />
+          <End Role="MechanicalMnf" Type="Self.MechanicalMnf" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Mechanical">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="MechanicalMnf">
+              <PropertyRef Name="M_Id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MiscMnf_Misc">
+          <End Role="Misc" Type="Self.Misc" Multiplicity="1" />
+          <End Role="MiscMnf" Type="Self.MiscMnf" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Misc">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="MiscMnf">
+              <PropertyRef Name="M_Id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_OptoelectronicsMnf_Optoelectronics">
+          <End Role="Optoelectronics" Type="Self.Optoelectronic" Multiplicity="1" />
+          <End Role="OptoelectronicsMnf" Type="Self.OptoelectronicsMnf" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Optoelectronics">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="OptoelectronicsMnf">
+              <PropertyRef Name="M_Id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_OscillatorsMnf_Oscillators">
+          <End Role="Oscillators" Type="Self.Oscillator" Multiplicity="1" />
+          <End Role="OscillatorsMnf" Type="Self.OscillatorsMnf" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Oscillators">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="OscillatorsMnf">
+              <PropertyRef Name="M_Id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PotentiometerMnf_Potentiometer">
+          <End Role="Potentiometer" Type="Self.Potentiometer" Multiplicity="1" />
+          <End Role="PotentiometerMnf" Type="Self.PotentiometerMnf" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Potentiometer">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="PotentiometerMnf">
+              <PropertyRef Name="M_Id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_RelayMnf_Relay">
+          <End Role="Relay" Type="Self.Relay" Multiplicity="1" />
+          <End Role="RelayMnf" Type="Self.RelayMnf" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Relay">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="RelayMnf">
+              <PropertyRef Name="M_Id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ResistorMnf_Resistor">
+          <End Role="Resistor" Type="Self.Resistor" Multiplicity="1" />
+          <End Role="ResistorMnf" Type="Self.ResistorMnf" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Resistor">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="ResistorMnf">
+              <PropertyRef Name="M_Id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_SwitchMnf_Switch">
+          <End Role="Switch" Type="Self.Switch" Multiplicity="1" />
+          <End Role="SwitchMnf" Type="Self.SwitchMnf" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Switch">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="SwitchMnf">
+              <PropertyRef Name="M_Id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ThermistorMnf_Thermistor">
+          <End Role="Thermistor" Type="Self.Thermistor" Multiplicity="1" />
+          <End Role="ThermistorMnf" Type="Self.ThermistorMnf" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Thermistor">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="ThermistorMnf">
+              <PropertyRef Name="M_Id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TransformerMnf_Transformer">
+          <End Role="Transformer" Type="Self.Transformer" Multiplicity="1" />
+          <End Role="TransformerMnf" Type="Self.TransformerMnf" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Transformer">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="TransformerMnf">
+              <PropertyRef Name="M_Id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TransistorMnf_Transistor">
+          <End Role="Transistor" Type="Self.Transistor" Multiplicity="1" />
+          <End Role="TransistorMnf" Type="Self.TransistorMnf" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Transistor">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="TransistorMnf">
+              <PropertyRef Name="M_Id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_WiresMnf_Wires">
+          <End Role="Wires" Type="Self.Wire" Multiplicity="1" />
+          <End Role="WiresMnf" Type="Self.WiresMnf" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Wires">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="WiresMnf">
+              <PropertyRef Name="M_Id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="CDTEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Capacitors" EntityType="Self.Capacitor" />
+          <EntitySet Name="CapacitorMnfs" EntityType="Self.CapacitorMnf" />
+          <EntitySet Name="Connectors" EntityType="Self.Connector" />
+          <EntitySet Name="ConnectorMnfs" EntityType="Self.ConnectorMnf" />
+          <EntitySet Name="Diodes" EntityType="Self.Diode" />
+          <EntitySet Name="DiodeMnfs" EntityType="Self.DiodeMnf" />
+          <EntitySet Name="Fuses" EntityType="Self.Fuse" />
+          <EntitySet Name="FuseMnfs" EntityType="Self.FuseMnf" />
+          <EntitySet Name="ICs" EntityType="Self.IC" />
+          <EntitySet Name="ICMnfs" EntityType="Self.ICMnf" />
+          <EntitySet Name="Inductors" EntityType="Self.Inductor" />
+          <EntitySet Name="InductorMnfs" EntityType="Self.InductorMnf" />
+          <EntitySet Name="Mechanicals" EntityType="Self.Mechanical" />
+          <EntitySet Name="MechanicalMnfs" EntityType="Self.MechanicalMnf" />
+          <EntitySet Name="Miscs" EntityType="Self.Misc" />
+          <EntitySet Name="MiscMnfs" EntityType="Self.MiscMnf" />
+          <EntitySet Name="Optoelectronics" EntityType="Self.Optoelectronic" />
+          <EntitySet Name="OptoelectronicsMnfs" EntityType="Self.OptoelectronicsMnf" />
+          <EntitySet Name="Oscillators" EntityType="Self.Oscillator" />
+          <EntitySet Name="OscillatorsMnfs" EntityType="Self.OscillatorsMnf" />
+          <EntitySet Name="Potentiometers" EntityType="Self.Potentiometer" />
+          <EntitySet Name="PotentiometerMnfs" EntityType="Self.PotentiometerMnf" />
+          <EntitySet Name="Relays" EntityType="Self.Relay" />
+          <EntitySet Name="RelayMnfs" EntityType="Self.RelayMnf" />
+          <EntitySet Name="Resistors" EntityType="Self.Resistor" />
+          <EntitySet Name="ResistorMnfs" EntityType="Self.ResistorMnf" />
+          <EntitySet Name="Switches" EntityType="Self.Switch" />
+          <EntitySet Name="SwitchMnfs" EntityType="Self.SwitchMnf" />
+          <EntitySet Name="Thermistors" EntityType="Self.Thermistor" />
+          <EntitySet Name="ThermistorMnfs" EntityType="Self.ThermistorMnf" />
+          <EntitySet Name="Transformers" EntityType="Self.Transformer" />
+          <EntitySet Name="TransformerMnfs" EntityType="Self.TransformerMnf" />
+          <EntitySet Name="Transistors" EntityType="Self.Transistor" />
+          <EntitySet Name="TransistorMnfs" EntityType="Self.TransistorMnf" />
+          <EntitySet Name="Users" EntityType="Self.User" />
+          <EntitySet Name="Wires" EntityType="Self.Wire" />
+          <EntitySet Name="WiresMnfs" EntityType="Self.WiresMnf" />
+          <AssociationSet Name="FK_CapacitorMnf_Capacitor" Association="Self.FK_CapacitorMnf_Capacitor">
+            <End Role="Capacitor" EntitySet="Capacitors" />
+            <End Role="CapacitorMnf" EntitySet="CapacitorMnfs" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ConnectorMnf_Connector" Association="Self.FK_ConnectorMnf_Connector">
+            <End Role="Connector" EntitySet="Connectors" />
+            <End Role="ConnectorMnf" EntitySet="ConnectorMnfs" />
+          </AssociationSet>
+          <AssociationSet Name="FK_DiodeMnf_Diode" Association="Self.FK_DiodeMnf_Diode">
+            <End Role="Diode" EntitySet="Diodes" />
+            <End Role="DiodeMnf" EntitySet="DiodeMnfs" />
+          </AssociationSet>
+          <AssociationSet Name="FK_FuseMnf_Fuse" Association="Self.FK_FuseMnf_Fuse">
+            <End Role="Fuse" EntitySet="Fuses" />
+            <End Role="FuseMnf" EntitySet="FuseMnfs" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ICMnf_IC" Association="Self.FK_ICMnf_IC">
+            <End Role="IC" EntitySet="ICs" />
+            <End Role="ICMnf" EntitySet="ICMnfs" />
+          </AssociationSet>
+          <AssociationSet Name="FK_InductorMnf_Inductor" Association="Self.FK_InductorMnf_Inductor">
+            <End Role="Inductor" EntitySet="Inductors" />
+            <End Role="InductorMnf" EntitySet="InductorMnfs" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MechanicalMnf_Mechanical" Association="Self.FK_MechanicalMnf_Mechanical">
+            <End Role="Mechanical" EntitySet="Mechanicals" />
+            <End Role="MechanicalMnf" EntitySet="MechanicalMnfs" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MiscMnf_Misc" Association="Self.FK_MiscMnf_Misc">
+            <End Role="Misc" EntitySet="Miscs" />
+            <End Role="MiscMnf" EntitySet="MiscMnfs" />
+          </AssociationSet>
+          <AssociationSet Name="FK_OptoelectronicsMnf_Optoelectronics" Association="Self.FK_OptoelectronicsMnf_Optoelectronics">
+            <End Role="Optoelectronics" EntitySet="Optoelectronics" />
+            <End Role="OptoelectronicsMnf" EntitySet="OptoelectronicsMnfs" />
+          </AssociationSet>
+          <AssociationSet Name="FK_OscillatorsMnf_Oscillators" Association="Self.FK_OscillatorsMnf_Oscillators">
+            <End Role="Oscillators" EntitySet="Oscillators" />
+            <End Role="OscillatorsMnf" EntitySet="OscillatorsMnfs" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PotentiometerMnf_Potentiometer" Association="Self.FK_PotentiometerMnf_Potentiometer">
+            <End Role="Potentiometer" EntitySet="Potentiometers" />
+            <End Role="PotentiometerMnf" EntitySet="PotentiometerMnfs" />
+          </AssociationSet>
+          <AssociationSet Name="FK_RelayMnf_Relay" Association="Self.FK_RelayMnf_Relay">
+            <End Role="Relay" EntitySet="Relays" />
+            <End Role="RelayMnf" EntitySet="RelayMnfs" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ResistorMnf_Resistor" Association="Self.FK_ResistorMnf_Resistor">
+            <End Role="Resistor" EntitySet="Resistors" />
+            <End Role="ResistorMnf" EntitySet="ResistorMnfs" />
+          </AssociationSet>
+          <AssociationSet Name="FK_SwitchMnf_Switch" Association="Self.FK_SwitchMnf_Switch">
+            <End Role="Switch" EntitySet="Switches" />
+            <End Role="SwitchMnf" EntitySet="SwitchMnfs" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ThermistorMnf_Thermistor" Association="Self.FK_ThermistorMnf_Thermistor">
+            <End Role="Thermistor" EntitySet="Thermistors" />
+            <End Role="ThermistorMnf" EntitySet="ThermistorMnfs" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TransformerMnf_Transformer" Association="Self.FK_TransformerMnf_Transformer">
+            <End Role="Transformer" EntitySet="Transformers" />
+            <End Role="TransformerMnf" EntitySet="TransformerMnfs" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TransistorMnf_Transistor" Association="Self.FK_TransistorMnf_Transistor">
+            <End Role="Transistor" EntitySet="Transistors" />
+            <End Role="TransistorMnf" EntitySet="TransistorMnfs" />
+          </AssociationSet>
+          <AssociationSet Name="FK_WiresMnf_Wires" Association="Self.FK_WiresMnf_Wires">
+            <End Role="Wires" EntitySet="Wires" />
+            <End Role="WiresMnf" EntitySet="WiresMnfs" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="CDTModelStoreContainer" CdmEntityContainer="CDTEntities">
+          <EntitySetMapping Name="Capacitors">
+            <EntityTypeMapping TypeName="CDTModel.Capacitor">
+              <MappingFragment StoreEntitySet="Capacitor">
+                <ScalarProperty Name="BOM_Number" ColumnName="BOM Number" />
+                <ScalarProperty Name="BU" ColumnName="BU" />
+                <ScalarProperty Name="Product_line" ColumnName="Product line" />
+                <ScalarProperty Name="Site" ColumnName="Site" />
+                <ScalarProperty Name="Thermo_Number" ColumnName="Thermo Number" />
+                <ScalarProperty Name="Item_Description" ColumnName="Item Description" />
+                <ScalarProperty Name="Category" ColumnName="Category" />
+                <ScalarProperty Name="Part" ColumnName="Part" />
+                <ScalarProperty Name="Part_Type" ColumnName="Part Type" />
+                <ScalarProperty Name="Technology" ColumnName="Technology" />
+                <ScalarProperty Name="Dielectric_for_Ceramic" ColumnName="Dielectric for Ceramic" />
+                <ScalarProperty Name="Value" ColumnName="Value" />
+                <ScalarProperty Name="Tol" ColumnName="Tol" />
+                <ScalarProperty Name="Temperature" ColumnName="Temperature" />
+                <ScalarProperty Name="Voltage" ColumnName="Voltage" />
+                <ScalarProperty Name="ESR" ColumnName="ESR" />
+                <ScalarProperty Name="Mounting" ColumnName="Mounting" />
+                <ScalarProperty Name="Dimensions" ColumnName="Dimensions" />
+                <ScalarProperty Name="Lead_Spacing" ColumnName="Lead Spacing" />
+                <ScalarProperty Name="SMD_package" ColumnName="SMD package" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CapacitorMnfs">
+            <EntityTypeMapping TypeName="CDTModel.CapacitorMnf">
+              <MappingFragment StoreEntitySet="CapacitorMnf">
+                <ScalarProperty Name="Mfr__Name" ColumnName="Mfr. Name" />
+                <ScalarProperty Name="Mfr__Part_Number" ColumnName="Mfr. Part Number" />
+                <ScalarProperty Name="Part_Status" ColumnName="Part Status" />
+                <ScalarProperty Name="RoHS_Status" ColumnName="RoHS Status" />
+                <ScalarProperty Name="Comments" ColumnName="Comments" />
+                <ScalarProperty Name="Type" ColumnName="Type" />
+                <ScalarProperty Name="M_Id" ColumnName="M_Id" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Connectors">
+            <EntityTypeMapping TypeName="CDTModel.Connector">
+              <MappingFragment StoreEntitySet="Connector">
+                <ScalarProperty Name="BOM_Number" ColumnName="BOM Number" />
+                <ScalarProperty Name="BU" ColumnName="BU" />
+                <ScalarProperty Name="Product_line" ColumnName="Product line" />
+                <ScalarProperty Name="Site" ColumnName="Site" />
+                <ScalarProperty Name="Thermo_Number" ColumnName="Thermo Number" />
+                <ScalarProperty Name="Item_Description" ColumnName="Item Description" />
+                <ScalarProperty Name="Category" ColumnName="Category" />
+                <ScalarProperty Name="Part" ColumnName="Part" />
+                <ScalarProperty Name="Part_Type" ColumnName="Part Type" />
+                <ScalarProperty Name="Contact_Contact_Type" ColumnName="Contact Contact Type" />
+                <ScalarProperty Name="Contact_Surface" ColumnName="Contact Surface" />
+                <ScalarProperty Name="Max___Temperature" ColumnName="Max &#xD;&#xA;Temperature" />
+                <ScalarProperty Name="No_of___Rows" ColumnName="No of &#xD;&#xA;Rows" />
+                <ScalarProperty Name="No_of___Positions" ColumnName="No of &#xD;&#xA;Positions" />
+                <ScalarProperty Name="Connector___Orientation" ColumnName="Connector &#xD;&#xA;Orientation" />
+                <ScalarProperty Name="Contact___Rating" ColumnName="Contact &#xD;&#xA;Rating" />
+                <ScalarProperty Name="Voltage___Rating" ColumnName="Voltage &#xD;&#xA;Rating" />
+                <ScalarProperty Name="Package" ColumnName="Package" />
+                <ScalarProperty Name="Pin_Spacing___or_pitch" ColumnName="Pin Spacing &#xD;&#xA;or pitch" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ConnectorMnfs">
+            <EntityTypeMapping TypeName="CDTModel.ConnectorMnf">
+              <MappingFragment StoreEntitySet="ConnectorMnf">
+                <ScalarProperty Name="Mfr__Name" ColumnName="Mfr. Name" />
+                <ScalarProperty Name="Mfr__Part_Number" ColumnName="Mfr. Part Number" />
+                <ScalarProperty Name="Part_Status" ColumnName="Part Status" />
+                <ScalarProperty Name="RoHS_Status" ColumnName="RoHS Status" />
+                <ScalarProperty Name="Comments" ColumnName="Comments" />
+                <ScalarProperty Name="Type" ColumnName="Type" />
+                <ScalarProperty Name="M_Id" ColumnName="M_Id" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Diodes">
+            <EntityTypeMapping TypeName="CDTModel.Diode">
+              <MappingFragment StoreEntitySet="Diode">
+                <ScalarProperty Name="BOM_Number" ColumnName="BOM Number" />
+                <ScalarProperty Name="BU" ColumnName="BU" />
+                <ScalarProperty Name="Product_line" ColumnName="Product line" />
+                <ScalarProperty Name="Site" ColumnName="Site" />
+                <ScalarProperty Name="Thermo_Number" ColumnName="Thermo Number" />
+                <ScalarProperty Name="Item_Description" ColumnName="Item Description" />
+                <ScalarProperty Name="Category" ColumnName="Category" />
+                <ScalarProperty Name="Part" ColumnName="Part" />
+                <ScalarProperty Name="Part_Type" ColumnName="Part Type" />
+                <ScalarProperty Name="DC_Voltage" ColumnName="DC Voltage" />
+                <ScalarProperty Name="Forward_Voltage" ColumnName="Forward Voltage" />
+                <ScalarProperty Name="Forward_Surge_Current" ColumnName="Forward Surge Current" />
+                <ScalarProperty Name="Power_Dissipation" ColumnName="Power Dissipation" />
+                <ScalarProperty Name="Mounting_Style" ColumnName="Mounting Style" />
+                <ScalarProperty Name="Package" ColumnName="Package" />
+                <ScalarProperty Name="Operating_Temperature" ColumnName="Operating Temperature" />
+                <ScalarProperty Name="Dimensions" ColumnName="Dimensions" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="DiodeMnfs">
+            <EntityTypeMapping TypeName="CDTModel.DiodeMnf">
+              <MappingFragment StoreEntitySet="DiodeMnf">
+                <ScalarProperty Name="Mfr__Name" ColumnName="Mfr. Name" />
+                <ScalarProperty Name="Mfr__Part_Number" ColumnName="Mfr. Part Number" />
+                <ScalarProperty Name="Part_Status" ColumnName="Part Status" />
+                <ScalarProperty Name="RoHS_Status" ColumnName="RoHS Status" />
+                <ScalarProperty Name="Comments" ColumnName="Comments" />
+                <ScalarProperty Name="Type" ColumnName="Type" />
+                <ScalarProperty Name="M_Id" ColumnName="M_Id" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Fuses">
+            <EntityTypeMapping TypeName="CDTModel.Fuse">
+              <MappingFragment StoreEntitySet="Fuse">
+                <ScalarProperty Name="BOM_Number" ColumnName="BOM Number" />
+                <ScalarProperty Name="BU" ColumnName="BU" />
+                <ScalarProperty Name="Product_line" ColumnName="Product line" />
+                <ScalarProperty Name="Site" ColumnName="Site" />
+                <ScalarProperty Name="Thermo_Number" ColumnName="Thermo Number" />
+                <ScalarProperty Name="Item_Description" ColumnName="Item Description" />
+                <ScalarProperty Name="Category" ColumnName="Category" />
+                <ScalarProperty Name="Part" ColumnName="Part" />
+                <ScalarProperty Name="Part_Type" ColumnName="Part Type" />
+                <ScalarProperty Name="Material" ColumnName="Material" />
+                <ScalarProperty Name="Blow_speed" ColumnName="Blow speed" />
+                <ScalarProperty Name="Rated_Current" ColumnName="Rated Current" />
+                <ScalarProperty Name="Volt" ColumnName="Volt" />
+                <ScalarProperty Name="Mounting_Style" ColumnName="Mounting Style" />
+                <ScalarProperty Name="Package_size" ColumnName="Package size" />
+                <ScalarProperty Name="Dimension" ColumnName="Dimension" />
+                <ScalarProperty Name="Lead_Spacing_" ColumnName="Lead Spacing(" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="FuseMnfs">
+            <EntityTypeMapping TypeName="CDTModel.FuseMnf">
+              <MappingFragment StoreEntitySet="FuseMnf">
+                <ScalarProperty Name="Mfr__Name" ColumnName="Mfr. Name" />
+                <ScalarProperty Name="Mfr__Part_Number" ColumnName="Mfr. Part Number" />
+                <ScalarProperty Name="Part_Status" ColumnName="Part Status" />
+                <ScalarProperty Name="RoHS_Status" ColumnName="RoHS Status" />
+                <ScalarProperty Name="Comments" ColumnName="Comments" />
+                <ScalarProperty Name="Type" ColumnName="Type" />
+                <ScalarProperty Name="M_Id" ColumnName="M_Id" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ICs">
+            <EntityTypeMapping TypeName="CDTModel.IC">
+              <MappingFragment StoreEntitySet="IC">
+                <ScalarProperty Name="BOM_Number" ColumnName="BOM Number" />
+                <ScalarProperty Name="BU" ColumnName="BU" />
+                <ScalarProperty Name="Product_line" ColumnName="Product line" />
+                <ScalarProperty Name="Site" ColumnName="Site" />
+                <ScalarProperty Name="Thermo_Number" ColumnName="Thermo Number" />
+                <ScalarProperty Name="Item_Description" ColumnName="Item Description" />
+                <ScalarProperty Name="Category" ColumnName="Category" />
+                <ScalarProperty Name="Part" ColumnName="Part" />
+                <ScalarProperty Name="Part_Type" ColumnName="Part Type" />
+                <ScalarProperty Name="Technology" ColumnName="Technology" />
+                <ScalarProperty Name="Supply_Voltage" ColumnName="Supply Voltage" />
+                <ScalarProperty Name="Memory___organisation" ColumnName="Memory &#xD;&#xA;organisation" />
+                <ScalarProperty Name="Memory___access_Time" ColumnName="Memory &#xD;&#xA;access Time" />
+                <ScalarProperty Name="Mouting" ColumnName="Mouting" />
+                <ScalarProperty Name="Package" ColumnName="Package" />
+                <ScalarProperty Name="Lead_Spacing_Inch_" ColumnName="Lead Spacing(Inch)" />
+                <ScalarProperty Name="No___of_pins" ColumnName="No &#xD;&#xA;of pins" />
+                <ScalarProperty Name="Operating__Temperature" ColumnName="Operating&#xD;&#xA;Temperature" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ICMnfs">
+            <EntityTypeMapping TypeName="CDTModel.ICMnf">
+              <MappingFragment StoreEntitySet="ICMnf">
+                <ScalarProperty Name="Mfr__Name" ColumnName="Mfr. Name" />
+                <ScalarProperty Name="Mfr__Part_Number" ColumnName="Mfr. Part Number" />
+                <ScalarProperty Name="Part_Status" ColumnName="Part Status" />
+                <ScalarProperty Name="RoHS_Status" ColumnName="RoHS Status" />
+                <ScalarProperty Name="Comments" ColumnName="Comments" />
+                <ScalarProperty Name="Type" ColumnName="Type" />
+                <ScalarProperty Name="M_Id" ColumnName="M_Id" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Inductors">
+            <EntityTypeMapping TypeName="CDTModel.Inductor">
+              <MappingFragment StoreEntitySet="Inductor">
+                <ScalarProperty Name="BOM_Number" ColumnName="BOM Number" />
+                <ScalarProperty Name="BU" ColumnName="BU" />
+                <ScalarProperty Name="Product_line" ColumnName="Product line" />
+                <ScalarProperty Name="Site" ColumnName="Site" />
+                <ScalarProperty Name="Thermo_Number" ColumnName="Thermo Number" />
+                <ScalarProperty Name="Item_Description" ColumnName="Item Description" />
+                <ScalarProperty Name="Category" ColumnName="Category" />
+                <ScalarProperty Name="Part" ColumnName="Part" />
+                <ScalarProperty Name="Part_Type" ColumnName="Part Type" />
+                <ScalarProperty Name="Construction" ColumnName="Construction" />
+                <ScalarProperty Name="Operating_Temperature" ColumnName="Operating Temperature" />
+                <ScalarProperty Name="Impedence" ColumnName="Impedence" />
+                <ScalarProperty Name="Inductance" ColumnName="Inductance" />
+                <ScalarProperty Name="Capacitance" ColumnName="Capacitance" />
+                <ScalarProperty Name="Tol" ColumnName="Tol" />
+                <ScalarProperty Name="Current_Rating" ColumnName="Current Rating" />
+                <ScalarProperty Name="DC_Resistance" ColumnName="DC Resistance" />
+                <ScalarProperty Name="Shielding" ColumnName="Shielding" />
+                <ScalarProperty Name="Frequency" ColumnName="Frequency" />
+                <ScalarProperty Name="Mounting" ColumnName="Mounting" />
+                <ScalarProperty Name="Package_for_SMD" ColumnName="Package for SMD" />
+                <ScalarProperty Name="Dimensions" ColumnName="Dimensions" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="InductorMnfs">
+            <EntityTypeMapping TypeName="CDTModel.InductorMnf">
+              <MappingFragment StoreEntitySet="InductorMnf">
+                <ScalarProperty Name="Mfr__Name" ColumnName="Mfr. Name" />
+                <ScalarProperty Name="Mfr__Part_Number" ColumnName="Mfr. Part Number" />
+                <ScalarProperty Name="Part_Status" ColumnName="Part Status" />
+                <ScalarProperty Name="RoHS_Status" ColumnName="RoHS Status" />
+                <ScalarProperty Name="Comments" ColumnName="Comments" />
+                <ScalarProperty Name="Type" ColumnName="Type" />
+                <ScalarProperty Name="M_Id" ColumnName="M_Id" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Mechanicals">
+            <EntityTypeMapping TypeName="CDTModel.Mechanical">
+              <MappingFragment StoreEntitySet="Mechanical">
+                <ScalarProperty Name="BOM_Number" ColumnName="BOM Number" />
+                <ScalarProperty Name="BU" ColumnName="BU" />
+                <ScalarProperty Name="Product_line" ColumnName="Product line" />
+                <ScalarProperty Name="Site" ColumnName="Site" />
+                <ScalarProperty Name="Thermo_Number" ColumnName="Thermo Number" />
+                <ScalarProperty Name="Item_Description" ColumnName="Item Description" />
+                <ScalarProperty Name="Category" ColumnName="Category" />
+                <ScalarProperty Name="Part" ColumnName="Part" />
+                <ScalarProperty Name="Part_Type" ColumnName="Part Type" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="MechanicalMnfs">
+            <EntityTypeMapping TypeName="CDTModel.MechanicalMnf">
+              <MappingFragment StoreEntitySet="MechanicalMnf">
+                <ScalarProperty Name="Mfr__Name" ColumnName="Mfr. Name" />
+                <ScalarProperty Name="Mfr__Part_Number" ColumnName="Mfr. Part Number" />
+                <ScalarProperty Name="Part_Status" ColumnName="Part Status" />
+                <ScalarProperty Name="RoHS_Status" ColumnName="RoHS Status" />
+                <ScalarProperty Name="Comments" ColumnName="Comments" />
+                <ScalarProperty Name="Type" ColumnName="Type" />
+                <ScalarProperty Name="M_Id" ColumnName="M_Id" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Miscs">
+            <EntityTypeMapping TypeName="CDTModel.Misc">
+              <MappingFragment StoreEntitySet="Misc">
+                <ScalarProperty Name="BOM_Number" ColumnName="BOM Number" />
+                <ScalarProperty Name="BU" ColumnName="BU" />
+                <ScalarProperty Name="Product_line" ColumnName="Product line" />
+                <ScalarProperty Name="Site" ColumnName="Site" />
+                <ScalarProperty Name="Thermo_Number" ColumnName="Thermo Number" />
+                <ScalarProperty Name="Item_Description" ColumnName="Item Description" />
+                <ScalarProperty Name="Category" ColumnName="Category" />
+                <ScalarProperty Name="Part" ColumnName="Part" />
+                <ScalarProperty Name="Part_Type" ColumnName="Part Type" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="MiscMnfs">
+            <EntityTypeMapping TypeName="CDTModel.MiscMnf">
+              <MappingFragment StoreEntitySet="MiscMnf">
+                <ScalarProperty Name="Mfr__Name" ColumnName="Mfr. Name" />
+                <ScalarProperty Name="Mfr__Part_Number" ColumnName="Mfr. Part Number" />
+                <ScalarProperty Name="Part_Status" ColumnName="Part Status" />
+                <ScalarProperty Name="RoHS_Status" ColumnName="RoHS Status" />
+                <ScalarProperty Name="Comments" ColumnName="Comments" />
+                <ScalarProperty Name="Type" ColumnName="Type" />
+                <ScalarProperty Name="M_Id" ColumnName="M_Id" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Optoelectronics">
+            <EntityTypeMapping TypeName="CDTModel.Optoelectronic">
+              <MappingFragment StoreEntitySet="Optoelectronics">
+                <ScalarProperty Name="BOM_Number" ColumnName="BOM Number" />
+                <ScalarProperty Name="BU" ColumnName="BU" />
+                <ScalarProperty Name="Product_line" ColumnName="Product line" />
+                <ScalarProperty Name="Site" ColumnName="Site" />
+                <ScalarProperty Name="Thermo_Number" ColumnName="Thermo Number" />
+                <ScalarProperty Name="Item_Description" ColumnName="Item Description" />
+                <ScalarProperty Name="Category" ColumnName="Category" />
+                <ScalarProperty Name="Part" ColumnName="Part" />
+                <ScalarProperty Name="Part_Type" ColumnName="Part Type" />
+                <ScalarProperty Name="Function" ColumnName="Function" />
+                <ScalarProperty Name="Detectable__light_Color" ColumnName="Detectable&#xD;&#xA;light Color" />
+                <ScalarProperty Name="Voltage" ColumnName="Voltage" />
+                <ScalarProperty Name="Forward___Current" ColumnName="Forward &#xD;&#xA;Current" />
+                <ScalarProperty Name="Power" ColumnName="Power" />
+                <ScalarProperty Name="Luminous___Intensity" ColumnName="Luminous &#xD;&#xA;Intensity" />
+                <ScalarProperty Name="Peak_Wave__length" ColumnName="Peak Wave&#xD;&#xA;length" />
+                <ScalarProperty Name="Dominant___Wavelength" ColumnName="Dominant &#xD;&#xA;Wavelength" />
+                <ScalarProperty Name="Reverse___Voltage" ColumnName="Reverse &#xD;&#xA;Voltage" />
+                <ScalarProperty Name="Viewing_Angle" ColumnName="Viewing Angle" />
+                <ScalarProperty Name="Mounting_Style" ColumnName="Mounting Style" />
+                <ScalarProperty Name="Package" ColumnName="Package" />
+                <ScalarProperty Name="Operating__Temperature" ColumnName="Operating&#xD;&#xA;Temperature" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="OptoelectronicsMnfs">
+            <EntityTypeMapping TypeName="CDTModel.OptoelectronicsMnf">
+              <MappingFragment StoreEntitySet="OptoelectronicsMnf">
+                <ScalarProperty Name="Mfr__Name" ColumnName="Mfr. Name" />
+                <ScalarProperty Name="Mfr__Part_Number" ColumnName="Mfr. Part Number" />
+                <ScalarProperty Name="Part_Status" ColumnName="Part Status" />
+                <ScalarProperty Name="RoHS_Status" ColumnName="RoHS Status" />
+                <ScalarProperty Name="Comments" ColumnName="Comments" />
+                <ScalarProperty Name="Type" ColumnName="Type" />
+                <ScalarProperty Name="M_Id" ColumnName="M_Id" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Oscillators">
+            <EntityTypeMapping TypeName="CDTModel.Oscillator">
+              <MappingFragment StoreEntitySet="Oscillators">
+                <ScalarProperty Name="BOM_Number" ColumnName="BOM Number" />
+                <ScalarProperty Name="BU" ColumnName="BU" />
+                <ScalarProperty Name="Product_line" ColumnName="Product line" />
+                <ScalarProperty Name="Site" ColumnName="Site" />
+                <ScalarProperty Name="Thermo_Number" ColumnName="Thermo Number" />
+                <ScalarProperty Name="Item_Description" ColumnName="Item Description" />
+                <ScalarProperty Name="Category" ColumnName="Category" />
+                <ScalarProperty Name="Part" ColumnName="Part" />
+                <ScalarProperty Name="Part_Type" ColumnName="Part Type" />
+                <ScalarProperty Name="Frequency" ColumnName="Frequency" />
+                <ScalarProperty Name="Freq____Tolerance" ColumnName="Freq. &#xD;&#xA;Tolerance" />
+                <ScalarProperty Name="Frequency___Stability" ColumnName="Frequency &#xD;&#xA;Stability" />
+                <ScalarProperty Name="Load___Capacitance" ColumnName="Load &#xD;&#xA;Capacitance" />
+                <ScalarProperty Name="Mounting" ColumnName="Mounting" />
+                <ScalarProperty Name="Operating___Temp" ColumnName="Operating &#xD;&#xA;Temp" />
+                <ScalarProperty Name="Dimensions" ColumnName="Dimensions" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="OscillatorsMnfs">
+            <EntityTypeMapping TypeName="CDTModel.OscillatorsMnf">
+              <MappingFragment StoreEntitySet="OscillatorsMnf">
+                <ScalarProperty Name="Mfr__Name" ColumnName="Mfr. Name" />
+                <ScalarProperty Name="Mfr__Part_Number" ColumnName="Mfr. Part Number" />
+                <ScalarProperty Name="Part_Status" ColumnName="Part Status" />
+                <ScalarProperty Name="RoHS_Status" ColumnName="RoHS Status" />
+                <ScalarProperty Name="Comments" ColumnName="Comments" />
+                <ScalarProperty Name="Type" ColumnName="Type" />
+                <ScalarProperty Name="M_Id" ColumnName="M_Id" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Potentiometers">
+            <EntityTypeMapping TypeName="CDTModel.Potentiometer">
+              <MappingFragment StoreEntitySet="Potentiometer">
+                <ScalarProperty Name="BOM_Number" ColumnName="BOM Number" />
+                <ScalarProperty Name="BU" ColumnName="BU" />
+                <ScalarProperty Name="Product_line" ColumnName="Product line" />
+                <ScalarProperty Name="Site" ColumnName="Site" />
+                <ScalarProperty Name="Thermo_Number" ColumnName="Thermo Number" />
+                <ScalarProperty Name="Item_Description" ColumnName="Item Description" />
+                <ScalarProperty Name="Category" ColumnName="Category" />
+                <ScalarProperty Name="Part" ColumnName="Part" />
+                <ScalarProperty Name="Part_Type" ColumnName="Part Type" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PotentiometerMnfs">
+            <EntityTypeMapping TypeName="CDTModel.PotentiometerMnf">
+              <MappingFragment StoreEntitySet="PotentiometerMnf">
+                <ScalarProperty Name="Mfr__Name" ColumnName="Mfr. Name" />
+                <ScalarProperty Name="Mfr__Part_Number" ColumnName="Mfr. Part Number" />
+                <ScalarProperty Name="Part_Status" ColumnName="Part Status" />
+                <ScalarProperty Name="RoHS_Status" ColumnName="RoHS Status" />
+                <ScalarProperty Name="Comments" ColumnName="Comments" />
+                <ScalarProperty Name="Type" ColumnName="Type" />
+                <ScalarProperty Name="M_Id" ColumnName="M_Id" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Relays">
+            <EntityTypeMapping TypeName="CDTModel.Relay">
+              <MappingFragment StoreEntitySet="Relay">
+                <ScalarProperty Name="BOM_Number" ColumnName="BOM Number" />
+                <ScalarProperty Name="BU" ColumnName="BU" />
+                <ScalarProperty Name="Product_line" ColumnName="Product line" />
+                <ScalarProperty Name="Site" ColumnName="Site" />
+                <ScalarProperty Name="Thermo_Number" ColumnName="Thermo Number" />
+                <ScalarProperty Name="Item_Description" ColumnName="Item Description" />
+                <ScalarProperty Name="Category" ColumnName="Category" />
+                <ScalarProperty Name="Part" ColumnName="Part" />
+                <ScalarProperty Name="Part_Type" ColumnName="Part Type" />
+                <ScalarProperty Name="Form___Factor" ColumnName="Form &#xD;&#xA;Factor" />
+                <ScalarProperty Name="Current___Rating_A" ColumnName="Current &#xD;&#xA;Rating A" />
+                <ScalarProperty Name="Coil___Rating" ColumnName="Coil &#xD;&#xA;Rating" />
+                <ScalarProperty Name="Coil___Resistance" ColumnName="Coil &#xD;&#xA;Resistance" />
+                <ScalarProperty Name="Contact___Configuration" ColumnName="Contact &#xD;&#xA;Configuration" />
+                <ScalarProperty Name="Operating___Temperature" ColumnName="Operating &#xD;&#xA;Temperature" />
+                <ScalarProperty Name="Mounting___Style" ColumnName="Mounting &#xD;&#xA;Style" />
+                <ScalarProperty Name="Dimensions" ColumnName="Dimensions" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="RelayMnfs">
+            <EntityTypeMapping TypeName="CDTModel.RelayMnf">
+              <MappingFragment StoreEntitySet="RelayMnf">
+                <ScalarProperty Name="Mfr__Name" ColumnName="Mfr. Name" />
+                <ScalarProperty Name="Mfr__Part_Number" ColumnName="Mfr. Part Number" />
+                <ScalarProperty Name="Part_Status" ColumnName="Part Status" />
+                <ScalarProperty Name="RoHS_Status" ColumnName="RoHS Status" />
+                <ScalarProperty Name="Comments" ColumnName="Comments" />
+                <ScalarProperty Name="Type" ColumnName="Type" />
+                <ScalarProperty Name="M_Id" ColumnName="M_Id" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Resistors">
+            <EntityTypeMapping TypeName="CDTModel.Resistor">
+              <MappingFragment StoreEntitySet="Resistor">
+                <ScalarProperty Name="BOM_Number" ColumnName="BOM Number" />
+                <ScalarProperty Name="BU" ColumnName="BU" />
+                <ScalarProperty Name="Product_line" ColumnName="Product line" />
+                <ScalarProperty Name="Site" ColumnName="Site" />
+                <ScalarProperty Name="Thermo_Number" ColumnName="Thermo Number" />
+                <ScalarProperty Name="Item_Description" ColumnName="Item Description" />
+                <ScalarProperty Name="Category" ColumnName="Category" />
+                <ScalarProperty Name="Part" ColumnName="Part" />
+                <ScalarProperty Name="Part_Type" ColumnName="Part Type" />
+                <ScalarProperty Name="Technology" ColumnName="Technology" />
+                <ScalarProperty Name="Value" ColumnName="Value" />
+                <ScalarProperty Name="Tol" ColumnName="Tol" />
+                <ScalarProperty Name="Temperature___Coefficent" ColumnName="Temperature &#xD;&#xA;Coefficent" />
+                <ScalarProperty Name="Power" ColumnName="Power" />
+                <ScalarProperty Name="Mounting___Style" ColumnName="Mounting &#xD;&#xA;Style" />
+                <ScalarProperty Name="Package" ColumnName="Package" />
+                <ScalarProperty Name="Dimensions" ColumnName="Dimensions" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ResistorMnfs">
+            <EntityTypeMapping TypeName="CDTModel.ResistorMnf">
+              <MappingFragment StoreEntitySet="ResistorMnf">
+                <ScalarProperty Name="Mfr__Name" ColumnName="Mfr. Name" />
+                <ScalarProperty Name="Mfr__Part_Number" ColumnName="Mfr. Part Number" />
+                <ScalarProperty Name="Part_Status" ColumnName="Part Status" />
+                <ScalarProperty Name="RoHS_Status" ColumnName="RoHS Status" />
+                <ScalarProperty Name="Comments" ColumnName="Comments" />
+                <ScalarProperty Name="Type" ColumnName="Type" />
+                <ScalarProperty Name="M_Id" ColumnName="M_Id" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Switches">
+            <EntityTypeMapping TypeName="CDTModel.Switch">
+              <MappingFragment StoreEntitySet="Switch">
+                <ScalarProperty Name="BOM_Number" ColumnName="BOM Number" />
+                <ScalarProperty Name="BU" ColumnName="BU" />
+                <ScalarProperty Name="Product_line" ColumnName="Product line" />
+                <ScalarProperty Name="Site" ColumnName="Site" />
+                <ScalarProperty Name="Thermo_Number" ColumnName="Thermo Number" />
+                <ScalarProperty Name="Item_Description" ColumnName="Item Description" />
+                <ScalarProperty Name="Category" ColumnName="Category" />
+                <ScalarProperty Name="Part" ColumnName="Part" />
+                <ScalarProperty Name="Part_Type" ColumnName="Part Type" />
+                <ScalarProperty Name="Endurance" ColumnName="Endurance" />
+                <ScalarProperty Name="Form_Factor" ColumnName="Form Factor" />
+                <ScalarProperty Name="Current_rating" ColumnName="Current rating" />
+                <ScalarProperty Name="Illumination" ColumnName="Illumination" />
+                <ScalarProperty Name="Voltage" ColumnName="Voltage" />
+                <ScalarProperty Name="Mounting_style" ColumnName="Mounting style" />
+                <ScalarProperty Name="Dimensions" ColumnName="Dimensions" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SwitchMnfs">
+            <EntityTypeMapping TypeName="CDTModel.SwitchMnf">
+              <MappingFragment StoreEntitySet="SwitchMnf">
+                <ScalarProperty Name="Mfr__Name" ColumnName="Mfr. Name" />
+                <ScalarProperty Name="Mfr__Part_Number" ColumnName="Mfr. Part Number" />
+                <ScalarProperty Name="Part_Status" ColumnName="Part Status" />
+                <ScalarProperty Name="RoHS_Status" ColumnName="RoHS Status" />
+                <ScalarProperty Name="Comments" ColumnName="Comments" />
+                <ScalarProperty Name="Type" ColumnName="Type" />
+                <ScalarProperty Name="M_Id" ColumnName="M_Id" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Thermistors">
+            <EntityTypeMapping TypeName="CDTModel.Thermistor">
+              <MappingFragment StoreEntitySet="Thermistor">
+                <ScalarProperty Name="BOM_Number" ColumnName="BOM Number" />
+                <ScalarProperty Name="BU" ColumnName="BU" />
+                <ScalarProperty Name="Product_line" ColumnName="Product line" />
+                <ScalarProperty Name="Site" ColumnName="Site" />
+                <ScalarProperty Name="Thermo_Number" ColumnName="Thermo Number" />
+                <ScalarProperty Name="Item_Description" ColumnName="Item Description" />
+                <ScalarProperty Name="Category" ColumnName="Category" />
+                <ScalarProperty Name="Part" ColumnName="Part" />
+                <ScalarProperty Name="Part_Type" ColumnName="Part Type" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ThermistorMnfs">
+            <EntityTypeMapping TypeName="CDTModel.ThermistorMnf">
+              <MappingFragment StoreEntitySet="ThermistorMnf">
+                <ScalarProperty Name="Mfr__Name" ColumnName="Mfr. Name" />
+                <ScalarProperty Name="Mfr__Part_Number" ColumnName="Mfr. Part Number" />
+                <ScalarProperty Name="Part_Status" ColumnName="Part Status" />
+                <ScalarProperty Name="RoHS_Status" ColumnName="RoHS Status" />
+                <ScalarProperty Name="Comments" ColumnName="Comments" />
+                <ScalarProperty Name="Type" ColumnName="Type" />
+                <ScalarProperty Name="M_Id" ColumnName="M_Id" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Transformers">
+            <EntityTypeMapping TypeName="CDTModel.Transformer">
+              <MappingFragment StoreEntitySet="Transformer">
+                <ScalarProperty Name="BOM_Number" ColumnName="BOM Number" />
+                <ScalarProperty Name="BU" ColumnName="BU" />
+                <ScalarProperty Name="Product_line" ColumnName="Product line" />
+                <ScalarProperty Name="Site" ColumnName="Site" />
+                <ScalarProperty Name="Thermo_Number" ColumnName="Thermo Number" />
+                <ScalarProperty Name="Item_Description" ColumnName="Item Description" />
+                <ScalarProperty Name="Category" ColumnName="Category" />
+                <ScalarProperty Name="Part" ColumnName="Part" />
+                <ScalarProperty Name="Part_Type" ColumnName="Part Type" />
+                <ScalarProperty Name="Turns_Ratio" ColumnName="Turns Ratio" />
+                <ScalarProperty Name="Power_rating" ColumnName="Power rating" />
+                <ScalarProperty Name="Mounting_Style" ColumnName="Mounting Style" />
+                <ScalarProperty Name="Max_Temp" ColumnName="Max.Temp" />
+                <ScalarProperty Name="Dimensions" ColumnName="Dimensions" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TransformerMnfs">
+            <EntityTypeMapping TypeName="CDTModel.TransformerMnf">
+              <MappingFragment StoreEntitySet="TransformerMnf">
+                <ScalarProperty Name="Mfr__Name" ColumnName="Mfr. Name" />
+                <ScalarProperty Name="Mfr__Part_Number" ColumnName="Mfr. Part Number" />
+                <ScalarProperty Name="Part_Status" ColumnName="Part Status" />
+                <ScalarProperty Name="RoHS_Status" ColumnName="RoHS Status" />
+                <ScalarProperty Name="Comments" ColumnName="Comments" />
+                <ScalarProperty Name="Type" ColumnName="Type" />
+                <ScalarProperty Name="M_Id" ColumnName="M_Id" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Transistors">
+            <EntityTypeMapping TypeName="CDTModel.Transistor">
+              <MappingFragment StoreEntitySet="Transistor">
+                <ScalarProperty Name="BOM_Number" ColumnName="BOM Number" />
+                <ScalarProperty Name="BU" ColumnName="BU" />
+                <ScalarProperty Name="Product_line" ColumnName="Product line" />
+                <ScalarProperty Name="Site" ColumnName="Site" />
+                <ScalarProperty Name="Thermo_Number" ColumnName="Thermo Number" />
+                <ScalarProperty Name="Item_Description" ColumnName="Item Description" />
+                <ScalarProperty Name="Category" ColumnName="Category" />
+                <ScalarProperty Name="Part" ColumnName="Part" />
+                <ScalarProperty Name="Part_Type" ColumnName="Part Type" />
+                <ScalarProperty Name="Technology" ColumnName="Technology" />
+                <ScalarProperty Name="Gain_Band___width_MhZ_" ColumnName="Gain Band &#xD;&#xA;width(MhZ)" />
+                <ScalarProperty Name="Material" ColumnName="Material" />
+                <ScalarProperty Name="VCE___Volts_" ColumnName="VCE&#xD;&#xA;(Volts)" />
+                <ScalarProperty Name="Current___Amps_" ColumnName="Current&#xD;&#xA;(Amps)" />
+                <ScalarProperty Name="Power___Watts_" ColumnName="Power&#xD;&#xA;(Watts)" />
+                <ScalarProperty Name="Application" ColumnName="Application" />
+                <ScalarProperty Name="Mounting" ColumnName="Mounting" />
+                <ScalarProperty Name="Package" ColumnName="Package" />
+                <ScalarProperty Name="Temperature" ColumnName="Temperature" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TransistorMnfs">
+            <EntityTypeMapping TypeName="CDTModel.TransistorMnf">
+              <MappingFragment StoreEntitySet="TransistorMnf">
+                <ScalarProperty Name="Mfr__Name" ColumnName="Mfr. Name" />
+                <ScalarProperty Name="Mfr__Part_Number" ColumnName="Mfr. Part Number" />
+                <ScalarProperty Name="Part_Status" ColumnName="Part Status" />
+                <ScalarProperty Name="RoHS_Status" ColumnName="RoHS Status" />
+                <ScalarProperty Name="Comments" ColumnName="Comments" />
+                <ScalarProperty Name="Type" ColumnName="Type" />
+                <ScalarProperty Name="M_Id" ColumnName="M_Id" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Users">
+            <EntityTypeMapping TypeName="CDTModel.User">
+              <MappingFragment StoreEntitySet="Users">
+                <ScalarProperty Name="SNo" ColumnName="SNo" />
+                <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+                <ScalarProperty Name="LastName" ColumnName="LastName" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="PhoneNumber" ColumnName="PhoneNumber" />
+                <ScalarProperty Name="Address" ColumnName="Address" />
+                <ScalarProperty Name="Password" ColumnName="Password" />
+                <ScalarProperty Name="Sex" ColumnName="Sex" />
+                <ScalarProperty Name="Age" ColumnName="Age" />
+                <ScalarProperty Name="PasswordHash" ColumnName="PasswordHash" />
+                <ScalarProperty Name="CreatedDateTime" ColumnName="CreatedDateTime" />
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+                <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Wires">
+            <EntityTypeMapping TypeName="CDTModel.Wire">
+              <MappingFragment StoreEntitySet="Wires">
+                <ScalarProperty Name="BOM_Number" ColumnName="BOM Number" />
+                <ScalarProperty Name="BU" ColumnName="BU" />
+                <ScalarProperty Name="Product_line" ColumnName="Product line" />
+                <ScalarProperty Name="Site" ColumnName="Site" />
+                <ScalarProperty Name="Thermo_Number" ColumnName="Thermo Number" />
+                <ScalarProperty Name="Item_Description" ColumnName="Item Description" />
+                <ScalarProperty Name="Category" ColumnName="Category" />
+                <ScalarProperty Name="Part" ColumnName="Part" />
+                <ScalarProperty Name="Part_Type" ColumnName="Part Type" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="WiresMnfs">
+            <EntityTypeMapping TypeName="CDTModel.WiresMnf">
+              <MappingFragment StoreEntitySet="WiresMnf">
+                <ScalarProperty Name="Mfr__Name" ColumnName="Mfr. Name" />
+                <ScalarProperty Name="Mfr__Part_Number" ColumnName="Mfr. Part Number" />
+                <ScalarProperty Name="Part_Status" ColumnName="Part Status" />
+                <ScalarProperty Name="RoHS_Status" ColumnName="RoHS Status" />
+                <ScalarProperty Name="Comments" ColumnName="Comments" />
+                <ScalarProperty Name="Type" ColumnName="Type" />
+                <ScalarProperty Name="M_Id" ColumnName="M_Id" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

@@ -1,0 +1,681 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="CDTModelStoreContainer" CdmEntityContainer="CDTEntities">
+    <EntitySetMapping Name="Capacitors">
+      <EntityTypeMapping TypeName="CDTModel.Capacitor">
+        <MappingFragment StoreEntitySet="Capacitor">
+          <ScalarProperty Name="BOM_Number" ColumnName="BOM Number" />
+          <ScalarProperty Name="BU" ColumnName="BU" />
+          <ScalarProperty Name="Product_line" ColumnName="Product line" />
+          <ScalarProperty Name="Site" ColumnName="Site" />
+          <ScalarProperty Name="Thermo_Number" ColumnName="Thermo Number" />
+          <ScalarProperty Name="Item_Description" ColumnName="Item Description" />
+          <ScalarProperty Name="Category" ColumnName="Category" />
+          <ScalarProperty Name="Part" ColumnName="Part" />
+          <ScalarProperty Name="Part_Type" ColumnName="Part Type" />
+          <ScalarProperty Name="Technology" ColumnName="Technology" />
+          <ScalarProperty Name="Dielectric_for_Ceramic" ColumnName="Dielectric for Ceramic" />
+          <ScalarProperty Name="Value" ColumnName="Value" />
+          <ScalarProperty Name="Tol" ColumnName="Tol" />
+          <ScalarProperty Name="Temperature" ColumnName="Temperature" />
+          <ScalarProperty Name="Voltage" ColumnName="Voltage" />
+          <ScalarProperty Name="ESR" ColumnName="ESR" />
+          <ScalarProperty Name="Mounting" ColumnName="Mounting" />
+          <ScalarProperty Name="Dimensions" ColumnName="Dimensions" />
+          <ScalarProperty Name="Lead_Spacing" ColumnName="Lead Spacing" />
+          <ScalarProperty Name="SMD_package" ColumnName="SMD package" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CapacitorMnfs">
+      <EntityTypeMapping TypeName="CDTModel.CapacitorMnf">
+        <MappingFragment StoreEntitySet="CapacitorMnf">
+          <ScalarProperty Name="Mfr__Name" ColumnName="Mfr. Name" />
+          <ScalarProperty Name="Mfr__Part_Number" ColumnName="Mfr. Part Number" />
+          <ScalarProperty Name="Part_Status" ColumnName="Part Status" />
+          <ScalarProperty Name="RoHS_Status" ColumnName="RoHS Status" />
+          <ScalarProperty Name="Comments" ColumnName="Comments" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="M_Id" ColumnName="M_Id" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Connectors">
+      <EntityTypeMapping TypeName="CDTModel.Connector">
+        <MappingFragment StoreEntitySet="Connector">
+          <ScalarProperty Name="BOM_Number" ColumnName="BOM Number" />
+          <ScalarProperty Name="BU" ColumnName="BU" />
+          <ScalarProperty Name="Product_line" ColumnName="Product line" />
+          <ScalarProperty Name="Site" ColumnName="Site" />
+          <ScalarProperty Name="Thermo_Number" ColumnName="Thermo Number" />
+          <ScalarProperty Name="Item_Description" ColumnName="Item Description" />
+          <ScalarProperty Name="Category" ColumnName="Category" />
+          <ScalarProperty Name="Part" ColumnName="Part" />
+          <ScalarProperty Name="Part_Type" ColumnName="Part Type" />
+          <ScalarProperty Name="Contact_Contact_Type" ColumnName="Contact Contact Type" />
+          <ScalarProperty Name="Contact_Surface" ColumnName="Contact Surface" />
+          <ScalarProperty Name="Max___Temperature" ColumnName="Max &#xD;&#xA;Temperature" />
+          <ScalarProperty Name="No_of___Rows" ColumnName="No of &#xD;&#xA;Rows" />
+          <ScalarProperty Name="No_of___Positions" ColumnName="No of &#xD;&#xA;Positions" />
+          <ScalarProperty Name="Connector___Orientation" ColumnName="Connector &#xD;&#xA;Orientation" />
+          <ScalarProperty Name="Contact___Rating" ColumnName="Contact &#xD;&#xA;Rating" />
+          <ScalarProperty Name="Voltage___Rating" ColumnName="Voltage &#xD;&#xA;Rating" />
+          <ScalarProperty Name="Package" ColumnName="Package" />
+          <ScalarProperty Name="Pin_Spacing___or_pitch" ColumnName="Pin Spacing &#xD;&#xA;or pitch" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ConnectorMnfs">
+      <EntityTypeMapping TypeName="CDTModel.ConnectorMnf">
+        <MappingFragment StoreEntitySet="ConnectorMnf">
+          <ScalarProperty Name="Mfr__Name" ColumnName="Mfr. Name" />
+          <ScalarProperty Name="Mfr__Part_Number" ColumnName="Mfr. Part Number" />
+          <ScalarProperty Name="Part_Status" ColumnName="Part Status" />
+          <ScalarProperty Name="RoHS_Status" ColumnName="RoHS Status" />
+          <ScalarProperty Name="Comments" ColumnName="Comments" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="M_Id" ColumnName="M_Id" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Diodes">
+      <EntityTypeMapping TypeName="CDTModel.Diode">
+        <MappingFragment StoreEntitySet="Diode">
+          <ScalarProperty Name="BOM_Number" ColumnName="BOM Number" />
+          <ScalarProperty Name="BU" ColumnName="BU" />
+          <ScalarProperty Name="Product_line" ColumnName="Product line" />
+          <ScalarProperty Name="Site" ColumnName="Site" />
+          <ScalarProperty Name="Thermo_Number" ColumnName="Thermo Number" />
+          <ScalarProperty Name="Item_Description" ColumnName="Item Description" />
+          <ScalarProperty Name="Category" ColumnName="Category" />
+          <ScalarProperty Name="Part" ColumnName="Part" />
+          <ScalarProperty Name="Part_Type" ColumnName="Part Type" />
+          <ScalarProperty Name="DC_Voltage" ColumnName="DC Voltage" />
+          <ScalarProperty Name="Forward_Voltage" ColumnName="Forward Voltage" />
+          <ScalarProperty Name="Forward_Surge_Current" ColumnName="Forward Surge Current" />
+          <ScalarProperty Name="Power_Dissipation" ColumnName="Power Dissipation" />
+          <ScalarProperty Name="Mounting_Style" ColumnName="Mounting Style" />
+          <ScalarProperty Name="Package" ColumnName="Package" />
+          <ScalarProperty Name="Operating_Temperature" ColumnName="Operating Temperature" />
+          <ScalarProperty Name="Dimensions" ColumnName="Dimensions" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DiodeMnfs">
+      <EntityTypeMapping TypeName="CDTModel.DiodeMnf">
+        <MappingFragment StoreEntitySet="DiodeMnf">
+          <ScalarProperty Name="Mfr__Name" ColumnName="Mfr. Name" />
+          <ScalarProperty Name="Mfr__Part_Number" ColumnName="Mfr. Part Number" />
+          <ScalarProperty Name="Part_Status" ColumnName="Part Status" />
+          <ScalarProperty Name="RoHS_Status" ColumnName="RoHS Status" />
+          <ScalarProperty Name="Comments" ColumnName="Comments" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="M_Id" ColumnName="M_Id" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Fuses">
+      <EntityTypeMapping TypeName="CDTModel.Fuse">
+        <MappingFragment StoreEntitySet="Fuse">
+          <ScalarProperty Name="BOM_Number" ColumnName="BOM Number" />
+          <ScalarProperty Name="BU" ColumnName="BU" />
+          <ScalarProperty Name="Product_line" ColumnName="Product line" />
+          <ScalarProperty Name="Site" ColumnName="Site" />
+          <ScalarProperty Name="Thermo_Number" ColumnName="Thermo Number" />
+          <ScalarProperty Name="Item_Description" ColumnName="Item Description" />
+          <ScalarProperty Name="Category" ColumnName="Category" />
+          <ScalarProperty Name="Part" ColumnName="Part" />
+          <ScalarProperty Name="Part_Type" ColumnName="Part Type" />
+          <ScalarProperty Name="Material" ColumnName="Material" />
+          <ScalarProperty Name="Blow_speed" ColumnName="Blow speed" />
+          <ScalarProperty Name="Rated_Current" ColumnName="Rated Current" />
+          <ScalarProperty Name="Volt" ColumnName="Volt" />
+          <ScalarProperty Name="Mounting_Style" ColumnName="Mounting Style" />
+          <ScalarProperty Name="Package_size" ColumnName="Package size" />
+          <ScalarProperty Name="Dimension" ColumnName="Dimension" />
+          <ScalarProperty Name="Lead_Spacing_" ColumnName="Lead Spacing(" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FuseMnfs">
+      <EntityTypeMapping TypeName="CDTModel.FuseMnf">
+        <MappingFragment StoreEntitySet="FuseMnf">
+          <ScalarProperty Name="Mfr__Name" ColumnName="Mfr. Name" />
+          <ScalarProperty Name="Mfr__Part_Number" ColumnName="Mfr. Part Number" />
+          <ScalarProperty Name="Part_Status" ColumnName="Part Status" />
+          <ScalarProperty Name="RoHS_Status" ColumnName="RoHS Status" />
+          <ScalarProperty Name="Comments" ColumnName="Comments" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="M_Id" ColumnName="M_Id" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ICs">
+      <EntityTypeMapping TypeName="CDTModel.IC">
+        <MappingFragment StoreEntitySet="IC">
+          <ScalarProperty Name="BOM_Number" ColumnName="BOM Number" />
+          <ScalarProperty Name="BU" ColumnName="BU" />
+          <ScalarProperty Name="Product_line" ColumnName="Product line" />
+          <ScalarProperty Name="Site" ColumnName="Site" />
+          <ScalarProperty Name="Thermo_Number" ColumnName="Thermo Number" />
+          <ScalarProperty Name="Item_Description" ColumnName="Item Description" />
+          <ScalarProperty Name="Category" ColumnName="Category" />
+          <ScalarProperty Name="Part" ColumnName="Part" />
+          <ScalarProperty Name="Part_Type" ColumnName="Part Type" />
+          <ScalarProperty Name="Technology" ColumnName="Technology" />
+          <ScalarProperty Name="Supply_Voltage" ColumnName="Supply Voltage" />
+          <ScalarProperty Name="Memory___organisation" ColumnName="Memory &#xD;&#xA;organisation" />
+          <ScalarProperty Name="Memory___access_Time" ColumnName="Memory &#xD;&#xA;access Time" />
+          <ScalarProperty Name="Mouting" ColumnName="Mouting" />
+          <ScalarProperty Name="Package" ColumnName="Package" />
+          <ScalarProperty Name="Lead_Spacing_Inch_" ColumnName="Lead Spacing(Inch)" />
+          <ScalarProperty Name="No___of_pins" ColumnName="No &#xD;&#xA;of pins" />
+          <ScalarProperty Name="Operating__Temperature" ColumnName="Operating&#xD;&#xA;Temperature" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ICMnfs">
+      <EntityTypeMapping TypeName="CDTModel.ICMnf">
+        <MappingFragment StoreEntitySet="ICMnf">
+          <ScalarProperty Name="Mfr__Name" ColumnName="Mfr. Name" />
+          <ScalarProperty Name="Mfr__Part_Number" ColumnName="Mfr. Part Number" />
+          <ScalarProperty Name="Part_Status" ColumnName="Part Status" />
+          <ScalarProperty Name="RoHS_Status" ColumnName="RoHS Status" />
+          <ScalarProperty Name="Comments" ColumnName="Comments" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="M_Id" ColumnName="M_Id" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Inductors">
+      <EntityTypeMapping TypeName="CDTModel.Inductor">
+        <MappingFragment StoreEntitySet="Inductor">
+          <ScalarProperty Name="BOM_Number" ColumnName="BOM Number" />
+          <ScalarProperty Name="BU" ColumnName="BU" />
+          <ScalarProperty Name="Product_line" ColumnName="Product line" />
+          <ScalarProperty Name="Site" ColumnName="Site" />
+          <ScalarProperty Name="Thermo_Number" ColumnName="Thermo Number" />
+          <ScalarProperty Name="Item_Description" ColumnName="Item Description" />
+          <ScalarProperty Name="Category" ColumnName="Category" />
+          <ScalarProperty Name="Part" ColumnName="Part" />
+          <ScalarProperty Name="Part_Type" ColumnName="Part Type" />
+          <ScalarProperty Name="Construction" ColumnName="Construction" />
+          <ScalarProperty Name="Operating_Temperature" ColumnName="Operating Temperature" />
+          <ScalarProperty Name="Impedence" ColumnName="Impedence" />
+          <ScalarProperty Name="Inductance" ColumnName="Inductance" />
+          <ScalarProperty Name="Capacitance" ColumnName="Capacitance" />
+          <ScalarProperty Name="Tol" ColumnName="Tol" />
+          <ScalarProperty Name="Current_Rating" ColumnName="Current Rating" />
+          <ScalarProperty Name="DC_Resistance" ColumnName="DC Resistance" />
+          <ScalarProperty Name="Shielding" ColumnName="Shielding" />
+          <ScalarProperty Name="Frequency" ColumnName="Frequency" />
+          <ScalarProperty Name="Mounting" ColumnName="Mounting" />
+          <ScalarProperty Name="Package_for_SMD" ColumnName="Package for SMD" />
+          <ScalarProperty Name="Dimensions" ColumnName="Dimensions" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="InductorMnfs">
+      <EntityTypeMapping TypeName="CDTModel.InductorMnf">
+        <MappingFragment StoreEntitySet="InductorMnf">
+          <ScalarProperty Name="Mfr__Name" ColumnName="Mfr. Name" />
+          <ScalarProperty Name="Mfr__Part_Number" ColumnName="Mfr. Part Number" />
+          <ScalarProperty Name="Part_Status" ColumnName="Part Status" />
+          <ScalarProperty Name="RoHS_Status" ColumnName="RoHS Status" />
+          <ScalarProperty Name="Comments" ColumnName="Comments" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="M_Id" ColumnName="M_Id" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Mechanicals">
+      <EntityTypeMapping TypeName="CDTModel.Mechanical">
+        <MappingFragment StoreEntitySet="Mechanical">
+          <ScalarProperty Name="BOM_Number" ColumnName="BOM Number" />
+          <ScalarProperty Name="BU" ColumnName="BU" />
+          <ScalarProperty Name="Product_line" ColumnName="Product line" />
+          <ScalarProperty Name="Site" ColumnName="Site" />
+          <ScalarProperty Name="Thermo_Number" ColumnName="Thermo Number" />
+          <ScalarProperty Name="Item_Description" ColumnName="Item Description" />
+          <ScalarProperty Name="Category" ColumnName="Category" />
+          <ScalarProperty Name="Part" ColumnName="Part" />
+          <ScalarProperty Name="Part_Type" ColumnName="Part Type" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MechanicalMnfs">
+      <EntityTypeMapping TypeName="CDTModel.MechanicalMnf">
+        <MappingFragment StoreEntitySet="MechanicalMnf">
+          <ScalarProperty Name="Mfr__Name" ColumnName="Mfr. Name" />
+          <ScalarProperty Name="Mfr__Part_Number" ColumnName="Mfr. Part Number" />
+          <ScalarProperty Name="Part_Status" ColumnName="Part Status" />
+          <ScalarProperty Name="RoHS_Status" ColumnName="RoHS Status" />
+          <ScalarProperty Name="Comments" ColumnName="Comments" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="M_Id" ColumnName="M_Id" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Miscs">
+      <EntityTypeMapping TypeName="CDTModel.Misc">
+        <MappingFragment StoreEntitySet="Misc">
+          <ScalarProperty Name="BOM_Number" ColumnName="BOM Number" />
+          <ScalarProperty Name="BU" ColumnName="BU" />
+          <ScalarProperty Name="Product_line" ColumnName="Product line" />
+          <ScalarProperty Name="Site" ColumnName="Site" />
+          <ScalarProperty Name="Thermo_Number" ColumnName="Thermo Number" />
+          <ScalarProperty Name="Item_Description" ColumnName="Item Description" />
+          <ScalarProperty Name="Category" ColumnName="Category" />
+          <ScalarProperty Name="Part" ColumnName="Part" />
+          <ScalarProperty Name="Part_Type" ColumnName="Part Type" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MiscMnfs">
+      <EntityTypeMapping TypeName="CDTModel.MiscMnf">
+        <MappingFragment StoreEntitySet="MiscMnf">
+          <ScalarProperty Name="Mfr__Name" ColumnName="Mfr. Name" />
+          <ScalarProperty Name="Mfr__Part_Number" ColumnName="Mfr. Part Number" />
+          <ScalarProperty Name="Part_Status" ColumnName="Part Status" />
+          <ScalarProperty Name="RoHS_Status" ColumnName="RoHS Status" />
+          <ScalarProperty Name="Comments" ColumnName="Comments" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="M_Id" ColumnName="M_Id" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Optoelectronics">
+      <EntityTypeMapping TypeName="CDTModel.Optoelectronic">
+        <MappingFragment StoreEntitySet="Optoelectronics">
+          <ScalarProperty Name="BOM_Number" ColumnName="BOM Number" />
+          <ScalarProperty Name="BU" ColumnName="BU" />
+          <ScalarProperty Name="Product_line" ColumnName="Product line" />
+          <ScalarProperty Name="Site" ColumnName="Site" />
+          <ScalarProperty Name="Thermo_Number" ColumnName="Thermo Number" />
+          <ScalarProperty Name="Item_Description" ColumnName="Item Description" />
+          <ScalarProperty Name="Category" ColumnName="Category" />
+          <ScalarProperty Name="Part" ColumnName="Part" />
+          <ScalarProperty Name="Part_Type" ColumnName="Part Type" />
+          <ScalarProperty Name="Function" ColumnName="Function" />
+          <ScalarProperty Name="Detectable__light_Color" ColumnName="Detectable&#xD;&#xA;light Color" />
+          <ScalarProperty Name="Voltage" ColumnName="Voltage" />
+          <ScalarProperty Name="Forward___Current" ColumnName="Forward &#xD;&#xA;Current" />
+          <ScalarProperty Name="Power" ColumnName="Power" />
+          <ScalarProperty Name="Luminous___Intensity" ColumnName="Luminous &#xD;&#xA;Intensity" />
+          <ScalarProperty Name="Peak_Wave__length" ColumnName="Peak Wave&#xD;&#xA;length" />
+          <ScalarProperty Name="Dominant___Wavelength" ColumnName="Dominant &#xD;&#xA;Wavelength" />
+          <ScalarProperty Name="Reverse___Voltage" ColumnName="Reverse &#xD;&#xA;Voltage" />
+          <ScalarProperty Name="Viewing_Angle" ColumnName="Viewing Angle" />
+          <ScalarProperty Name="Mounting_Style" ColumnName="Mounting Style" />
+          <ScalarProperty Name="Package" ColumnName="Package" />
+          <ScalarProperty Name="Operating__Temperature" ColumnName="Operating&#xD;&#xA;Temperature" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="OptoelectronicsMnfs">
+      <EntityTypeMapping TypeName="CDTModel.OptoelectronicsMnf">
+        <MappingFragment StoreEntitySet="OptoelectronicsMnf">
+          <ScalarProperty Name="Mfr__Name" ColumnName="Mfr. Name" />
+          <ScalarProperty Name="Mfr__Part_Number" ColumnName="Mfr. Part Number" />
+          <ScalarProperty Name="Part_Status" ColumnName="Part Status" />
+          <ScalarProperty Name="RoHS_Status" ColumnName="RoHS Status" />
+          <ScalarProperty Name="Comments" ColumnName="Comments" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="M_Id" ColumnName="M_Id" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Oscillators">
+      <EntityTypeMapping TypeName="CDTModel.Oscillator">
+        <MappingFragment StoreEntitySet="Oscillators">
+          <ScalarProperty Name="BOM_Number" ColumnName="BOM Number" />
+          <ScalarProperty Name="BU" ColumnName="BU" />
+          <ScalarProperty Name="Product_line" ColumnName="Product line" />
+          <ScalarProperty Name="Site" ColumnName="Site" />
+          <ScalarProperty Name="Thermo_Number" ColumnName="Thermo Number" />
+          <ScalarProperty Name="Item_Description" ColumnName="Item Description" />
+          <ScalarProperty Name="Category" ColumnName="Category" />
+          <ScalarProperty Name="Part" ColumnName="Part" />
+          <ScalarProperty Name="Part_Type" ColumnName="Part Type" />
+          <ScalarProperty Name="Frequency" ColumnName="Frequency" />
+          <ScalarProperty Name="Freq____Tolerance" ColumnName="Freq. &#xD;&#xA;Tolerance" />
+          <ScalarProperty Name="Frequency___Stability" ColumnName="Frequency &#xD;&#xA;Stability" />
+          <ScalarProperty Name="Load___Capacitance" ColumnName="Load &#xD;&#xA;Capacitance" />
+          <ScalarProperty Name="Mounting" ColumnName="Mounting" />
+          <ScalarProperty Name="Operating___Temp" ColumnName="Operating &#xD;&#xA;Temp" />
+          <ScalarProperty Name="Dimensions" ColumnName="Dimensions" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="OscillatorsMnfs">
+      <EntityTypeMapping TypeName="CDTModel.OscillatorsMnf">
+        <MappingFragment StoreEntitySet="OscillatorsMnf">
+          <ScalarProperty Name="Mfr__Name" ColumnName="Mfr. Name" />
+          <ScalarProperty Name="Mfr__Part_Number" ColumnName="Mfr. Part Number" />
+          <ScalarProperty Name="Part_Status" ColumnName="Part Status" />
+          <ScalarProperty Name="RoHS_Status" ColumnName="RoHS Status" />
+          <ScalarProperty Name="Comments" ColumnName="Comments" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="M_Id" ColumnName="M_Id" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Potentiometers">
+      <EntityTypeMapping TypeName="CDTModel.Potentiometer">
+        <MappingFragment StoreEntitySet="Potentiometer">
+          <ScalarProperty Name="BOM_Number" ColumnName="BOM Number" />
+          <ScalarProperty Name="BU" ColumnName="BU" />
+          <ScalarProperty Name="Product_line" ColumnName="Product line" />
+          <ScalarProperty Name="Site" ColumnName="Site" />
+          <ScalarProperty Name="Thermo_Number" ColumnName="Thermo Number" />
+          <ScalarProperty Name="Item_Description" ColumnName="Item Description" />
+          <ScalarProperty Name="Category" ColumnName="Category" />
+          <ScalarProperty Name="Part" ColumnName="Part" />
+          <ScalarProperty Name="Part_Type" ColumnName="Part Type" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PotentiometerMnfs">
+      <EntityTypeMapping TypeName="CDTModel.PotentiometerMnf">
+        <MappingFragment StoreEntitySet="PotentiometerMnf">
+          <ScalarProperty Name="Mfr__Name" ColumnName="Mfr. Name" />
+          <ScalarProperty Name="Mfr__Part_Number" ColumnName="Mfr. Part Number" />
+          <ScalarProperty Name="Part_Status" ColumnName="Part Status" />
+          <ScalarProperty Name="RoHS_Status" ColumnName="RoHS Status" />
+          <ScalarProperty Name="Comments" ColumnName="Comments" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="M_Id" ColumnName="M_Id" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Relays">
+      <EntityTypeMapping TypeName="CDTModel.Relay">
+        <MappingFragment StoreEntitySet="Relay">
+          <ScalarProperty Name="BOM_Number" ColumnName="BOM Number" />
+          <ScalarProperty Name="BU" ColumnName="BU" />
+          <ScalarProperty Name="Product_line" ColumnName="Product line" />
+          <ScalarProperty Name="Site" ColumnName="Site" />
+          <ScalarProperty Name="Thermo_Number" ColumnName="Thermo Number" />
+          <ScalarProperty Name="Item_Description" ColumnName="Item Description" />
+          <ScalarProperty Name="Category" ColumnName="Category" />
+          <ScalarProperty Name="Part" ColumnName="Part" />
+          <ScalarProperty Name="Part_Type" ColumnName="Part Type" />
+          <ScalarProperty Name="Form___Factor" ColumnName="Form &#xD;&#xA;Factor" />
+          <ScalarProperty Name="Current___Rating_A" ColumnName="Current &#xD;&#xA;Rating A" />
+          <ScalarProperty Name="Coil___Rating" ColumnName="Coil &#xD;&#xA;Rating" />
+          <ScalarProperty Name="Coil___Resistance" ColumnName="Coil &#xD;&#xA;Resistance" />
+          <ScalarProperty Name="Contact___Configuration" ColumnName="Contact &#xD;&#xA;Configuration" />
+          <ScalarProperty Name="Operating___Temperature" ColumnName="Operating &#xD;&#xA;Temperature" />
+          <ScalarProperty Name="Mounting___Style" ColumnName="Mounting &#xD;&#xA;Style" />
+          <ScalarProperty Name="Dimensions" ColumnName="Dimensions" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RelayMnfs">
+      <EntityTypeMapping TypeName="CDTModel.RelayMnf">
+        <MappingFragment StoreEntitySet="RelayMnf">
+          <ScalarProperty Name="Mfr__Name" ColumnName="Mfr. Name" />
+          <ScalarProperty Name="Mfr__Part_Number" ColumnName="Mfr. Part Number" />
+          <ScalarProperty Name="Part_Status" ColumnName="Part Status" />
+          <ScalarProperty Name="RoHS_Status" ColumnName="RoHS Status" />
+          <ScalarProperty Name="Comments" ColumnName="Comments" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="M_Id" ColumnName="M_Id" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Resistors">
+      <EntityTypeMapping TypeName="CDTModel.Resistor">
+        <MappingFragment StoreEntitySet="Resistor">
+          <ScalarProperty Name="BOM_Number" ColumnName="BOM Number" />
+          <ScalarProperty Name="BU" ColumnName="BU" />
+          <ScalarProperty Name="Product_line" ColumnName="Product line" />
+          <ScalarProperty Name="Site" ColumnName="Site" />
+          <ScalarProperty Name="Thermo_Number" ColumnName="Thermo Number" />
+          <ScalarProperty Name="Item_Description" ColumnName="Item Description" />
+          <ScalarProperty Name="Category" ColumnName="Category" />
+          <ScalarProperty Name="Part" ColumnName="Part" />
+          <ScalarProperty Name="Part_Type" ColumnName="Part Type" />
+          <ScalarProperty Name="Technology" ColumnName="Technology" />
+          <ScalarProperty Name="Value" ColumnName="Value" />
+          <ScalarProperty Name="Tol" ColumnName="Tol" />
+          <ScalarProperty Name="Temperature___Coefficent" ColumnName="Temperature &#xD;&#xA;Coefficent" />
+          <ScalarProperty Name="Power" ColumnName="Power" />
+          <ScalarProperty Name="Mounting___Style" ColumnName="Mounting &#xD;&#xA;Style" />
+          <ScalarProperty Name="Package" ColumnName="Package" />
+          <ScalarProperty Name="Dimensions" ColumnName="Dimensions" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ResistorMnfs">
+      <EntityTypeMapping TypeName="CDTModel.ResistorMnf">
+        <MappingFragment StoreEntitySet="ResistorMnf">
+          <ScalarProperty Name="Mfr__Name" ColumnName="Mfr. Name" />
+          <ScalarProperty Name="Mfr__Part_Number" ColumnName="Mfr. Part Number" />
+          <ScalarProperty Name="Part_Status" ColumnName="Part Status" />
+          <ScalarProperty Name="RoHS_Status" ColumnName="RoHS Status" />
+          <ScalarProperty Name="Comments" ColumnName="Comments" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="M_Id" ColumnName="M_Id" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Switches">
+      <EntityTypeMapping TypeName="CDTModel.Switch">
+        <MappingFragment StoreEntitySet="Switch">
+          <ScalarProperty Name="BOM_Number" ColumnName="BOM Number" />
+          <ScalarProperty Name="BU" ColumnName="BU" />
+          <ScalarProperty Name="Product_line" ColumnName="Product line" />
+          <ScalarProperty Name="Site" ColumnName="Site" />
+          <ScalarProperty Name="Thermo_Number" ColumnName="Thermo Number" />
+          <ScalarProperty Name="Item_Description" ColumnName="Item Description" />
+          <ScalarProperty Name="Category" ColumnName="Category" />
+          <ScalarProperty Name="Part" ColumnName="Part" />
+          <ScalarProperty Name="Part_Type" ColumnName="Part Type" />
+          <ScalarProperty Name="Endurance" ColumnName="Endurance" />
+          <ScalarProperty Name="Form_Factor" ColumnName="Form Factor" />
+          <ScalarProperty Name="Current_rating" ColumnName="Current rating" />
+          <ScalarProperty Name="Illumination" ColumnName="Illumination" />
+          <ScalarProperty Name="Voltage" ColumnName="Voltage" />
+          <ScalarProperty Name="Mounting_style" ColumnName="Mounting style" />
+          <ScalarProperty Name="Dimensions" ColumnName="Dimensions" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SwitchMnfs">
+      <EntityTypeMapping TypeName="CDTModel.SwitchMnf">
+        <MappingFragment StoreEntitySet="SwitchMnf">
+          <ScalarProperty Name="Mfr__Name" ColumnName="Mfr. Name" />
+          <ScalarProperty Name="Mfr__Part_Number" ColumnName="Mfr. Part Number" />
+          <ScalarProperty Name="Part_Status" ColumnName="Part Status" />
+          <ScalarProperty Name="RoHS_Status" ColumnName="RoHS Status" />
+          <ScalarProperty Name="Comments" ColumnName="Comments" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="M_Id" ColumnName="M_Id" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Thermistors">
+      <EntityTypeMapping TypeName="CDTModel.Thermistor">
+        <MappingFragment StoreEntitySet="Thermistor">
+          <ScalarProperty Name="BOM_Number" ColumnName="BOM Number" />
+          <ScalarProperty Name="BU" ColumnName="BU" />
+          <ScalarProperty Name="Product_line" ColumnName="Product line" />
+          <ScalarProperty Name="Site" ColumnName="Site" />
+          <ScalarProperty Name="Thermo_Number" ColumnName="Thermo Number" />
+          <ScalarProperty Name="Item_Description" ColumnName="Item Description" />
+          <ScalarProperty Name="Category" ColumnName="Category" />
+          <ScalarProperty Name="Part" ColumnName="Part" />
+          <ScalarProperty Name="Part_Type" ColumnName="Part Type" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ThermistorMnfs">
+      <EntityTypeMapping TypeName="CDTModel.ThermistorMnf">
+        <MappingFragment StoreEntitySet="ThermistorMnf">
+          <ScalarProperty Name="Mfr__Name" ColumnName="Mfr. Name" />
+          <ScalarProperty Name="Mfr__Part_Number" ColumnName="Mfr. Part Number" />
+          <ScalarProperty Name="Part_Status" ColumnName="Part Status" />
+          <ScalarProperty Name="RoHS_Status" ColumnName="RoHS Status" />
+          <ScalarProperty Name="Comments" ColumnName="Comments" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="M_Id" ColumnName="M_Id" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Transformers">
+      <EntityTypeMapping TypeName="CDTModel.Transformer">
+        <MappingFragment StoreEntitySet="Transformer">
+          <ScalarProperty Name="BOM_Number" ColumnName="BOM Number" />
+          <ScalarProperty Name="BU" ColumnName="BU" />
+          <ScalarProperty Name="Product_line" ColumnName="Product line" />
+          <ScalarProperty Name="Site" ColumnName="Site" />
+          <ScalarProperty Name="Thermo_Number" ColumnName="Thermo Number" />
+          <ScalarProperty Name="Item_Description" ColumnName="Item Description" />
+          <ScalarProperty Name="Category" ColumnName="Category" />
+          <ScalarProperty Name="Part" ColumnName="Part" />
+          <ScalarProperty Name="Part_Type" ColumnName="Part Type" />
+          <ScalarProperty Name="Turns_Ratio" ColumnName="Turns Ratio" />
+          <ScalarProperty Name="Power_rating" ColumnName="Power rating" />
+          <ScalarProperty Name="Mounting_Style" ColumnName="Mounting Style" />
+          <ScalarProperty Name="Max_Temp" ColumnName="Max.Temp" />
+          <ScalarProperty Name="Dimensions" ColumnName="Dimensions" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TransformerMnfs">
+      <EntityTypeMapping TypeName="CDTModel.TransformerMnf">
+        <MappingFragment StoreEntitySet="TransformerMnf">
+          <ScalarProperty Name="Mfr__Name" ColumnName="Mfr. Name" />
+          <ScalarProperty Name="Mfr__Part_Number" ColumnName="Mfr. Part Number" />
+          <ScalarProperty Name="Part_Status" ColumnName="Part Status" />
+          <ScalarProperty Name="RoHS_Status" ColumnName="RoHS Status" />
+          <ScalarProperty Name="Comments" ColumnName="Comments" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="M_Id" ColumnName="M_Id" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Transistors">
+      <EntityTypeMapping TypeName="CDTModel.Transistor">
+        <MappingFragment StoreEntitySet="Transistor">
+          <ScalarProperty Name="BOM_Number" ColumnName="BOM Number" />
+          <ScalarProperty Name="BU" ColumnName="BU" />
+          <ScalarProperty Name="Product_line" ColumnName="Product line" />
+          <ScalarProperty Name="Site" ColumnName="Site" />
+          <ScalarProperty Name="Thermo_Number" ColumnName="Thermo Number" />
+          <ScalarProperty Name="Item_Description" ColumnName="Item Description" />
+          <ScalarProperty Name="Category" ColumnName="Category" />
+          <ScalarProperty Name="Part" ColumnName="Part" />
+          <ScalarProperty Name="Part_Type" ColumnName="Part Type" />
+          <ScalarProperty Name="Technology" ColumnName="Technology" />
+          <ScalarProperty Name="Gain_Band___width_MhZ_" ColumnName="Gain Band &#xD;&#xA;width(MhZ)" />
+          <ScalarProperty Name="Material" ColumnName="Material" />
+          <ScalarProperty Name="VCE___Volts_" ColumnName="VCE&#xD;&#xA;(Volts)" />
+          <ScalarProperty Name="Current___Amps_" ColumnName="Current&#xD;&#xA;(Amps)" />
+          <ScalarProperty Name="Power___Watts_" ColumnName="Power&#xD;&#xA;(Watts)" />
+          <ScalarProperty Name="Application" ColumnName="Application" />
+          <ScalarProperty Name="Mounting" ColumnName="Mounting" />
+          <ScalarProperty Name="Package" ColumnName="Package" />
+          <ScalarProperty Name="Temperature" ColumnName="Temperature" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TransistorMnfs">
+      <EntityTypeMapping TypeName="CDTModel.TransistorMnf">
+        <MappingFragment StoreEntitySet="TransistorMnf">
+          <ScalarProperty Name="Mfr__Name" ColumnName="Mfr. Name" />
+          <ScalarProperty Name="Mfr__Part_Number" ColumnName="Mfr. Part Number" />
+          <ScalarProperty Name="Part_Status" ColumnName="Part Status" />
+          <ScalarProperty Name="RoHS_Status" ColumnName="RoHS Status" />
+          <ScalarProperty Name="Comments" ColumnName="Comments" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="M_Id" ColumnName="M_Id" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Users">
+      <EntityTypeMapping TypeName="CDTModel.User">
+        <MappingFragment StoreEntitySet="Users">
+          <ScalarProperty Name="SNo" ColumnName="SNo" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="PhoneNumber" ColumnName="PhoneNumber" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="Sex" ColumnName="Sex" />
+          <ScalarProperty Name="Age" ColumnName="Age" />
+          <ScalarProperty Name="PasswordHash" ColumnName="PasswordHash" />
+          <ScalarProperty Name="CreatedDateTime" ColumnName="CreatedDateTime" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Wires">
+      <EntityTypeMapping TypeName="CDTModel.Wire">
+        <MappingFragment StoreEntitySet="Wires">
+          <ScalarProperty Name="BOM_Number" ColumnName="BOM Number" />
+          <ScalarProperty Name="BU" ColumnName="BU" />
+          <ScalarProperty Name="Product_line" ColumnName="Product line" />
+          <ScalarProperty Name="Site" ColumnName="Site" />
+          <ScalarProperty Name="Thermo_Number" ColumnName="Thermo Number" />
+          <ScalarProperty Name="Item_Description" ColumnName="Item Description" />
+          <ScalarProperty Name="Category" ColumnName="Category" />
+          <ScalarProperty Name="Part" ColumnName="Part" />
+          <ScalarProperty Name="Part_Type" ColumnName="Part Type" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="WiresMnfs">
+      <EntityTypeMapping TypeName="CDTModel.WiresMnf">
+        <MappingFragment StoreEntitySet="WiresMnf">
+          <ScalarProperty Name="Mfr__Name" ColumnName="Mfr. Name" />
+          <ScalarProperty Name="Mfr__Part_Number" ColumnName="Mfr. Part Number" />
+          <ScalarProperty Name="Part_Status" ColumnName="Part Status" />
+          <ScalarProperty Name="RoHS_Status" ColumnName="RoHS Status" />
+          <ScalarProperty Name="Comments" ColumnName="Comments" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="M_Id" ColumnName="M_Id" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

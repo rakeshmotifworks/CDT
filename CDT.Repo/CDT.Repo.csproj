@@ -171,6 +171,7 @@
     <Compile Include="User.cs">
       <DependentUpon>CDT_Model.tt</DependentUpon>
     </Compile>
+    <Compile Include="View Model\ICVM.cs" />
     <Compile Include="Wire.cs">
       <DependentUpon>CDT_Model.tt</DependentUpon>
     </Compile>

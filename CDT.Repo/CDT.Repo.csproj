@@ -176,6 +176,7 @@
     <Compile Include="User.cs">
       <DependentUpon>CDT_Model.tt</DependentUpon>
     </Compile>
+
     <Compile Include="View Model\CapacitorVM.cs" />
     <Compile Include="View Model\ComponentVM.cs" />
     <Compile Include="View Model\Composite\ICComposite.cs" />
@@ -206,6 +207,9 @@
     <Compile Include="View Model\TransistorMnfsVM.cs" />
     <Compile Include="View Model\TransistorVM.cs" />
     <Compile Include="View Model\WiresVM.cs" />
+
+    <Compile Include="View Model\ICVM.cs" />
+ 
     <Compile Include="Wire.cs">
       <DependentUpon>CDT_Model.tt</DependentUpon>
     </Compile>

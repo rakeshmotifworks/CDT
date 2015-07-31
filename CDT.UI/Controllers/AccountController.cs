@@ -9,6 +9,9 @@ using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.EntityFramework;
 using Microsoft.Owin.Security;
 using CDT.UI.Models;
+using CDT.Repo;
+using System.Web.Security;
+using CDT.Repo.BAL;
 
 namespace CDT.UI.Controllers
 {
@@ -45,21 +48,128 @@ namespace CDT.UI.Controllers
         {
             if (ModelState.IsValid)
             {
-                var user = await UserManager.FindAsync(model.UserName, model.Password);
+                var userService = new UserBAL();
+                var user = userService.GetUserByEmailOrPhone(model.UserName);
                 if (user != null)
                 {
-                    await SignInAsync(user, model.RememberMe);
-                    return RedirectToLocal(returnUrl);
+                    //var membershipUser = Membership.Provider.GetUser(new Guid(user.RowKey), false);
+                    //if (null != membershipUser)
+                    //{
+                    if (userService.ValidateUser(model.UserName, model.Password))
+                        {
+                            return Authorize(user);
+                        }
+                    //}
                 }
-                else
-                {
-                    ModelState.AddModelError("", "Invalid username or password.");
-                }
+
+                ModelState.AddModelError(string.Empty, @"Invalid Email/Phone and/or Password.");
             }
 
-            // If we got this far, something failed, redisplay form
+           
             return View(model);
+
+
+            //if (ModelState.IsValid)
+            //{
+            //    using (var db = new CDTEntities())
+            //    {
+
+            //        var user = db.Users.Any(user => user.Email == model.UserName
+            //            && user.Password == model.Password);
+
+
+            //        //var user = await UserManager.FindAsync(model.UserName, model.Password);
+            //        if (user != null)
+            //        {
+            //            await SignInAsync(user, model.RememberMe);
+            //            return RedirectToLocal(returnUrl);
+            //        }
+            //        else
+            //        {
+            //            ModelState.AddModelError("", "Invalid username or password.");
+            //        }
+            //    }
+
+            //}
+
+            //// If we got this far, something failed, redisplay form
+            //return View(model);
         }
+
+
+        private ActionResult Authorize(User user)
+        {
+            DateTime now = DateTime.Now;
+            DateTime cookieExpiry = DateTime.Now.AddMonths(6);
+            Response.Cookies.Add(new HttpCookie(FormsAuthentication.FormsCookieName,
+                    FormsAuthentication.Encrypt(new FormsAuthenticationTicket(
+                            1,
+                            user.FirstName,
+                            now,
+                            cookieExpiry,
+                            true,
+                            FormsAuthentication.FormsCookiePath)))
+            {
+                Expires = cookieExpiry
+            });
+
+            return AuthorizeNow(user);
+        }
+
+        private ActionResult AuthorizeNow(User user)
+        {
+            return RedirectToAction("Index", "Home");
+        }
+
+     
+        //public ActionResult Login(User model, string returnUrl)
+        //{
+        //    // Lets first check if the Model is valid or not
+        //    if (ModelState.IsValid)
+        //    {
+        //        using (userDbEntities entities = new userDbEntities())
+        //        {
+        //            string username = model.username;
+        //            string password = model.password;
+
+        //            // Now if our password was enctypted or hashed we would have done the
+        //            // same operation on the user entered password here, But for now
+        //            // since the password is in plain text lets just authenticate directly
+
+        //            bool userValid = entities.Users.Any(user => user.username == username && user.password == password);
+
+        //            // User found in the database
+        //            if (userValid)
+        //            {
+
+        //                FormsAuthentication.SetAuthCookie(username, false);
+        //                if (Url.IsLocalUrl(returnUrl) && returnUrl.Length > 1 && returnUrl.StartsWith("/")
+        //                    && !returnUrl.StartsWith("//") && !returnUrl.StartsWith("/\\"))
+        //                {
+        //                    return Redirect(returnUrl);
+        //                }
+        //                else
+        //                {
+        //                    return RedirectToAction("Index", "Home");
+        //                }
+        //            }
+        //            else
+        //            {
+        //                ModelState.AddModelError("", "The user name or password provided is incorrect.");
+        //            }
+        //        }
+        //    }
+
+        //    // If we got this far, something failed, redisplay form
+        //    return View(model);
+        //}
+
+        //public ActionResult Logout()
+        //{
+        //    FormsAuthentication.SignOut();
+
+        //    return RedirectToAction("Index", "Home");
+        //}
 
         //
         // GET: /Account/Register
@@ -378,7 +488,8 @@ namespace CDT.UI.Controllers
 
         private class ChallengeResult : HttpUnauthorizedResult
         {
-            public ChallengeResult(string provider, string redirectUri) : this(provider, redirectUri, null)
+            public ChallengeResult(string provider, string redirectUri)
+                : this(provider, redirectUri, null)
             {
             }
 

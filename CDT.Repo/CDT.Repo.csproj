@@ -52,6 +52,7 @@
   <ItemGroup>
     <Compile Include="BAL\createBAL.cs" />
     <Compile Include="BAL\IndexBAL.cs" />
+    <Compile Include="BAL\UserBAL.cs" />
     <Compile Include="Capacitor.cs">
       <DependentUpon>CDT_Model.tt</DependentUpon>
     </Compile>

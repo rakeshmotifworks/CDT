@@ -14,6 +14,8 @@ namespace CDT.UI.Controllers
     {
         CDTEntities db = new CDTEntities();
         private IndexBAL _indexBAL;
+
+        [Authorize(Roles = "Admin")]
         public ActionResult Index()
         {
             List<ComponentVM> components = new List<ComponentVM>();

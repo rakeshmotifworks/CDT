@@ -14,6 +14,7 @@ namespace CDT.UI.Controllers
     {
         CDTEntities db = new CDTEntities();
         private IndexBAL _indexBAL;
+        private createBAL _createBAL;
         public ActionResult Index()
         {
             List<ComponentVM> components = new List<ComponentVM>();
@@ -47,7 +48,13 @@ namespace CDT.UI.Controllers
 
         public PartialViewResult ICCreate(ICComposite icVM)
         {
-            return PartialView("_ICMnfsPartial");
+            if(ModelState.IsValid)
+            { 
+            _createBAL=new createBAL();
+            int get = _createBAL.iccrete(icVM);
+            }
+
+            return PartialView("_AllSuccessPartial");
 
         }
         //public PartialViewResult ICMnfsCreate(ICMnf icMnf, string from)

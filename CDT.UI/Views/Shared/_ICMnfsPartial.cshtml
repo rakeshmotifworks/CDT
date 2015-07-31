@@ -36,52 +36,107 @@
 
 @for (int i = count - 1; i < count; i++)
 {
-    <div class="form-horizontal col-md-10">
+   
         @*<h4>ICMnf</h4>
             <hr />
             @Html.ValidationSummary(true)*@
+    <div class="panel panel-default">
+        <div class="panel-heading" style="background-color: #3399FF; color: white">
+            <h3 class="panel-title">Manufacturer Information</h3>
+        </div>
+        <div class="panel-body text-center">
+            <div class="col-md-12" id="divParent">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="col-xs-12 col-sm-12 col-md-12 row">
+                            <div class="col-xs-6 col-sm-6 col-md-6 text-right">
+                                <div class="form-group">
+                                    @Html.Label("Mfr Name", new { @style = "font-family:Adobe Hebrew" })
+                                </div>
+                            </div>
 
-        <div class="form-group">
-            @Html.LabelFor(model => model.ICMainMnf[i].Mfr__Name, new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.ICMainMnf[i].Mfr__Name)
-                @Html.ValidationMessageFor(model => model.ICMainMnf[i].Mfr__Name)
+                            <div class="col-xs-6 col-sm-6 col-md-6">
+                                <div class="form-group">
+                                    @Html.EditorFor(model => model.ICMainMnf[i].Mfr__Name)
+                                    @Html.ValidationMessageFor(model => model.ICMainMnf[i].Mfr__Name)
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-xs-12 col-sm-12 col-md-12 row">
+                            <div class="col-xs-6 col-sm-6 col-md-6 text-right">
+                                <div class="form-group">
+                                    @Html.Label("Mfr Part Number", new { @style = "font-family:Adobe Hebrew" })
+                                </div>
+                            </div>
+
+                            <div class="col-xs-6 col-sm-6 col-md-6">
+                                <div class="form-group">
+                                    @Html.EditorFor(model => model.ICMainMnf[i].Mfr__Part_Number)
+                                    @Html.ValidationMessageFor(model => model.ICMainMnf[i].Mfr__Part_Number)
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="col-xs-12 col-sm-12 col-md-12 row">
+                            <div class="col-xs-6 col-sm-6 col-md-6 text-right">
+                                <div class="form-group">
+                                    @Html.Label("Part Status", new { @style = "font-family:Adobe Hebrew" })
+                                </div>
+                            </div>
+
+                            <div class="col-xs-6 col-sm-6 col-md-6">
+                                <div class="form-group">
+                                    @Html.EditorFor(model => model.ICMainMnf[i].Part_Status)
+                                    @Html.ValidationMessageFor(model => model.ICMainMnf[i].Part_Status)
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-xs-12 col-sm-12 col-md-12 row">
+                            <div class="col-xs-6 col-sm-6 col-md-6 text-right">
+                                <div class="form-group">
+                                    @Html.Label("RoHS Status", new { @style = "font-family:Adobe Hebrew" })
+                                </div>
+                            </div>
+
+                            <div class="col-xs-6 col-sm-6 col-md-6">
+                                <div class="form-group">
+                                    @Html.EditorFor(model => model.ICMainMnf[i].RoHS_Status)
+                                    @Html.ValidationMessageFor(model => model.ICMainMnf[i].RoHS_Status)
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="col-xs-12 col-sm-12 col-md-12 row">
+                            <div class="col-xs-6 col-sm-6 col-md-6 text-right">
+                                <div class="form-group">
+                                    @Html.Label("Comments", new { @style = "font-family:Adobe Hebrew" })
+                                </div>
+                            </div>
+
+                            <div class="col-xs-6 col-sm-6 col-md-6">
+                                <div class="form-group">
+                                    @Html.EditorFor(model => model.ICMainMnf[i].Comments)
+                                    @Html.ValidationMessageFor(model => model.ICMainMnf[i].Comments)
+                                </div>
+                            </div>
+                            <div></div>
+                        </div>
+                    </div>
+
+                </div>
             </div>
         </div>
-
-        <div class="form-group">
-            @Html.LabelFor(model => model.ICMainMnf[i].Mfr__Part_Number, new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.ICMainMnf[i].Mfr__Part_Number)
-                @Html.ValidationMessageFor(model => model.ICMainMnf[i].Mfr__Part_Number)
-            </div>
         </div>
 
-        <div class="form-group">
-            @Html.LabelFor(model => model.ICMainMnf[i].Part_Status, new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.ICMainMnf[i].Part_Status)
-                @Html.ValidationMessageFor(model => model.ICMainMnf[i].Part_Status)
-            </div>
-        </div>
 
-        <div class="form-group">
-            @Html.LabelFor(model => model.ICMainMnf[i].RoHS_Status, new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.ICMainMnf[i].RoHS_Status)
-                @Html.ValidationMessageFor(model => model.ICMainMnf[i].RoHS_Status)
-            </div>
-        </div>
-
-        <div class="form-group">
-            @Html.LabelFor(model => model.ICMainMnf[i].Comments, new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.ICMainMnf[i].Comments)
-                @Html.ValidationMessageFor(model => model.ICMainMnf[i].Comments)
-            </div>
-        </div>
-
-        @*<div class="form-group">
+                                                @*<div class="form-group">
                 @Html.LabelFor(model => model.Type, new { @class = "control-label col-md-2" })
                 <div class="col-md-10">
                     @Html.EditorFor(model => model.Type)
@@ -89,25 +144,25 @@
                 </div>
             </div>*@
 
-        @*<div class="form-group">
+                        @*<div class="form-group">
             @Html.LabelFor(model => model.M_Id, "M_Id", new { @class = "control-label col-md-2" })
             <div class="col-md-10">*@
-        @*@Html.DropDownList("M_Id", String.Empty)
+                        @*@Html.DropDownList("M_Id", String.Empty)
             @Html.ValidationMessageFor(model => model.M_Id)*@
-        @*</div>
+                        @*</div>
             </div>*@
 
-        @*<div class="form-group">
+                        @*<div class="form-group">
                 <div class="col-md-offset-2 col-md-10">
                     <input type="submit" value="Create" class="btn btn-default" />
                 </div>
             </div>*@
-    </div>
+                    
 }
 
 
-@*}*@
+                        @*}*@
 
-@*<div>
-        @Html.ActionLink("Back to List", "Index")
-    </div>*@
+                        @*<div>
+                        @Html.ActionLink("Back to List", "Index")
+                    </div>*@

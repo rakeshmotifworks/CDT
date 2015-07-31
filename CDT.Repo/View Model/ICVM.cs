@@ -23,7 +23,8 @@ namespace CDT.Repo.View_Model
         public string Memory___access_Time { get; set; }
         public string Mouting { get; set; }
         public string Package { get; set; }
-        public Nullable<double> Lead_Spacing_Inch_ { get; set; }
+      //  public Nullable<double> Lead_Spacing_Inch_ { get; set; }
+        public double? Lead_Spacing_Inch_ { get; set; }
         public Nullable<int> No___of_pins { get; set; }
         public string Operating__Temperature { get; set; }
         public int Id { get; set; }

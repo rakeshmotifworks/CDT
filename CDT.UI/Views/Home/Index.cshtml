@@ -5,23 +5,29 @@
 }<br />
 <br />
 <br />
-<script src="~/Scripts/jquery-1.10.2.js"></script>
 
+<script src="~/Scripts/jquery-1.10.2.js"></script>
+<div class="row-fluid" >
+    <div class="col-sm-2 col-md-2">
 <nav class="navbar navbar-default sidebar" role="navigation">
     <div class="container-fluid">
            <div class="collapse navbar-collapse" id="bs-sidebar-navbar-collapse-1">
             <ul class="nav navbar-nav">
                 @foreach (var item in Model)
-                {
-                    <li class="component text-center" id=@item.Id title="@item.Component1"><a>@item.Component1<span style="font-size:16px;"></span></a></li>
-                }
+{
+    <li class="component text-center hvr-overline-from-center btn-xs btn-default" style="font-family:Adobe Hebrew; font-size:medium" id=@item.Id title="@item.Component1"><a>@item.Component1<span style="font-size:16px;"></span></a></li>
+}
             </ul>
         </div>
 
     </div>
 </nav>
+        </div>
+    <div class="col-sm-10 col-md-10">
 <div id="dvLoading" style="display:none"></div>
-<div id="divMain">
+        <div id="divMain">
+        </div>
+</div>
 </div>
 
 

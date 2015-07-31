@@ -1,0 +1,162 @@
+﻿@model CDT.Repo.Resistor
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Details</title>
+</head>
+<body>
+    <div>
+        <h4>Resistor</h4>
+    	<hr />
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.BOM_Number)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.BOM_Number)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.BU)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.BU)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.Product_line)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Product_line)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.Site)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Site)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.Thermo_Number)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Thermo_Number)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.Item_Description)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Item_Description)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.Category)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Category)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.Part)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Part)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.Part_Type)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Part_Type)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.Technology)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Technology)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.Value)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Value)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.Tol)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Tol)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.Temperature___Coefficent)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Temperature___Coefficent)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.Power)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Power)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.Mounting___Style)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Mounting___Style)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.Package)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Package)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.Dimensions)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Dimensions)
+            </dd>
+    
+        </dl>
+    </div>
+    <p>
+        @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+</body>
+</html>

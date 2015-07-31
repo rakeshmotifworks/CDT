@@ -1,0 +1,104 @@
+﻿@model CDT.Repo.Thermistor
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Delete</title>
+</head>
+<body>
+    <h3>Are you sure you want to delete this?</h3>
+    <div>
+        <h4>Thermistor</h4>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.BOM_Number)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.BOM_Number)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.BU)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.BU)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.Product_line)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Product_line)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.Site)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Site)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.Thermo_Number)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Thermo_Number)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.Item_Description)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Item_Description)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.Category)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Category)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.Part)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Part)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.Part_Type)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Part_Type)
+            </dd>
+    
+        </dl>
+    
+        @using (Html.BeginForm()) {
+            @Html.AntiForgeryToken()
+    
+            <div class="form-actions no-color">
+                <input type="submit" value="Delete" class="btn btn-default" /> |
+                @Html.ActionLink("Back to List", "Index")
+            </div>
+        }
+    </div>
+</body>
+</html>

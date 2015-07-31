@@ -1,0 +1,395 @@
+﻿@model CDT.Repo.View_Model.Composite.ICComposite
+
+@{
+    ViewBag.Title = "Index";
+    var val = Json.Encode(Model);
+}
+
+<style type="text/css">
+    #dvLoading {
+        background: url(../Images/loading.gif) no-repeat center center;
+        height: 300px;
+        width: 300px;
+        position: fixed;
+        z-index: 1000;
+        left: 50%;
+        top: 50%;
+        margin: -20px 0 0 -25px;
+        /*opacity: 2px;*/
+    }
+</style>
+
+<link href="~/Content/bootstrap.css" rel="stylesheet" />
+@*@using (Html.BeginForm("ICCreate", "Home", FormMethod.Post))
+{*@
+<div id="dvLoading" style="display:none"></div>
+<fieldset id="infoForm">
+    @Html.AntiForgeryToken()
+    <div class="container-fluid">
+        <div class="col-md-12">
+            <h4 class="text-center">IC</h4>
+        </div>
+        <div class="col-md-10" id="divParent">
+
+            <div class="row">
+                <div class="col-md-6">
+
+                    <div class="col-xs-12 col-sm-12 col-md-12 row">
+                        <div class="col-xs-6 col-sm-6 col-md-6  text-right">
+                            <div class="form-group">
+                                @Html.LabelFor(model => model.ICMain.BOM_Number, new { @class = "control-label col-md-2" })
+                            </div>
+                        </div>
+                        <div class="col-xs-6 col-sm-6 col-md-6">
+                            <div class="form-group">
+                                @Html.EditorFor(model =>  model.ICMain.BOM_Number)
+                                @Html.ValidationMessageFor(model =>  model.ICMain.BOM_Number)
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-12 col-md-12 row">
+                        <div class="col-xs-6 col-sm-6 col-md-6  text-right">
+                            <div class="form-group">
+                                @Html.LabelFor(model => model.ICMain.BU, new { @class = "control-label col-md-2" })
+                            </div>
+                        </div>
+                        <div class="col-xs-6 col-sm-6 col-md-6">
+                            <div class="form-group">
+                                @Html.EditorFor(model => model.ICMain.BU)
+                                @Html.ValidationMessageFor(model => model.ICMain.BU)
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-xs-12 col-sm-12 col-md-12 row">
+                        <div class="col-xs-6 col-sm-6 col-md-6  text-right">
+                            <div class="form-group">
+                                @Html.LabelFor(model => model.ICMain.Product_line, new { @class = "control-label col-md-2" })
+                            </div>
+                        </div>
+                        <div class="col-xs-6 col-sm-6 col-md-6">
+                            <div class="form-group">
+                                @Html.EditorFor(model => model.ICMain.Product_line)
+                                @Html.ValidationMessageFor(model => model.ICMain.Product_line)
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-12 col-md-12 row">
+                        <div class="col-xs-6 col-sm-6 col-md-6  text-right">
+                            <div class="form-group">
+                                @Html.LabelFor(model => model.ICMain.Site, new { @class = "control-label col-md-2" })
+                            </div>
+                        </div>
+                        <div class="col-xs-6 col-sm-6 col-md-6">
+                            <div class="form-group">
+                                @Html.EditorFor(model => model.ICMain.Site)
+                                @Html.ValidationMessageFor(model => model.ICMain.Site)
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-12 col-md-12 row">
+                        <div class="col-xs-6 col-sm-6 col-md-6  text-right">
+                            <div class="form-group">
+                                @Html.LabelFor(model => model.ICMain.Thermo_Number, new { @class = "control-label col-md-2" })
+                            </div>
+                        </div>
+                        <div class="col-xs-6 col-sm-6 col-md-6">
+                            <div class="form-group">
+                                @Html.EditorFor(model => model.ICMain.Thermo_Number)
+                                @Html.ValidationMessageFor(model => model.ICMain.Thermo_Number)
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-xs-12 col-sm-12 col-md-12 row">
+                        <div class="col-xs-6 col-sm-6 col-md-6  text-right">
+                            <div class="form-group">
+                                @Html.LabelFor(model => model.ICMain.Item_Description, new { @class = "control-label col-md-2" })
+                            </div>
+                        </div>
+                        <div class="col-xs-6 col-sm-6 col-md-6">
+                            <div class="form-group">
+                                @Html.EditorFor(model => model.ICMain.Item_Description)
+                                @Html.ValidationMessageFor(model => model.ICMain.Item_Description)
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-12 col-md-12 row">
+                        <div class="col-xs-6 col-sm-6 col-md-6  text-right">
+                            <div class="form-group">
+                                @Html.LabelFor(model => model.ICMain.Category, new { @class = "control-label col-md-2" })
+                            </div>
+                        </div>
+                        <div class="col-xs-6 col-sm-6 col-md-6">
+                            <div class="form-group">
+                                @Html.EditorFor(model => model.ICMain.Category)
+                                @Html.ValidationMessageFor(model => model.ICMain.Category)
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-12 col-md-12 row">
+                        <div class="col-xs-6 col-sm-6 col-md-6  text-right">
+                            <div class="form-group">
+                                @Html.LabelFor(model => model.ICMain.Part, new { @class = "control-label col-md-2" })
+                            </div>
+                        </div>
+                        <div class="col-xs-6 col-sm-6 col-md-6">
+                            <div class="form-group">
+                                @Html.EditorFor(model => model.ICMain.Part)
+                                @Html.ValidationMessageFor(model => model.ICMain.Part)
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-12 col-md-12 row">
+                        <div class="col-xs-6 col-sm-6 col-md-6  text-right">
+                            <div class="form-group">
+                                @Html.LabelFor(model => model.ICMain.Part_Type, new { @class = "control-label col-md-2" })
+                            </div>
+                        </div>
+                        <div class="col-xs-6 col-sm-6 col-md-6">
+                            <div class="form-group">
+                                @Html.EditorFor(model => model.ICMain.Part_Type)
+                                @Html.ValidationMessageFor(model => model.ICMain.Part_Type)
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="col-md-6">
+
+                    <div class="col-xs-12 col-sm-12 col-md-12 row">
+                        <div class="col-xs-6 col-sm-6 col-md-6  text-right">
+                            <div class="form-group">
+                                @Html.LabelFor(model => model.ICMain.Technology, new { @class = "control-label col-md-2" })
+                            </div>
+                        </div>
+                        <div class="col-xs-6 col-sm-6 col-md-6">
+                            <div class="form-group">
+                                @Html.EditorFor(model => model.ICMain.Technology)
+                                @Html.ValidationMessageFor(model => model.ICMain.Technology)
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-xs-12 col-sm-12 col-md-12 row">
+                        <div class="col-xs-6 col-sm-6 col-md-6  text-right">
+                            <div class="form-group">
+                                @Html.LabelFor(model => model.ICMain.Supply_Voltage, new { @class = "control-label col-md-2" })
+                            </div>
+                        </div>
+                        <div class="col-xs-6 col-sm-6 col-md-6">
+                            <div class="form-group">
+                                @Html.EditorFor(model => model.ICMain.Supply_Voltage)
+                                @Html.ValidationMessageFor(model => model.ICMain.Supply_Voltage)
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-12 col-md-12 row">
+                        <div class="col-xs-6 col-sm-6 col-md-6  text-right">
+                            <div class="form-group">
+                                @Html.LabelFor(model => model.ICMain.Memory___organisation, new { @class = "control-label col-md-2" })
+                            </div>
+                        </div>
+                        <div class="col-xs-6 col-sm-6 col-md-6">
+                            <div class="form-group">
+                                @Html.EditorFor(model => model.ICMain.Memory___organisation)
+                                @Html.ValidationMessageFor(model => model.ICMain.Memory___organisation)
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-12 col-md-12 row">
+                        <div class="col-xs-6 col-sm-6 col-md-6  text-right">
+                            <div class="form-group">
+                                @Html.LabelFor(model => model.ICMain.Memory___access_Time, new { @class = "control-label col-md-2" })
+                            </div>
+                        </div>
+                        <div class="col-xs-6 col-sm-6 col-md-6">
+                            <div class="form-group">
+                                @Html.EditorFor(model => model.ICMain.Memory___access_Time)
+                                @Html.ValidationMessageFor(model => model.ICMain.Memory___access_Time)
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-12 col-md-12 row">
+                        <div class="col-xs-6 col-sm-6 col-md-6  text-right">
+                            <div class="form-group">
+                                @Html.LabelFor(model => model.ICMain.Mouting, new { @class = "control-label col-md-2" })
+                            </div>
+                        </div>
+                        <div class="col-xs-6 col-sm-6 col-md-6">
+                            <div class="form-group">
+                                @Html.EditorFor(model => model.ICMain.Mouting)
+                                @Html.ValidationMessageFor(model => model.ICMain.Mouting)
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-12 col-md-12 row">
+                        <div class="col-xs-6 col-sm-6 col-md-6  text-right">
+                            <div class="form-group">
+                                @Html.LabelFor(model => model.ICMain.Package, new { @class = "control-label col-md-2" })
+                            </div>
+                        </div>
+                        <div class="col-xs-6 col-sm-6 col-md-6">
+                            <div class="form-group">
+                                @Html.EditorFor(model => model.ICMain.Package)
+                                @Html.ValidationMessageFor(model => model.ICMain.Package)
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-12 col-md-12 row">
+                        <div class="col-xs-6 col-sm-6 col-md-6  text-right">
+                            <div class="form-group">
+                                @Html.LabelFor(model => model.ICMain.Lead_Spacing_Inch_, new { @class = "control-label col-md-2" })
+                            </div>
+                        </div>
+                        <div class="col-xs-6 col-sm-6 col-md-6">
+                            <div class="form-group">
+                                @Html.EditorFor(model => model.ICMain.Lead_Spacing_Inch_)
+                                @Html.ValidationMessageFor(model => model.ICMain.Lead_Spacing_Inch_)
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-12 col-md-12 row">
+                        <div class="col-xs-6 col-sm-6 col-md-6  text-right">
+                            <div class="form-group">
+                                @Html.LabelFor(model => model.ICMain.No___of_pins, new { @class = "control-label col-md-2" })
+                            </div>
+                        </div>
+                        <div class="col-xs-6 col-sm-6 col-md-6">
+                            <div class="form-group">
+                                @Html.EditorFor(model => model.ICMain.No___of_pins)
+                                @Html.ValidationMessageFor(model => model.ICMain.No___of_pins)
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-12 col-md-12 row">
+                        <div class="col-xs-6 col-sm-6 col-md-6  text-right">
+                            <div class="form-group">
+                                @Html.LabelFor(model => model.ICMain.Operating__Temperature, new { @class = "control-label col-md-2" })
+                            </div>
+                        </div>
+                        <div class="col-xs-6 col-sm-6 col-md-6">
+                            <div class="form-group">
+                                @Html.EditorFor(model => model.ICMain.Operating__Temperature)
+                                @Html.ValidationMessageFor(model => model.ICMain.Operating__Temperature)
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            @*@foreach (var item in Model.ICMain.ICMnfs)
+            {
+            <div class="form-group">
+                @Html.LabelFor(model => item.Part_Status, new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => item.Part_Status)
+                    @Html.ValidationMessageFor(model => item.Part_Status)
+                </div>
+            </div>
+            }*@
+
+
+            <div class="col-md-10 text-center">
+                <input type="submit" id="submitButton" value="Create" class="btn btn-default" />
+
+            </div>
+        </div>
+    </div>
+
+    <div id="divChild">
+
+    </div>
+</fieldset>
+    <input type="button" id="btnAddMore" value="Add More Mnfs" class="btn-sm btn-success" />
+    @*}*@
+
+    @section Scripts {
+        @Scripts.Render("~/bundles/jqueryval")
+    }
+
+    <script type="text/javascript">
+        $('#createIC').click(function () {
+            var id = $(this).attr('id');
+            var name = $(this).attr('title');
+
+            var tempurl = window.location.protocol + "//" + window.location.hostname +
+                (window.location.port ? ':' + window.location.port : '') + window.location.pathname + "/ICCreate";
+            tempurl = tempurl.replace('/Index', '');
+            var check = @Html.Raw(val);
+            $.ajax({
+                url: tempurl,
+                cache: false,
+                type: "get",
+                data: { "icVM": val },
+                success: function (result) {
+                    $("#divMain").html(result);
+                }
+            });
+
+        });
+
+        $('#btnAddMore').click(function () {
+            $("#dvLoading").show();
+            var tempurl = window.location.protocol + "//" + window.location.hostname +
+                (window.location.port ? ':' + window.location.port : '') + window.location.pathname + "/ICMnfsPartial";
+            tempurl = tempurl.replace('/Index', '');
+
+            $.ajax({
+                url: tempurl,
+                cache: false,
+                type: "get",
+                dataType: "html",
+                success: function (result) {
+                    $("#dvLoading").hide();
+                    $("#divChild").append(result);
+                }
+            });
+
+        });
+
+
+        $(function () {
+            var submitButton = $("#submitButton");
+            var infoForm = $("#infoForm");
+
+            //  Attach event handler to submit button
+            submitButton.click(function () {
+                SubmitInfo(infoForm);
+            });
+        });
+
+
+        var tempurl = window.location.protocol + "//" + window.location.hostname +
+              (window.location.port ? ':' + window.location.port : '') + window.location.pathname + "/ICCreate";
+        tempurl = tempurl.replace('/Index', '');
+        //  Submits the Info form to Controller
+        //  formContainer: (jQuery) The form model to submit
+        function SubmitInfo(formContainer) {
+            debugger;
+          //  alert(formContainer);
+            $.ajax({
+                url: tempurl,
+                type: 'post',
+                data: formContainer.serialize(),
+                success: function (data) {
+                    $("#divParent").hide();
+                    $("#divChild").append(data);
+                    //if (data.IsSuccess) {
+                        // Clear the input tags
+                      //  formContainer.find("input[type='text']").each(function (i, element) {
+                        //    $(this).val('');
+                        //});
+                    }
+
+                 //   alert(data.Message);
+               // },
+                //error: function (jqXHR, textStatus, errorThrown) {
+                ////    alert(errorThrown);
+                //}
+            });
+        }
+
+
+    </script>

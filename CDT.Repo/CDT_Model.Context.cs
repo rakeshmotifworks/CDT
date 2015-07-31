@@ -62,5 +62,6 @@ namespace CDT.Repo
         public virtual DbSet<User> Users { get; set; }
         public virtual DbSet<Wire> Wires { get; set; }
         public virtual DbSet<WiresMnf> WiresMnfs { get; set; }
+        public virtual DbSet<Component> Components { get; set; }
     }
 }

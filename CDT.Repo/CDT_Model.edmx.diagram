@@ -60,6 +60,7 @@
         <AssociationConnector Association="CDTModel.FK_TransformerMnf_Transformer" ManuallyRouted="false" />
         <AssociationConnector Association="CDTModel.FK_TransistorMnf_Transistor" ManuallyRouted="false" />
         <AssociationConnector Association="CDTModel.FK_WiresMnf_Wires" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="CDTModel.Component" Width="1.5" PointX="0.75" PointY="17.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

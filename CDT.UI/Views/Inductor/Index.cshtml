@@ -1,0 +1,167 @@
+﻿@model IEnumerable<CDT.Repo.Inductor>
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <p>
+        @Html.ActionLink("Create New", "Create")
+    </p>
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.BOM_Number)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.BU)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Product_line)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Site)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Thermo_Number)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Item_Description)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Category)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Part)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Part_Type)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Construction)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Operating_Temperature)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Impedence)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Inductance)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Capacitance)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Tol)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Current_Rating)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DC_Resistance)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Shielding)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Frequency)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Mounting)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Package_for_SMD)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Dimensions)
+            </th>
+            <th></th>
+        </tr>
+    
+    @foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.BOM_Number)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.BU)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Product_line)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Site)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Thermo_Number)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Item_Description)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Category)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Part)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Part_Type)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Construction)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Operating_Temperature)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Impedence)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Inductance)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Capacitance)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Tol)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Current_Rating)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DC_Resistance)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Shielding)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Frequency)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Mounting)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Package_for_SMD)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Dimensions)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
+                @Html.ActionLink("Details", "Details", new { id=item.Id }) |
+                @Html.ActionLink("Delete", "Delete", new { id=item.Id })
+            </td>
+        </tr>
+    }
+    
+    </table>
+</body>
+</html>

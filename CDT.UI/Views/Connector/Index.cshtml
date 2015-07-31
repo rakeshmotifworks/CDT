@@ -1,0 +1,141 @@
+﻿@model IEnumerable<CDT.Repo.Connector>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.BOM_Number)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.BU)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Product_line)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Site)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Thermo_Number)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Item_Description)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Category)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Part)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Part_Type)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Contact_Contact_Type)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Contact_Surface)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Max___Temperature)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.No_of___Rows)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.No_of___Positions)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Connector___Orientation)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Contact___Rating)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Voltage___Rating)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Package)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Pin_Spacing___or_pitch)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.BOM_Number)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.BU)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Product_line)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Site)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Thermo_Number)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Item_Description)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Category)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Part)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Part_Type)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Contact_Contact_Type)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Contact_Surface)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Max___Temperature)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.No_of___Rows)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.No_of___Positions)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Connector___Orientation)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Contact___Rating)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Voltage___Rating)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Package)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Pin_Spacing___or_pitch)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
+            @Html.ActionLink("Details", "Details", new { id=item.Id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.Id })
+        </td>
+    </tr>
+}
+
+</table>

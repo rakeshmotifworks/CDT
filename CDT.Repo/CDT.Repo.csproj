@@ -50,6 +50,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BAL\createBAL.cs" />
+    <Compile Include="BAL\IndexBAL.cs" />
     <Compile Include="Capacitor.cs">
       <DependentUpon>CDT_Model.tt</DependentUpon>
     </Compile>
@@ -70,6 +72,9 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>CDT_Model.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Component.cs">
+      <DependentUpon>CDT_Model.tt</DependentUpon>
     </Compile>
     <Compile Include="Connector.cs">
       <DependentUpon>CDT_Model.tt</DependentUpon>
@@ -171,6 +176,36 @@
     <Compile Include="User.cs">
       <DependentUpon>CDT_Model.tt</DependentUpon>
     </Compile>
+    <Compile Include="View Model\CapacitorVM.cs" />
+    <Compile Include="View Model\ComponentVM.cs" />
+    <Compile Include="View Model\Composite\ICComposite.cs" />
+    <Compile Include="View Model\ConnectorMnfsVM.cs" />
+    <Compile Include="View Model\ConnectorVM.cs" />
+    <Compile Include="View Model\DiodeMnfsVM.cs" />
+    <Compile Include="View Model\DiodeVM.cs" />
+    <Compile Include="View Model\FuseMnfsVM.cs" />
+    <Compile Include="View Model\FuseVM.cs" />
+    <Compile Include="View Model\IcMnfsvm.cs" />
+    <Compile Include="View Model\ICVM.cs" />
+    <Compile Include="View Model\InductorMnfsVM.cs" />
+    <Compile Include="View Model\InductorVM.cs" />
+    <Compile Include="View Model\MechanicalVM.cs" />
+    <Compile Include="View Model\MiscVM.cs" />
+    <Compile Include="View Model\OptoelectronicsMnfsVM.cs" />
+    <Compile Include="View Model\OptoelectronicsVM.cs" />
+    <Compile Include="View Model\OscillatorsMnfsVM.cs" />
+    <Compile Include="View Model\OscillatorsVM.cs" />
+    <Compile Include="View Model\PotentiometerVM.cs" />
+    <Compile Include="View Model\RelayMnfsVM.cs" />
+    <Compile Include="View Model\RelayVM.cs" />
+    <Compile Include="View Model\ResistorVM.cs" />
+    <Compile Include="View Model\SwitchMnfsVM.cs" />
+    <Compile Include="View Model\SwitchVM.cs" />
+    <Compile Include="View Model\ThermistorVM.cs" />
+    <Compile Include="View Model\TransformerVM.cs" />
+    <Compile Include="View Model\TransistorMnfsVM.cs" />
+    <Compile Include="View Model\TransistorVM.cs" />
+    <Compile Include="View Model\WiresVM.cs" />
     <Compile Include="Wire.cs">
       <DependentUpon>CDT_Model.tt</DependentUpon>
     </Compile>

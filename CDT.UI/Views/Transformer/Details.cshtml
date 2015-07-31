@@ -1,0 +1,138 @@
+﻿@model CDT.Repo.Transformer
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Details</title>
+</head>
+<body>
+    <div>
+        <h4>Transformer</h4>
+    	<hr />
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.BOM_Number)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.BOM_Number)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.BU)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.BU)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.Product_line)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Product_line)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.Site)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Site)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.Thermo_Number)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Thermo_Number)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.Item_Description)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Item_Description)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.Category)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Category)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.Part)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Part)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.Part_Type)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Part_Type)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.Turns_Ratio)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Turns_Ratio)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.Power_rating)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Power_rating)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.Mounting_Style)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Mounting_Style)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.Max_Temp)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Max_Temp)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.Dimensions)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Dimensions)
+            </dd>
+    
+        </dl>
+    </div>
+    <p>
+        @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+</body>
+</html>

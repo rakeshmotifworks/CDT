@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="CDTModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="CDTModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="Capacitor">
           <Key>
             <PropertyRef Name="Id" />
@@ -43,6 +43,13 @@
           <Property Name="Type" Type="varchar" MaxLength="50" Nullable="false" />
           <Property Name="M_Id" Type="int" Nullable="false" />
           <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Components">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Component" Type="nvarchar" MaxLength="50" Nullable="false" />
         </EntityType>
         <EntityType Name="Connector">
           <Key>
@@ -615,6 +622,7 @@
           <Property Name="CreatedDateTime" Type="datetime" />
           <Property Name="IsActive" Type="nvarchar" MaxLength="5" />
           <Property Name="IsDeleted" Type="nvarchar" MaxLength="5" />
+          <Property Name="Roles" Type="nvarchar" MaxLength="50" />
         </EntityType>
         <EntityType Name="Wires">
           <Key>
@@ -863,6 +871,7 @@
         <EntityContainer Name="CDTModelStoreContainer">
           <EntitySet Name="Capacitor" EntityType="Self.Capacitor" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="CapacitorMnf" EntityType="Self.CapacitorMnf" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Components" EntityType="Self.Components" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Connector" EntityType="Self.Connector" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="ConnectorMnf" EntityType="Self.ConnectorMnf" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Diode" EntityType="Self.Diode" Schema="dbo" store:Type="Tables" />
@@ -971,8 +980,7 @@
             <End Role="WiresMnf" EntitySet="WiresMnf" />
           </AssociationSet>
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="CDTModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -1620,6 +1628,7 @@
           <Property Name="CreatedDateTime" Type="DateTime" Precision="3" />
           <Property Name="IsActive" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
           <Property Name="IsDeleted" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+          <Property Name="Roles" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
         </EntityType>
         <EntityType Name="Wire">
           <Key>
@@ -1977,7 +1986,15 @@
             <End Role="Wires" EntitySet="Wires" />
             <End Role="WiresMnf" EntitySet="WiresMnfs" />
           </AssociationSet>
+          <EntitySet Name="Components" EntityType="CDTModel.Component" />
         </EntityContainer>
+        <EntityType Name="Component">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Component1" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -2614,6 +2631,7 @@
           <EntitySetMapping Name="Users">
             <EntityTypeMapping TypeName="CDTModel.User">
               <MappingFragment StoreEntitySet="Users">
+                <ScalarProperty Name="Roles" ColumnName="Roles" />
                 <ScalarProperty Name="SNo" ColumnName="SNo" />
                 <ScalarProperty Name="FirstName" ColumnName="FirstName" />
                 <ScalarProperty Name="LastName" ColumnName="LastName" />
@@ -2656,6 +2674,14 @@
                 <ScalarProperty Name="Comments" ColumnName="Comments" />
                 <ScalarProperty Name="Type" ColumnName="Type" />
                 <ScalarProperty Name="M_Id" ColumnName="M_Id" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Components">
+            <EntityTypeMapping TypeName="CDTModel.Component">
+              <MappingFragment StoreEntitySet="Components">
+                <ScalarProperty Name="Component1" ColumnName="Component" />
                 <ScalarProperty Name="Id" ColumnName="Id" />
               </MappingFragment>
             </EntityTypeMapping>

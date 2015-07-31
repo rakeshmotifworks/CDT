@@ -1,0 +1,123 @@
+﻿@model IEnumerable<CDT.Repo.Switch>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.BOM_Number)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.BU)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Product_line)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Site)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Thermo_Number)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Item_Description)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Category)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Part)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Part_Type)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Endurance)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Form_Factor)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Current_rating)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Illumination)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Voltage)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Mounting_style)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Dimensions)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.BOM_Number)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.BU)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Product_line)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Site)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Thermo_Number)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Item_Description)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Category)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Part)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Part_Type)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Endurance)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Form_Factor)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Current_rating)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Illumination)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Voltage)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Mounting_style)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Dimensions)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
+            @Html.ActionLink("Details", "Details", new { id=item.Id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.Id })
+        </td>
+    </tr>
+}
+
+</table>

@@ -8,7 +8,7 @@ namespace CDT.Repo.View_Model.Composite
 {
     public class ICComposite
     {
-        public IC ICMain { get; set; }
-        public List<ICMnf> ICMainMnf { get; set; }
+        public ICVM ICMain { get; set; }
+        public List<IcMnfsvm> ICMainMnf { get; set; }
     }
 }

@@ -176,6 +176,7 @@
     <Compile Include="User.cs">
       <DependentUpon>CDT_Model.tt</DependentUpon>
     </Compile>
+    <Compile Include="View Model\CapacitorMnfsVM.cs" />
     <Compile Include="View Model\CapacitorVM.cs" />
     <Compile Include="View Model\ComponentVM.cs" />
     <Compile Include="View Model\Composite\ICComposite.cs" />
@@ -189,22 +190,29 @@
     <Compile Include="View Model\ICVM.cs" />
     <Compile Include="View Model\InductorMnfsVM.cs" />
     <Compile Include="View Model\InductorVM.cs" />
+    <Compile Include="View Model\MechanicalMnfsVM.cs" />
     <Compile Include="View Model\MechanicalVM.cs" />
+    <Compile Include="View Model\MiscMnfsVM.cs" />
     <Compile Include="View Model\MiscVM.cs" />
     <Compile Include="View Model\OptoelectronicsMnfsVM.cs" />
     <Compile Include="View Model\OptoelectronicsVM.cs" />
     <Compile Include="View Model\OscillatorsMnfsVM.cs" />
     <Compile Include="View Model\OscillatorsVM.cs" />
+    <Compile Include="View Model\PotentiometerMnfsVM.cs" />
     <Compile Include="View Model\PotentiometerVM.cs" />
     <Compile Include="View Model\RelayMnfsVM.cs" />
     <Compile Include="View Model\RelayVM.cs" />
+    <Compile Include="View Model\ResistorMnfsVM.cs" />
     <Compile Include="View Model\ResistorVM.cs" />
     <Compile Include="View Model\SwitchMnfsVM.cs" />
     <Compile Include="View Model\SwitchVM.cs" />
+    <Compile Include="View Model\ThermistorMnfsVM.cs" />
     <Compile Include="View Model\ThermistorVM.cs" />
+    <Compile Include="View Model\TransformerMnfsVM.cs" />
     <Compile Include="View Model\TransformerVM.cs" />
     <Compile Include="View Model\TransistorMnfsVM.cs" />
     <Compile Include="View Model\TransistorVM.cs" />
+    <Compile Include="View Model\WiresMnfsVM.cs" />
     <Compile Include="View Model\WiresVM.cs" />
     <Compile Include="Wire.cs">
       <DependentUpon>CDT_Model.tt</DependentUpon>

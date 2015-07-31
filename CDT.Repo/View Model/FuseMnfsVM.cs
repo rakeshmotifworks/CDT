@@ -6,9 +6,8 @@ using System.Threading.Tasks;
 
 namespace CDT.Repo.View_Model
 {
-    class FuseMnfsVM
-    {
-        public partial class FuseMnf
+  
+        public class FuseMnfsVM
         {
             public string Mfr__Name { get; set; }
             public string Mfr__Part_Number { get; set; }
@@ -21,5 +20,4 @@ namespace CDT.Repo.View_Model
 
             public virtual Fuse Fuse { get; set; }
         }
-    }
 }

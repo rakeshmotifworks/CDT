@@ -6,9 +6,8 @@ using System.Threading.Tasks;
 
 namespace CDT.Repo.View_Model
 {
-    class DiodeMnfsVM
-    {
-        public partial class DiodeMnf
+  
+        public partial class DiodeMnfsVM
         {
             public string Mfr__Name { get; set; }
             public string Mfr__Part_Number { get; set; }
@@ -21,5 +20,4 @@ namespace CDT.Repo.View_Model
 
             public virtual Diode Diode { get; set; }
         }
-    }
 }

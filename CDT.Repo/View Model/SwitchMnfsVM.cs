@@ -6,9 +6,8 @@ using System.Threading.Tasks;
 
 namespace CDT.Repo.View_Model
 {
-    class SwitchMnfsVM
-    {
-        public partial class SwitchMnf
+   
+        public class SwitchMnfsVM
         {
             public string Mfr__Name { get; set; }
             public string Mfr__Part_Number { get; set; }
@@ -21,5 +20,5 @@ namespace CDT.Repo.View_Model
 
             public virtual Switch Switch { get; set; }
         }
-    }
+   
 }

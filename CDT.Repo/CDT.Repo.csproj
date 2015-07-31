@@ -176,7 +176,6 @@
     <Compile Include="User.cs">
       <DependentUpon>CDT_Model.tt</DependentUpon>
     </Compile>
-
     <Compile Include="View Model\CapacitorVM.cs" />
     <Compile Include="View Model\ComponentVM.cs" />
     <Compile Include="View Model\Composite\ICComposite.cs" />
@@ -207,9 +206,6 @@
     <Compile Include="View Model\TransistorMnfsVM.cs" />
     <Compile Include="View Model\TransistorVM.cs" />
     <Compile Include="View Model\WiresVM.cs" />
-
-    <Compile Include="View Model\ICVM.cs" />
- 
     <Compile Include="Wire.cs">
       <DependentUpon>CDT_Model.tt</DependentUpon>
     </Compile>
@@ -218,13 +214,11 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <None Include="App.Config" />
     <EntityDeploy Include="CDT_Model.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>CDT_Model.Designer.cs</LastGenOutput>
     </EntityDeploy>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="App.Config" />
     <None Include="CDT_Model.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>CDT_Model.edmx</DependentUpon>

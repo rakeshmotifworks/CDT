@@ -27,6 +27,7 @@ namespace CDT.Repo
     
         public virtual DbSet<Capacitor> Capacitors { get; set; }
         public virtual DbSet<CapacitorMnf> CapacitorMnfs { get; set; }
+        public virtual DbSet<Component> Components { get; set; }
         public virtual DbSet<Connector> Connectors { get; set; }
         public virtual DbSet<ConnectorMnf> ConnectorMnfs { get; set; }
         public virtual DbSet<Diode> Diodes { get; set; }
@@ -62,6 +63,5 @@ namespace CDT.Repo
         public virtual DbSet<User> Users { get; set; }
         public virtual DbSet<Wire> Wires { get; set; }
         public virtual DbSet<WiresMnf> WiresMnfs { get; set; }
-        public virtual DbSet<Component> Components { get; set; }
     }
 }

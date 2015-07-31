@@ -6,9 +6,8 @@ using System.Threading.Tasks;
 
 namespace CDT.Repo.View_Model
 {
-    class RelayMnfsVM
-    {
-        public partial class RelayMnf
+  
+        public class RelayMnfsVM
         {
             public string Mfr__Name { get; set; }
             public string Mfr__Part_Number { get; set; }
@@ -22,4 +21,4 @@ namespace CDT.Repo.View_Model
             public virtual Relay Relay { get; set; }
         }
     }
-}
+

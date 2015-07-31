@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CDT.Repo.View_Model
 {
-    public class ConnectorMnf
+    public class ConnectorMnfVM
     {
         public string Mfr__Name { get; set; }
         public string Mfr__Part_Number { get; set; }

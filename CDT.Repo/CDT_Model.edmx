@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-    <Schema Namespace="CDTModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+      <Schema Namespace="CDTModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="Capacitor">
           <Key>
             <PropertyRef Name="Id" />
@@ -980,7 +980,8 @@
             <End Role="WiresMnf" EntitySet="WiresMnf" />
           </AssociationSet>
         </EntityContainer>
-      </Schema></edmx:StorageModels>
+      </Schema>
+    </edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="CDTModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -1024,6 +1025,13 @@
           <Property Name="M_Id" Type="Int32" Nullable="false" />
           <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <NavigationProperty Name="Capacitor" Relationship="Self.FK_CapacitorMnf_Capacitor" FromRole="CapacitorMnf" ToRole="Capacitor" />
+        </EntityType>
+        <EntityType Name="Component">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Component1" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
         </EntityType>
         <EntityType Name="Connector">
           <Key>
@@ -1879,6 +1887,7 @@
         <EntityContainer Name="CDTEntities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="Capacitors" EntityType="Self.Capacitor" />
           <EntitySet Name="CapacitorMnfs" EntityType="Self.CapacitorMnf" />
+          <EntitySet Name="Components" EntityType="Self.Component" />
           <EntitySet Name="Connectors" EntityType="Self.Connector" />
           <EntitySet Name="ConnectorMnfs" EntityType="Self.ConnectorMnf" />
           <EntitySet Name="Diodes" EntityType="Self.Diode" />
@@ -1986,15 +1995,7 @@
             <End Role="Wires" EntitySet="Wires" />
             <End Role="WiresMnf" EntitySet="WiresMnfs" />
           </AssociationSet>
-          <EntitySet Name="Components" EntityType="CDTModel.Component" />
         </EntityContainer>
-        <EntityType Name="Component">
-          <Key>
-            <PropertyRef Name="Id" />
-          </Key>
-          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="Component1" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
-        </EntityType>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -2039,6 +2040,14 @@
                 <ScalarProperty Name="Type" ColumnName="Type" />
                 <ScalarProperty Name="M_Id" ColumnName="M_Id" />
                 <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Components">
+            <EntityTypeMapping TypeName="CDTModel.Component">
+              <MappingFragment StoreEntitySet="Components">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Component1" ColumnName="Component" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -2631,7 +2640,6 @@
           <EntitySetMapping Name="Users">
             <EntityTypeMapping TypeName="CDTModel.User">
               <MappingFragment StoreEntitySet="Users">
-                <ScalarProperty Name="Roles" ColumnName="Roles" />
                 <ScalarProperty Name="SNo" ColumnName="SNo" />
                 <ScalarProperty Name="FirstName" ColumnName="FirstName" />
                 <ScalarProperty Name="LastName" ColumnName="LastName" />
@@ -2645,6 +2653,7 @@
                 <ScalarProperty Name="CreatedDateTime" ColumnName="CreatedDateTime" />
                 <ScalarProperty Name="IsActive" ColumnName="IsActive" />
                 <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+                <ScalarProperty Name="Roles" ColumnName="Roles" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -2674,14 +2683,6 @@
                 <ScalarProperty Name="Comments" ColumnName="Comments" />
                 <ScalarProperty Name="Type" ColumnName="Type" />
                 <ScalarProperty Name="M_Id" ColumnName="M_Id" />
-                <ScalarProperty Name="Id" ColumnName="Id" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="Components">
-            <EntityTypeMapping TypeName="CDTModel.Component">
-              <MappingFragment StoreEntitySet="Components">
-                <ScalarProperty Name="Component1" ColumnName="Component" />
                 <ScalarProperty Name="Id" ColumnName="Id" />
               </MappingFragment>
             </EntityTypeMapping>

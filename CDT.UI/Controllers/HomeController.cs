@@ -16,7 +16,7 @@ namespace CDT.UI.Controllers
         private IndexBAL _indexBAL;
         private createBAL _createBAL;
 
-        [Authorize(Roles = "Admin")]
+        //[Authorize(Roles = "Admin")]
         public ActionResult Index()
         {
             List<ComponentVM> components = new List<ComponentVM>();

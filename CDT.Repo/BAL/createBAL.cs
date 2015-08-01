@@ -37,13 +37,10 @@ namespace CDT.Repo.BAL
                     Operating__Temperature = icVM.ICMain.Operating__Temperature,
                     ICMnfs = GetICMnfs(icVM)
                 };
-                
                 db.ICs.Add(ic);
                 db.SaveChanges();
 
                 return ic.Id;
-
-
             };
         }
 

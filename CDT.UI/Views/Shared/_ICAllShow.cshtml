@@ -1,0 +1,354 @@
+﻿@model CDT.Repo.View_Model.Composite.ICComposite
+
+<style type="text/css">
+    #dvLoading {
+        background: url(../Images/loading.gif) no-repeat center center;
+        height: 300px;
+        width: 300px;
+        position: fixed;
+        z-index: 1000;
+        left: 50%;
+        top: 50%;
+        margin: -20px 0 0 -25px;
+        /*opacity: 2px;*/
+    }
+</style>
+
+<link href="~/Content/bootstrap.css" rel="stylesheet" />
+@*@using (Html.BeginForm("ICCreate", "Home", FormMethod.Post))
+    {*@
+<div id="dvLoading" style="display:none"></div>
+
+<div class="panel panel-default">
+    <div class="panel-heading" style="background-color: #428bca; color:white">
+        <h3 class="panel-title">Created IC</h3>
+    </div>
+    <div class="panel-body">
+        <div class="col-md-12" id="divParent">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="col-xs-12 col-sm-12 col-md-12 row">
+                        <div class="col-xs-6 col-sm-6 col-md-6 text-right">
+                            <div class="form-group">
+                                @Html.Label("BOM Number", new { @style = "font-family:Adobe Hebrew" })
+                            </div>
+                        </div>
+                        <div class="col-xs-6 col-sm-6 col-md-6">
+                            <div class="form-group">
+                                @Html.LabelFor(model => model.ICMain.BOM_Number, null, new { htmlAttributes = new { @class = "form-control input-sm" } })
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-12 col-md-12 row">
+                        <div class="col-xs-6 col-sm-6 col-md-6  text-right">
+                            <div class="form-group">
+                                @Html.Label("BU", new { @style = "font-family:Adobe Hebrew" })
+                            </div>
+                        </div>
+                        <div class="col-xs-6 col-sm-6 col-md-6">
+                            <div class="form-group">
+                                @Html.LabelFor(model => model.ICMain.BU)
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-12 col-md-12 row">
+                        <div class="col-xs-6 col-sm-6 col-md-6  text-right">
+                            <div class="form-group">
+                                @Html.Label("Product line", new { @style = "font-family:Adobe Hebrew" })
+                            </div>
+                        </div>
+                        <div class="col-xs-6 col-sm-6 col-md-6">
+                            <div class="form-group">
+                                @Html.LabelFor(model => model.ICMain.Product_line)
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-12 col-md-12 row">
+                        <div class="col-xs-6 col-sm-6 col-md-6  text-right">
+                            <div class="form-group">
+                                @Html.Label("Site", new { @style = "font-family:Adobe Hebrew" })
+                            </div>
+                        </div>
+                        <div class="col-xs-6 col-sm-6 col-md-6">
+                            <div class="form-group">
+                                @Html.LabelFor(model => model.ICMain.Site)
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-12 col-md-12 row">
+                        <div class="col-xs-6 col-sm-6 col-md-6  text-right">
+                            <div class="form-group">
+                                @Html.Label("Thermo Number", new { @style = "font-family:Adobe Hebrew" })
+                            </div>
+                        </div>
+                        <div class="col-xs-6 col-sm-6 col-md-6">
+                            <div class="form-group">
+                                @Html.LabelFor(model => model.ICMain.Thermo_Number)
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-12 col-md-12 row">
+                        <div class="col-xs-6 col-sm-6 col-md-6  text-right">
+                            <div class="form-group">
+                                @Html.Label("Item Description", new { @style = "font-family:Adobe Hebrew" })
+                            </div>
+                        </div>
+                        <div class="col-xs-6 col-sm-6 col-md-6">
+                            <div class="form-group">
+                                @Html.LabelFor(model => model.ICMain.Item_Description)
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-12 col-md-12 row">
+                        <div class="col-xs-6 col-sm-6 col-md-6  text-right">
+                            <div class="form-group">
+                                @Html.Label("Category", new { @style = "font-family:Adobe Hebrew" })
+                            </div>
+                        </div>
+                        <div class="col-xs-6 col-sm-6 col-md-6">
+                            <div class="form-group">
+                                @Html.LabelFor(model => model.ICMain.Category)
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-12 col-md-12 row">
+                        <div class="col-xs-6 col-sm-6 col-md-6  text-right">
+                            <div class="form-group">
+                                @Html.Label("Part", new { @style = "font-family:Adobe Hebrew" })
+                            </div>
+                        </div>
+                        <div class="col-xs-6 col-sm-6 col-md-6">
+                            <div class="form-group">
+                                @Html.LabelFor(model => model.ICMain.Part)
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-12 col-md-12 row">
+                        <div class="col-xs-6 col-sm-6 col-md-6  text-right">
+                            <div class="form-group">
+                                @Html.Label("Part Type", new { @style = "font-family:Adobe Hebrew" })
+                            </div>
+                        </div>
+                        <div class="col-xs-6 col-sm-6 col-md-6">
+                            <div class="form-group">
+                                @Html.LabelFor(model => model.ICMain.Part_Type)
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="col-xs-12 col-sm-12 col-md-12 row">
+                        <div class="col-xs-6 col-sm-6 col-md-6  text-right">
+                            <div class="form-group">
+                                @Html.Label("Technology", new { @style = "font-family:Adobe Hebrew" })
+                            </div>
+                        </div>
+                        <div class="col-xs-6 col-sm-6 col-md-6">
+                            <div class="form-group">
+                                @Html.LabelFor(model => model.ICMain.Technology)
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-12 col-md-12 row">
+                        <div class="col-xs-6 col-sm-6 col-md-6  text-right">
+                            <div class="form-group">
+                                @Html.Label("Supply Voltage", new { @style = "font-family:Adobe Hebrew" })
+                            </div>
+                        </div>
+                        <div class="col-xs-6 col-sm-6 col-md-6">
+                            <div class="form-group">
+                                @Html.LabelFor(model => model.ICMain.Supply_Voltage)
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-12 col-md-12 row">
+                        <div class="col-xs-6 col-sm-6 col-md-6  text-right">
+                            <div class="form-group">
+                                @Html.Label("Memory organisation", new { @style = "font-family:Adobe Hebrew" })
+                            </div>
+                        </div>
+                        <div class="col-xs-6 col-sm-6 col-md-6">
+                            <div class="form-group">
+                                @Html.LabelFor(model => model.ICMain.Memory___organisation)
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-12 col-md-12 row">
+                        <div class="col-xs-6 col-sm-6 col-md-6  text-right">
+                            <div class="form-group">
+                                @Html.Label("Memory access Time", new { @style = "font-family:Adobe Hebrew" })
+                            </div>
+                        </div>
+                        <div class="col-xs-6 col-sm-6 col-md-6">
+                            <div class="form-group">
+                                @Html.LabelFor(model => model.ICMain.Memory___access_Time)
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-12 col-md-12 row">
+                        <div class="col-xs-6 col-sm-6 col-md-6  text-right">
+                            <div class="form-group">
+                                @Html.Label("Mouting", new { @style = "font-family:Adobe Hebrew" })
+                            </div>
+                        </div>
+                        <div class="col-xs-6 col-sm-6 col-md-6">
+                            <div class="form-group">
+                                @Html.LabelFor(model => model.ICMain.Mouting)
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-12 col-md-12 row">
+                        <div class="col-xs-6 col-sm-6 col-md-6  text-right">
+                            <div class="form-group">
+                                @Html.Label("Package", new { @style = "font-family:Adobe Hebrew" })
+                            </div>
+                        </div>
+                        <div class="col-xs-6 col-sm-6 col-md-6">
+                            <div class="form-group">
+                                @Html.LabelFor(model => model.ICMain.Package)
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-12 col-md-12 row">
+                        <div class="col-xs-6 col-sm-6 col-md-6  text-right">
+                            <div class="form-group">
+                                @Html.Label("Lead Spacing (Inch)", new { @style = "font-family:Adobe Hebrew" })
+                            </div>
+                        </div>
+                        <div class="col-xs-6 col-sm-6 col-md-6">
+                            <div class="form-group">
+                                @Html.LabelFor(model => model.ICMain.Lead_Spacing_Inch_)
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-12 col-md-12 row">
+                        <div class="col-xs-6 col-sm-6 col-md-6  text-right">
+                            <div class="form-group">
+                                @Html.Label("No of pins", new { @style = "font-family:Adobe Hebrew" })
+                            </div>
+                        </div>
+                        <div class="col-xs-6 col-sm-6 col-md-6">
+                            <div class="form-group">
+                                @Html.LabelFor(model => model.ICMain.No___of_pins)
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-12 col-md-12 row">
+                        <div class="col-xs-6 col-sm-6 col-md-6  text-right">
+                            <div class="form-group">
+                                @Html.Label("Operating Temperature", new { @style = "font-family:Adobe Hebrew" })
+                            </div>
+                        </div>
+                        <div class="col-xs-6 col-sm-6 col-md-6">
+                            <div class="form-group">
+                                @Html.LabelFor(model => model.ICMain.Operating__Temperature)
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+           
+            <div class="panel panel-default">
+                <div class="panel-heading" style="background-color: #3399FF; color: white">
+                    <h3 class="panel-title">Manufacturer Information</h3>
+                </div>
+                <div class="panel-body text-center">
+                    @foreach (var item in Model.ICMainMnf)
+                    {
+                        <div class="col-md-12" id="divChild">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="col-xs-12 col-sm-12 col-md-12 row">
+                                        <div class="col-xs-6 col-sm-6 col-md-6 text-right">
+                                            <div class="form-group">
+                                                @Html.Label("Mfr Name", new { @style = "font-family:Adobe Hebrew" })
+                                            </div>
+                                        </div>
+                                        <div class="col-xs-6 col-sm-6 col-md-6">
+                                            <div class="form-group">
+                                                @Html.Label(item.Mfr__Name)
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-12 col-sm-12 col-md-12 row">
+                                        <div class="col-xs-6 col-sm-6 col-md-6 text-right">
+                                            <div class="form-group">
+                                                @Html.Label("Mfr Part Number", new { @style = "font-family:Adobe Hebrew" })
+                                            </div>
+                                        </div>
+                                        <div class="col-xs-6 col-sm-6 col-md-6">
+                                            <div class="form-group">
+                                                @Html.Label(item.Mfr__Part_Number)
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="col-xs-12 col-sm-12 col-md-12 row">
+                                        <div class="col-xs-6 col-sm-6 col-md-6 text-right">
+                                            <div class="form-group">
+                                                @Html.Label("Part Status", new { @style = "font-family:Adobe Hebrew" })
+                                            </div>
+                                        </div>
+                                        <div class="col-xs-6 col-sm-6 col-md-6">
+                                            <div class="form-group">
+                                                @Html.Label(item.Part_Status)
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-12 col-sm-12 col-md-12 row">
+                                        <div class="col-xs-6 col-sm-6 col-md-6 text-right">
+                                            <div class="form-group">
+                                                @Html.Label("RoHS Status", new { @style = "font-family:Adobe Hebrew" })
+                                            </div>
+                                        </div>
+                                        <div class="col-xs-6 col-sm-6 col-md-6">
+                                            <div class="form-group">
+                                                @Html.Label(item.RoHS_Status)
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="col-xs-12 col-sm-12 col-md-12 row">
+                                        <div class="col-xs-6 col-sm-6 col-md-6 text-right">
+                                            <div class="form-group">
+                                                @Html.Label("Comments", new { @style = "font-family:Adobe Hebrew" })
+                                            </div>
+                                        </div>
+                                        <div class="col-xs-6 col-sm-6 col-md-6">
+                                            <div class="form-group">
+                                                @Html.Label(item.Comments)
+                                            </div>
+                                        </div>
+                                        <div></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="col-xs-12 col-sm-12 col-md-12 row">
+                                        <div class="col-xs-6 col-sm-6 col-md-6 text-right">
+                                            <div class="form-group">
+                                                @Html.Label("Type", new { @style = "font-family:Adobe Hebrew" })
+                                            </div>
+                                        </div>
+                                        <div class="col-xs-6 col-sm-6 col-md-6">
+                                            <div class="form-group">
+                                                @Html.Label(item.Type)
+                                            </div>
+                                        </div>
+                                        <div></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

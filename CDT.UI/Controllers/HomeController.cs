@@ -53,34 +53,13 @@ namespace CDT.UI.Controllers
             if(ModelState.IsValid)
             { 
             _createBAL=new createBAL();
-            int get = _createBAL.iccrete(icVM);
+            ICComposite get = _createBAL.iccrete(icVM);
             }
 
-            return PartialView("_AllSuccessPartial");
+            return PartialView("_ICAllShow", icVM);
 
         }
-        //public PartialViewResult ICMnfsCreate(ICMnf icMnf, string from)
-        //{
-            
-        //    List<ICMnf> icMnfs = new List<ICMnf>();
-        //    if (from == "icMnfs")
-        //    {
-        //        icMnfs.Add(icMnf);
-        //        Session["icMnfs"] = icMnfs;
-        //    }
-        //    else if (from == "icVMMnf")
-        //    {
-
-
-
-        //    }
-        //    //createBAL createBAL = new createBAL();
-
-        //    //int icId = createBAL.iccrete(icVM);
-
-        //    return PartialView("_ICMnfsPartial");
-
-        //}
+        
         public PartialViewResult Connector()
         {
             CDTEntities db = new CDTEntities();

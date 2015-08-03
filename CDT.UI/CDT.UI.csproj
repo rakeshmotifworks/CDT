@@ -326,6 +326,7 @@
     <Content Include="Views\Shared\_PotentiometerPartial.cshtml" />
     <Content Include="Views\Shared\_ThermistorPartial.cshtml" />
     <Content Include="Views\Shared\_ICMnfsPartial.cshtml" />
+    <Content Include="Views\Shared\_ICAllShow.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

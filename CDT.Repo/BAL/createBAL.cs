@@ -12,7 +12,7 @@ namespace CDT.Repo.BAL
 {
     public class createBAL
     {
-        public int iccrete(ICComposite icVM)
+        public ICComposite iccrete(ICComposite icVM)
         {
 
             try
@@ -46,7 +46,7 @@ namespace CDT.Repo.BAL
                     db.ICs.Add(ic);
                     db.SaveChanges();
 
-                    return ic.Id;
+                    return icVM;
                 };
             }
             catch (DbEntityValidationException e)
@@ -61,7 +61,7 @@ namespace CDT.Repo.BAL
                             ve.PropertyName, ve.ErrorMessage);
                     }
                 }
-                return 0;
+                return icVM;
             }
         }
 
